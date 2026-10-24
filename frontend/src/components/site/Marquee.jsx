@@ -1,24 +1,4 @@
-const WORDS = ["Dados", "Estratégia", "Tecnologia", "Pessoas", "Receita"];
-
-export const EditorialMarquee = () => {
-  const row = [...WORDS, ...WORDS];
-  return (
-    <div data-testid="editorial-marquee" className="relative overflow-hidden border-y border-white/10 bg-[#070809] py-6 md:py-10">
-      <div className="marquee-track flex items-center" style={{ "--dur": "70s" }}>
-        {[0, 1].map((k) => (
-          <div key={k} className="flex items-center" aria-hidden={k === 1}>
-            {row.map((w, i) => (
-              <span key={`${k}-${i}`} className="flex items-center">
-                <span className={`font-display uppercase text-6xl md:text-[8rem] leading-none px-6 md:px-10 ${i % 2 ? "text-outline" : "text-[#F7F8F8]"}`}>{w}</span>
-                <svg viewBox="0 0 24 24" className="h-8 w-8 md:h-14 md:w-14 shrink-0 fill-[#FFC400]"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" /></svg>
-              </span>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+import { CLIENTS } from "@/lib/content";
 
 export const LogoMarquee = ({ logos }) => (
   <div data-testid="clients-marquee" className="marquee-wrap relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
@@ -32,4 +12,11 @@ export const LogoMarquee = ({ logos }) => (
       ))}
     </div>
   </div>
+);
+
+export const ClientsStrip = () => (
+  <section data-testid="clients-section" className="py-20 md:py-24">
+    <p className="font-mono mb-6 px-5 text-center text-xs uppercase tracking-[0.28em] text-[#AEB0B6]">Empresas que confiam</p>
+    <LogoMarquee logos={CLIENTS} />
+  </section>
 );

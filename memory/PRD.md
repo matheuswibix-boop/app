@@ -16,6 +16,12 @@ Respostas: endereço R. Urbâno Lopes, 277 B - Cristo Rei, Curitiba - PR, 80050-
 - Home: hero com reveal mascarado + parallax/tilt 3D (foto sede GGV), manifesto com scroll-highlight, marquee editorial, bento de 6 serviços, Método PRIMA (5 passos, linha animada), faixa de resultados, toggle Marketing quebrado vs integrado, 4 cases (Madeleste, Primee, Technocoat, Speedo), marquee de logos de clientes, Grupo GGV + selos + 4 empresas + sócios, prévia do blog, contato (form + WhatsApp + dados), footer
 - /blog e /blog/:slug (3 artigos fixos), /admin (login, lista de leads, excluir, exportar CSV), botão WhatsApp flutuante, favicon SVG
 
+## Update (2026-10-24, visual edits)
+- Logo oficial vetorizado (SVG a partir da apresentação) + favicon com o símbolo
+- Removidos: faixa de palavras rolando e seção Nossos Cases (faixa de logos de clientes mantida); nav sem 'Cases'
+- Serviços em carrossel automático da direita para a esquerda (pausa no hover)
+- Foto dos sócios trocada pela original em moldura
+
 ## Backlog
 - P1: Páginas de Política de Privacidade/Termos; nomes e bios dos sócios; aprovação dos depoimentos e logos de clientes
 - P1: Notificação por e-mail/WhatsApp a cada novo lead

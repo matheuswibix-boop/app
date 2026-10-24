@@ -75,9 +75,9 @@ export const Hero = () => {
               <MessageSquare className="h-4 w-4" /> Quero impulsionar minha receita
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
-            <button data-testid="hero-cta-cases" onClick={() => goTo("cases")}
+            <button data-testid="hero-cta-method" onClick={() => goTo("metodologia")}
               className="inline-flex items-center gap-2.5 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-[#FFC400] hover:text-[#FFC400]">
-              Conheça os cases <Play className="h-4 w-4" />
+              Conheça o método <Play className="h-4 w-4" />
             </button>
           </div>
         </motion.div>

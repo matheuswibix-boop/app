@@ -6,9 +6,9 @@ import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 const Team = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["8%", "-8%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
   return (
-    <div ref={ref} className="relative grid items-end gap-8 lg:grid-cols-[0.8fr_1.4fr]">
+    <div ref={ref} className="relative grid items-center gap-10 lg:grid-cols-[0.75fr_1.5fr]">
       <div className="relative z-10 pb-4">
         <Eyebrow>Sócios-diretores</Eyebrow>
         <h3 className="font-display mt-6 uppercase leading-[0.95] text-3xl sm:text-4xl lg:text-5xl">
@@ -18,11 +18,13 @@ const Team = () => {
         </h3>
         <Reveal><p className="mt-6 max-w-md text-[#c2c4c9] leading-relaxed">Uma liderança com visão de futuro, experiência prática e compromisso real com o crescimento dos nossos clientes.</p></Reveal>
       </div>
-      <div className="relative">
-        <div className="absolute inset-x-[8%] bottom-0 top-[20%] rounded-[40px] bg-[radial-gradient(ellipse_at_center,rgba(255,196,0,0.35),transparent_70%)] blur-2xl" />
-        <motion.img style={{ y }} src="/img/socios.webp" alt="Sócios-diretores da INSALES" loading="lazy" data-testid="team-image"
-          className="relative w-full object-contain [mask-image:linear-gradient(to_bottom,black_75%,transparent)]" />
-      </div>
+      <Reveal>
+        <div className="relative aspect-[2/1] overflow-hidden rounded-3xl border border-[#FFC400]/25 sm:aspect-[1536/655]">
+          <motion.img style={{ y }} src="/img/socios.webp" alt="Sócios-diretores da INSALES" loading="lazy" data-testid="team-image"
+            className="h-full w-full scale-110 object-cover object-[92%_30%] sm:object-center" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070809]/50 via-transparent to-transparent" />
+        </div>
+      </Reveal>
     </div>
   );
 };

@@ -15,7 +15,6 @@ export const CONTACT = {
 export const NAV = [
   { id: "servicos", label: "Serviços" },
   { id: "metodologia", label: "Metodologia" },
-  { id: "cases", label: "Cases" },
   { id: "sobre", label: "Sobre" },
   { id: "blog", label: "Blog" },
 ];
