@@ -6,50 +6,41 @@ import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 const Team = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
   return (
-    <div ref={ref} className="relative grid items-center gap-10 lg:grid-cols-[0.75fr_1.5fr]">
-      <div className="relative z-10 pb-4">
-        <Eyebrow>Sócios-diretores</Eyebrow>
-        <h3 className="font-display mt-6 uppercase leading-[0.95] text-3xl sm:text-4xl lg:text-5xl">
-          <MaskLine>Estratégia, dados</MaskLine>
-          <MaskLine delay={0.08}>e pessoas que</MaskLine>
-          <MaskLine delay={0.16} className="text-[#FFC400]">fazem a diferença.</MaskLine>
-        </h3>
-        <Reveal><p className="mt-6 max-w-md text-[#c2c4c9] leading-relaxed">Uma liderança com visão de futuro, experiência prática e compromisso real com o crescimento dos nossos clientes.</p></Reveal>
+    <div ref={ref} data-testid="team-block" className="relative flex flex-col overflow-hidden rounded-3xl border border-[#FFC400]/20 bg-[#070809] md:block md:min-h-[520px] lg:aspect-[1536/655] lg:min-h-0">
+      <div className="relative aspect-[16/9] md:absolute md:inset-0 md:aspect-auto">
+        <motion.img style={{ y }} src="/img/socios.webp" alt="Sócios-diretores da INSALES" loading="lazy" data-testid="team-image"
+          className="absolute inset-0 h-full w-full object-cover object-[95%_20%] md:scale-[1.15] md:object-[100%_30%] lg:object-center" />
       </div>
-      <Reveal>
-        <div className="relative aspect-[2/1] overflow-hidden rounded-3xl border border-[#FFC400]/25 sm:aspect-[1536/655]">
-          <motion.img style={{ y }} src="/img/socios.webp" alt="Sócios-diretores da INSALES" loading="lazy" data-testid="team-image"
-            className="h-full w-full scale-110 object-cover object-[92%_30%] sm:object-center" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070809]/50 via-transparent to-transparent" />
-        </div>
-      </Reveal>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070809] via-[#070809]/40 via-45% to-transparent md:bg-gradient-to-r md:from-[#070809] md:via-[#070809]/75 md:to-transparent md:via-35%" />
+      <div className="relative z-10 -mt-10 flex flex-col p-6 md:mt-0 md:h-full md:min-h-[inherit] md:max-w-[46%] md:justify-center md:p-10 lg:p-14">
+        <Eyebrow>Sócios-diretores</Eyebrow>
+        <h3 className="font-display mt-5 uppercase leading-[1] text-xl sm:text-2xl lg:text-3xl">
+          <MaskLine>Estratégia, dados e</MaskLine>
+          <MaskLine delay={0.08}>pessoas que fazem</MaskLine>
+          <MaskLine delay={0.16} className="text-[#FFC400]">a diferença.</MaskLine>
+        </h3>
+        <Reveal><p className="mt-4 max-w-sm text-sm text-[#d5d7db] leading-relaxed">Uma liderança com visão de futuro, experiência prática e compromisso real com o crescimento dos nossos clientes.</p></Reveal>
+      </div>
     </div>
   );
 };
 
 const Group = () => (
-  <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-    <Reveal>
-      <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-        <img src="/img/predio.webp" alt="Sede do Grupo GGV" loading="lazy" className="h-full w-full object-cover object-[70%_50%]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#070809]/90 to-transparent" />
-        <p className="font-display absolute bottom-6 left-6 right-6 text-2xl uppercase md:text-3xl">Somos <span className="text-[#FFC400]">Gente Gerando Valor</span></p>
-      </div>
-    </Reveal>
+  <div className="grid gap-8 lg:grid-cols-2 lg:items-end">
     <div>
       <Eyebrow>Sobre nós</Eyebrow>
       <h2 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl">
         <MaskLine>Fazemos parte</MaskLine>
         <MaskLine delay={0.1}>do <span className="text-[#FFC400]">Grupo GGV.</span></MaskLine>
       </h2>
-      <Reveal>
-        <p className="mt-6 text-[#c2c4c9] leading-relaxed text-lg">
-          Um grupo de empresas especializado em Gestão, Marketing e Vendas, com mais de 100 colaboradores e mais de 2.000 empresas atendidas no Brasil, Estados Unidos, Reino Unido e China.
-        </p>
-      </Reveal>
     </div>
+    <Reveal>
+      <p className="text-[#c2c4c9] leading-relaxed text-lg">
+        Um grupo de empresas especializado em Gestão, Marketing e Vendas, com mais de 100 colaboradores e mais de 2.000 empresas atendidas no Brasil, Estados Unidos, Reino Unido e China. <span className="text-white font-semibold">Somos Gente Gerando Valor.</span>
+      </p>
+    </Reveal>
   </div>
 );
 

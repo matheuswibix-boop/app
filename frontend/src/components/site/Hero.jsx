@@ -24,8 +24,8 @@ const HeroImage = ({ y }) => {
   };
   return (
     <div onMouseMove={onMove} onMouseLeave={() => { mx.set(0); my.set(0); }}
-      className="absolute inset-0 lg:left-[38%] [perspective:1400px]">
-      <motion.div style={{ y, rotateX: rx, rotateY: ry }} className="absolute inset-0 origin-center will-change-transform">
+      className="absolute inset-0 lg:left-[30%] [perspective:1400px] lg:[mask-image:linear-gradient(to_right,transparent,black_35%)]">
+      <motion.div style={{ y, rotateX: rx, rotateY: ry }} className="absolute -inset-[4%] origin-center will-change-transform">
         <motion.img
           src="/img/predio.webp" alt="Sede do Grupo GGV em Curitiba ao pôr do sol"
           data-testid="hero-image"
