@@ -1,0 +1,254 @@
+{
+  "project_name": "InSales - HUB DATA MARKETING do Brasil",
+  "app_type": "marketing_site",
+  "language": "pt-BR",
+  "brand_identity": {
+    "agency_name": "InSales",
+    "tagline": "MARKETING QUE VIRA RECEITA.",
+    "positioning": "Somos a primeira HUB DATA MARKETING do Brasil",
+    "contact_info": {
+      "phone_whatsapp": "(41) 99661-7279",
+      "whatsapp_clean": "5541996617279",
+      "email": "contato@insales.com.br",
+      "address": "R. Urbâno Lopes, 277 B - Cristo Rei, Curitiba - PR, 80050-520",
+      "instagram": "https://instagram.com/insalesmkt",
+      "instagram_handle": "@insalesmkt"
+    },
+    "group_affiliation": "Grupo GGV"
+  },
+  "colors": {
+    "primary": "#FFC400",
+    "primary_hover": "#E6B000",
+    "background_dark": "#070809",
+    "surface_graphite": "#111316",
+    "surface_card": "#16191D",
+    "surface_card_border": "rgba(255, 196, 0, 0.15)",
+    "text_light": "#F7F8F8",
+    "text_muted": "#AEB0B6",
+    "accent_yellow": "#FFC400",
+    "badge_bg": "rgba(255, 196, 0, 0.12)",
+    "badge_text": "#FFC400",
+    "forbidden_colors": ["#7351B7", "#1B93A4"]
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Barlow Condensed, Syne, Outfit, sans-serif",
+      "style": "uppercase, tracking-tight, font-extrabold",
+      "h1_hero": "text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-[0.95]",
+      "h2_section": "text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white leading-tight",
+      "h3_card": "text-xl sm:text-2xl font-bold uppercase tracking-snug text-white"
+    },
+    "body": {
+      "font_family": "Inter, Plus Jakarta Sans, sans-serif",
+      "p_main": "text-base sm:text-lg text-[#AEB0B6] leading-relaxed font-normal",
+      "small_label": "text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#FFC400]"
+    }
+  },
+  "key_features_and_content": {
+    "nav_items": [
+      { "label": "Serviços", "href": "#servicos" },
+      { "label": "Metodologia", "href": "#metodologia" },
+      { "label": "Cases", "href": "#cases" },
+      { "label": "Sobre", "href": "#sobre" },
+      { "label": "Blog", "href": "#blog" }
+    ],
+    "hero_stats": [
+      { "value": "+R$ 1 Bilhão", "label": "em vendas geradas" },
+      { "value": "+2.000", "label": "clientes impactados" },
+      { "value": "+15 Anos", "label": "de experiência de mercado" }
+    ],
+    "services_bento": [
+      {
+        "id": "trafego",
+        "title": "TRÁFEGO PAGO DE ALTA PERFORMANCE",
+        "badge": "Mídia & Performance",
+        "description": "Gestão orientada a dados em Meta Ads, Google Ads, LinkedIn Ads e TikTok Ads com foco obsessivo em CAC e ROAS.",
+        "icon": "TrendingUp",
+        "size": "col-span-1 md:col-span-2 row-span-1"
+      },
+      {
+        "id": "seo_geo",
+        "title": "SEO & GEO INTELLIGENCE",
+        "badge": "Search & Local AI",
+        "description": "Otimização de posicionamento orgânico e presença local impulsionada por IA generativa para dominar as buscas comerciais.",
+        "icon": "Search",
+        "size": "col-span-1 row-span-1"
+      },
+      {
+        "id": "crm_automacao",
+        "title": "CRM & AUTOMAÇÃO DE VENDAS",
+        "badge": "RevOps & Processos",
+        "description": "Estruturação de funis de vendas, integração de HubSpot, RD Station e Salesforce com regras automáticas de nutrição.",
+        "icon": "Cpu",
+        "size": "col-span-1 row-span-1"
+      },
+      {
+        "id": "ia_vendas",
+        "title": "IA PARA PERFORMANCE DE VENDAS",
+        "badge": "Inovação Tech",
+        "description": "SDRs virtuais com Inteligência Artificial para qualificação instantânea de leads 24/7 e pré-atendimento humanizado.",
+        "icon": "Zap",
+        "size": "col-span-1 md:col-span-2 row-span-1"
+      }
+    ],
+    "metodologia_prima": [
+      {
+        "step": "01",
+        "title": "DIAGNÓSTICO PROFUNDO",
+        "desc": "Auditoria completa de dados de mídia, funil de conversão atual, CRM e concorrência para mapear gargalos de receita."
+      },
+      {
+        "step": "02",
+        "title": "ESTRATÉGIA DE DADOS",
+        "desc": "Plano tático customizado com definição de KPIs claros, projeções de ROI, estratégia de canais e arquitetura de rastreamento."
+      },
+      {
+        "step": "03",
+        "title": "IMPLEMENTAÇÃO ÁGIL",
+        "desc": "Execução rápida das campanhas, automações de CRM, rastreamento Server-Side e agentes de IA em sprints semanais."
+      },
+      {
+        "step": "04",
+        "title": "ACOMPANHAMENTO CONTINUO",
+        "desc": "Otimização diária baseada em dashboards em tempo real, testes A/B contínuos e reuniões semanais de alinhamento de ROI."
+      }
+    ],
+    "results_band": [
+      { "stat": "+300%", "label": "Aumento Médio em ROAS" },
+      { "stat": "-40%", "label": "Redução no CAC Médio" },
+      { "stat": "+250%", "label": "Crescimento em Volume de Leads" }
+    ],
+    "cases": [
+      {
+        "client": "Madeleste",
+        "metric": "+300%",
+        "label": "crescimento de vendas orgânicas e pagas",
+        "industry": "Construção & Madeiras",
+        "detail": "Estruturação completa do canal digital, unificando tráfego direto para representantes regionais com automação de WhatsApp."
+      },
+      {
+        "client": "Primee",
+        "metric": "20 → 1.100",
+        "label": "colaboradores impulsionados com aquisição digital",
+        "industry": "Serviços Corporativos",
+        "detail": "Escala exponencial de captação B2B de novos clientes com mídia de alta segmentação e funil preditivo de vendas."
+      },
+      {
+        "client": "Technocoat",
+        "metric": "R$ 9.4M ARR",
+        "label": "em novos contratos gerados via inbound",
+        "industry": "Indústria Química & Revestimentos",
+        "detail": "Estratégia SEO B2B focada em tomadores de decisão corporativos combinada com inteligência geográfica de vendas."
+      },
+      {
+        "client": "Speedo",
+        "metric": "+185%",
+        "label": "eficiência na conversão de e-commerce e varejo",
+        "industry": "Esportes & Moda",
+        "detail": "Reestruturação de mídia paga com remarketing dinâmico e integração omnicanal de dados de clientes."
+      }
+    ],
+    "socios_diretores": [
+      {
+        "name": "Pedro Souza",
+        "role": "Chief Executive Officer & Co-fundador",
+        "bio": "Especialista em Growth e RevOps com mais de 12 anos gerindo operações de marketing orientadas a performance corporativa.",
+        "image": "https://images.unsplash.com/photo-1729795795561-97daeedfec02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsJTIwYnJhemlsaWFuJTIwZGlyZWN0b3J8ZW58MHx8fHwxNzkyODgxNTI4fDA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "name": "Marcelo Garmatter",
+        "role": "Chief Data Officer & Co-fundador",
+        "bio": "Pioneiro em arquitetura de dados e automação de vendas via IA. Ex-liderança do Grupo GGV com foco em escala B2B.",
+        "image": "https://images.unsplash.com/photo-1637080767103-bc34afcbd2b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsJTIwYnJhemlsaWFuJTIwZGlyZWN0b3J8ZW58MHx8fHwxNzkyODgxNTI4fDA&ixlib=rb-4.1.0&q=85"
+      }
+    ],
+    "blog_articles": [
+      {
+        "id": "hub-data-marketing-futuro",
+        "title": "Por que o modelo tradicional de agência morreu e o HUB DATA MARKETING venceu",
+        "category": "Estratégia & Dados",
+        "read_time": "5 min",
+        "date": "14 Jul 2026",
+        "excerpt": "Descubra como a integração de Business Intelligence, CRM e Inteligência Artificial substituiu os relatórios estáticos de vaidade."
+      },
+      {
+        "id": "ia-na-qualificacao-de-leads",
+        "title": "Como implementar SDRs de Inteligência Artificial para qualificar leads 24h por dia",
+        "category": "Inteligência Artificial",
+        "read_time": "7 min",
+        "date": "02 Jul 2026",
+        "excerpt": "Guia prático para reduzir em 60% o tempo de resposta comercial e aumentar em até 3x a conversão de reuniões agendadas."
+      },
+      {
+        "id": "cac-vs-roas-b2b-2026",
+        "title": "CAC vs ROAS em 2026: As métricas que realmente importam para a diretoria corporativa",
+        "category": "RevOps & Vendas",
+        "read_time": "6 min",
+        "date": "20 Jun 2026",
+        "excerpt": "Analise como empresas líderes estão ajustando seus orçamentos de mídia diante de novas regras de privacidade e tracking."
+      }
+    ]
+  },
+  "layout_and_components": {
+    "header": {
+      "type": "fixed",
+      "style": "bg-[#070809]/80 backdrop-blur-xl border-b border-[#FFC400]/15 text-white z-50",
+      "cta": "Fale com Especialista",
+      "admin_button": "Painel de Leads (Admin)"
+    },
+    "hero": {
+      "headline": "MARKETING QUE VIRA RECEITA.",
+      "subheadline": "Somos a primeira HUB DATA MARKETING do Brasil. Combinamos inteligência artificial, tráfego de alta performance e automação de vendas para gerar escala previsível de faturamento.",
+      "background_image": "https://images.pexels.com/photos/32110922/pexels-photo-32110922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "overlay": "bg-gradient-to-r from-[#070809] via-[#070809]/85 to-[#070809]/60"
+    },
+    "client_marquee": {
+      "clients": ["Madeleste", "Primee", "Technocoat", "Speedo", "Grupo GGV", "Biotec", "LogiCorp", "Vanguard Real Estate"],
+      "speed": "slow drift, continuous animation"
+    },
+    "lead_capture_form": {
+      "fields": ["name", "email", "phone", "company", "monthly_revenue", "message"],
+      "storage_mechanism": "localStorage & state with mock API delay, stored under 'insales_leads'",
+      "admin_panel_trigger": "Modal or route toggle allowing the team to inspect, filter, export and delete leads."
+    },
+    "whatsapp_floating_cta": {
+      "position": "fixed bottom-6 right-6 z-50",
+      "message_url": "https://wa.me/5541996617279?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20InSales%20e%20gostaria%20de%20falar%20com%20um%20especialista.",
+      "style": "bg-[#FFC400] text-[#070809] font-bold rounded-full p-4 shadow-[0_0_25px_rgba(255,196,0,0.4)] hover:scale-105 transition-all"
+    }
+  },
+  "image_urls": {
+    "building_sunset": "https://images.pexels.com/photos/32110922/pexels-photo-32110922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "executive_1": "https://images.unsplash.com/photo-1729795795561-97daeedfec02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsJTIwYnJhemlsaWFuJTIwZGlyZWN0b3J8ZW58MHx8fHwxNzkyODgxNTI4fDA&ixlib=rb-4.1.0&q=85",
+    "executive_2": "https://images.unsplash.com/photo-1637080767103-bc34afcbd2b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsJTIwYnJhemlsaWFuJTIwZGlyZWN0b3J8ZW58MHx8fHwxNzkyODgxNTI4fDA&ixlib=rb-4.1.0&q=85",
+    "office_team": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHszfHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1lZXRpbmd8ZW58MHx8fHwxNzkyODgxNTIzfDA&ixlib=rb-4.1.0&q=85"
+  },
+  "motion_and_effects": {
+    "library": "framer-motion",
+    "scroll_smoothness": "Lenis smooth scroll or Framer Motion scroll triggers",
+    "kinetic_hero_reveal": "Masked line-by-line reveal animation on page load for the headline MARKETING QUE VIRA RECEITA.",
+    "hover_states": "Yellow glow shadows (shadow-[0_0_20px_rgba(255,196,0,0.3)]), subtle 1px border shift to bright #FFC400"
+  },
+  "testing_mandate": {
+    "rule": "Every interactive button, link, input field, modal trigger, card, lead item, and data counter MUST include a descriptive data-testid attribute in kebab-case.",
+    "examples": [
+      "data-testid=\"nav-link-servicos\"",
+      "data-testid=\"hero-cta-button\"",
+      "data-testid=\"whatsapp-floating-button\"",
+      "data-testid=\"lead-form-submit-button\"",
+      "data-testid=\"admin-leads-modal-trigger\"",
+      "data-testid=\"case-card-madeleste\""
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the color palette: Deep Black (#070809), Graphite (#111316), Electric Yellow (#FFC400), Soft White (#F7F8F8), Muted Gray (#AEB0B6).",
+    "Ensure all headings use bold uppercase heavy typography styling for maximum brand impact.",
+    "Implement Lenis or smooth scrolling behavior across the entire page.",
+    "Build the complete lead capture modal and contact form section with local storage persistence and mock API validation.",
+    "Build the Admin Leads drawer/modal to let users view, filter, export JSON/CSV, or clear submitted leads.",
+    "Include direct interactive WhatsApp button with pre-filled message linking to (41) 99661-7279.",
+    "Build the blog post view so users can click on sample articles ('HUB DATA MARKETING', 'IA para Leads', 'CAC vs ROAS') to read full detailed articles.",
+    "Include the full agency contact address (R. Urbâno Lopes, 277 B - Cristo Rei, Curitiba - PR) in the footer and contact section.",
+    "Make sure every interactive element has a unique data-testid attribute."
+  ]
+}

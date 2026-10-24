@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #070809;
+  --graphite: #111316;
+  --card: #15181c;
+  --sun: #ffc400;
+  --paper: #f7f8f8;
+  --mist: #aeb0b6;
+}
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Manrope Variable", "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: var(--sun); color: var(--ink); }
+
+.font-display {
+  font-family: "Archivo Variable", "Archivo", sans-serif;
+  font-stretch: 125%;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+.font-mono { font-family: "JetBrains Mono", monospace; }
+
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(247, 248, 248, 0.35);
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(255, 196, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 196, 0, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { animation: marquee var(--dur, 60s) linear infinite; width: max-content; }
+.marquee-wrap:hover .marquee-track.pausable { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+@layer base {
+  :root {
+    --background: 220 10% 3%;
+    --foreground: 180 5% 97%;
+    --card: 214 13% 7%;
+    --card-foreground: 180 5% 97%;
+    --popover: 214 13% 7%;
+    --popover-foreground: 180 5% 97%;
+    --primary: 46 100% 50%;
+    --primary-foreground: 220 10% 3%;
+    --secondary: 214 13% 12%;
+    --secondary-foreground: 180 5% 97%;
+    --muted: 214 13% 12%;
+    --muted-foreground: 228 4% 70%;
+    --accent: 214 13% 12%;
+    --accent-foreground: 180 5% 97%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 10% 16%;
+    --input: 214 10% 18%;
+    --ring: 46 100% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+}
+
+@layer base {
+  [data-debug-wrapper="true"] { display: contents !important; }
+  [data-debug-wrapper="true"] > * {
+    margin-left: inherit; margin-right: inherit; margin-top: inherit; margin-bottom: inherit;
+    padding-left: inherit; padding-right: inherit; padding-top: inherit; padding-bottom: inherit;
+    column-gap: inherit; row-gap: inherit; gap: inherit;
+    border-left-width: inherit; border-right-width: inherit; border-top-width: inherit; border-bottom-width: inherit;
+    border-left-style: inherit; border-right-style: inherit; border-top-style: inherit; border-bottom-style: inherit;
+    border-left-color: inherit; border-right-color: inherit; border-top-color: inherit; border-bottom-color: inherit;
+  }
+}
