@@ -26,16 +26,16 @@ export const STATS = [
 ];
 
 export const SERVICES = [
-  {
-    key: "trafego", n: "01", title: "Tráfego Pago", tag: "Performance",
-    text: "Mais clientes com campanhas de alta performance em Google, Meta e LinkedIn. Otimização por MQL, SQL e venda — não por clique barato.",
-    span: "md:col-span-2 md:row-span-2", big: true,
-  },
-  { key: "seo", n: "02", title: "SEO + GEO", tag: "Orgânico & IA", text: "Visibilidade e demanda orgânica no Google e nas respostas de IA, com estratégia e conteúdo.", span: "md:col-span-2" },
-  { key: "crm", n: "03", title: "CRM e Automação", tag: "RevOps", text: "Processos que convertem e escalam suas vendas.", span: "" },
-  { key: "ia", n: "04", title: "IA para Vendas", tag: "Inteligência", text: "Produtividade e inteligência no seu funil comercial.", span: "" },
-  { key: "site", n: "05", title: "Sites e E-commerce", tag: "Conversão", text: "Estruturas rápidas, rastreáveis e feitas para vender online.", span: "md:col-span-2" },
-  { key: "video", n: "06", title: "Video Branding e Social", tag: "Marca", text: "Branding, vídeos estratégicos e social media para posicionamento.", span: "md:col-span-2" },
+  { key: "branding", n: "01", title: "Branding", tag: "Marca", text: "Identidade e posicionamento que tornam sua marca reconhecida e desejada." },
+  { key: "meta", n: "02", title: "Meta Ads", tag: "Mídia paga", text: "Campanhas no Facebook e Instagram otimizadas para gerar leads e vendas." },
+  { key: "social", n: "03", title: "Social Media", tag: "Conteúdo", text: "Gestão de redes com estratégia, calendário e conteúdo que engaja." },
+  { key: "seo", n: "04", title: "SEO — Tráfego Orgânico", tag: "Orgânico", text: "Suas páginas nas primeiras posições do Google, gerando demanda contínua." },
+  { key: "ecommerce", n: "05", title: "Criação de E-commerce", tag: "Loja virtual", text: "Lojas virtuais rápidas, rastreáveis e estruturadas para vender online." },
+  { key: "google", n: "06", title: "Google Ads", tag: "Mídia paga", text: "Anúncios na pesquisa, YouTube e display para quem já procura o que você vende." },
+  { key: "sites", n: "07", title: "Sites Institucionais", tag: "Presença digital", text: "Sites profissionais que transmitem credibilidade e convertem visitantes." },
+  { key: "materiais", n: "08", title: "Materiais de Venda", tag: "Comercial", text: "Apresentações, propostas e catálogos que ajudam seu time a fechar negócios." },
+  { key: "videos", n: "09", title: "Vídeos Social e Institucionais", tag: "Audiovisual", text: "Vídeos para redes sociais e institucionais que contam a história da sua marca." },
+  { key: "geo", n: "10", title: "SEO para IA (GEO)", tag: "Inteligência artificial", text: "Sua empresa citada nas respostas do ChatGPT, Gemini e outras IAs." },
 ];
 
 export const PRIMA = [

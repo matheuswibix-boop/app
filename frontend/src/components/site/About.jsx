@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { COMPANIES, SEALS } from "@/lib/content";
+import { COMPANIES } from "@/lib/content";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 
 const Team = () => {
@@ -48,13 +48,6 @@ const Group = () => (
         <p className="mt-6 text-[#c2c4c9] leading-relaxed text-lg">
           Um grupo de empresas especializado em Gestão, Marketing e Vendas, com mais de 100 colaboradores e mais de 2.000 empresas atendidas no Brasil, Estados Unidos, Reino Unido e China.
         </p>
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          {SEALS.map((s) => (
-            <span key={s} className="grid h-16 w-28 place-items-center rounded-xl bg-[#F7F8F8] p-2">
-              <img src={`/img/logos/${s}.webp`} alt={s.replace("selo_", "").replace(/_/g, " ")} loading="lazy" className="max-h-12 object-contain" />
-            </span>
-          ))}
-        </div>
       </Reveal>
     </div>
   </div>
@@ -67,8 +60,8 @@ const Companies = () => (
       {COMPANIES.map((c, i) => (
         <Reveal key={c.key} delay={i * 0.08}>
           <div data-testid={`company-card-${c.key}`} className="group h-full rounded-3xl border border-white/10 bg-[#111316] p-6 transition-[border-color,transform] duration-500 hover:-translate-y-1 hover:border-[#FFC400]/50">
-            <div className="grid h-16 place-items-center rounded-xl bg-[#F7F8F8] px-4">
-              <img src={c.logo} alt={c.key} loading="lazy" className="max-h-10 object-contain" />
+            <div className="flex h-16 items-center">
+              <img src={c.logo} alt={c.key} loading="lazy" className="max-h-10 max-w-[180px] object-contain brightness-0 invert opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
             </div>
             <p className="mt-5 text-sm text-[#c2c4c9] leading-relaxed">{c.text}</p>
           </div>

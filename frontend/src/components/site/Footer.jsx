@@ -1,5 +1,4 @@
 import { Instagram } from "lucide-react";
-import { motion } from "framer-motion";
 import { CONTACT, NAV } from "@/lib/content";
 import { Logo } from "./Logo";
 import { useGoTo } from "./Nav";
@@ -30,11 +29,7 @@ export const Footer = () => {
           <a href={CONTACT.maps} target="_blank" rel="noreferrer" data-testid="footer-address" className="block hover:text-[#FFC400]">{CONTACT.address}</a>
         </div>
       </div>
-      <div className="mx-auto max-w-[1400px] overflow-hidden pt-16">
-        <motion.p initial={{ y: "60%" }} whileInView={{ y: "0%" }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display select-none text-center uppercase leading-[0.8] text-[15vw] lg:text-[12.5rem] text-[#FFC400]">Insales</motion.p>
-      </div>
-      <div className="mx-auto flex max-w-[1400px] flex-col gap-2 border-t border-white/10 py-6 text-xs text-[#AEB0B6] md:flex-row md:justify-between">
+      <div className="mx-auto mt-16 flex max-w-[1400px] flex-col gap-2 border-t border-white/10 py-6 text-xs text-[#AEB0B6] md:flex-row md:justify-between">
         <span>© {new Date().getFullYear()} INSALES Marketing. Todos os direitos reservados.</span>
         <span>Parte do Grupo GGV · Curitiba - PR</span>
       </div>
