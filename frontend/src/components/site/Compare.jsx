@@ -11,14 +11,13 @@ export const Compare = () => {
       <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[1fr_1.3fr]">
         <div>
           <Eyebrow>O que muda</Eyebrow>
-          <h2 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl">
-            <MaskLine>Do tráfego isolado</MaskLine>
-            <MaskLine delay={0.1}>à <span className="text-[#FFC400]">soberania digital.</span></MaskLine>
+          <h2 className="font-display mt-6 uppercase leading-[1] text-3xl sm:text-4xl lg:text-5xl">
+            <MaskLine>Do tráfego isolado à <span className="text-[#FFC400]">soberania digital.</span></MaskLine>
           </h2>
           <div role="tablist" className="mt-10 inline-flex rounded-full border border-white/15 p-1">
             {[["Quebrado", false], ["Integrado", true]].map(([l, v]) => (
               <button key={l} role="tab" aria-selected={on === v} data-testid={`compare-toggle-${l.toLowerCase()}`} onClick={() => setOn(v)}
-                className="relative rounded-full px-6 py-2.5 text-sm font-bold">
+                className="relative whitespace-nowrap rounded-full px-4 py-2.5 text-xs font-bold sm:px-6 sm:text-sm">
                 {on === v && <motion.span layoutId="cmp" className={`absolute inset-0 rounded-full ${v ? "bg-[#FFC400]" : "bg-white/15"}`} transition={{ type: "spring", stiffness: 400, damping: 32 }} />}
                 <span className={`relative ${on === v && v ? "text-[#070809]" : "text-white"}`}>Marketing {l.toLowerCase()}</span>
               </button>

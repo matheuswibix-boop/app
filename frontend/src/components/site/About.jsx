@@ -8,20 +8,18 @@ const Team = () => {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
   return (
-    <div ref={ref} data-testid="team-block" className="relative flex flex-col overflow-hidden rounded-3xl border border-[#FFC400]/20 bg-[#070809] md:block md:min-h-[520px] lg:aspect-[1536/655] lg:min-h-0">
-      <div className="relative aspect-[16/9] md:absolute md:inset-0 md:aspect-auto">
+    <div ref={ref} data-testid="team-block" className="relative flex flex-col overflow-hidden rounded-3xl border border-[#FFC400]/20 bg-[#070809] lg:block lg:aspect-[1536/655]">
+      <div className="relative aspect-[16/9] lg:absolute lg:inset-0 lg:aspect-auto">
         <motion.img style={{ y }} src="/img/socios.webp" alt="Sócios-diretores da INSALES" loading="lazy" data-testid="team-image"
-          className="absolute inset-0 h-full w-full object-cover object-[95%_20%] md:scale-[1.15] md:object-[100%_30%] lg:object-center" />
+          className="absolute inset-0 h-full w-full object-cover object-[95%_20%] lg:object-center lg:scale-[1.12]" />
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070809] via-[#070809]/40 via-45% to-transparent md:bg-gradient-to-r md:from-[#070809] md:via-[#070809]/75 md:to-transparent md:via-35%" />
-      <div className="relative z-10 -mt-10 flex flex-col p-6 md:mt-0 md:h-full md:min-h-[inherit] md:max-w-[46%] md:justify-center md:p-10 lg:p-14">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070809] via-[#070809]/40 via-45% to-transparent lg:bg-gradient-to-r lg:from-[#070809] lg:via-[#070809]/75 lg:to-transparent lg:via-35%" />
+      <div className="relative z-10 -mt-10 flex flex-col p-6 sm:p-10 lg:mt-0 lg:h-full lg:max-w-[46%] lg:justify-center lg:p-12 xl:p-14">
         <Eyebrow>Sócios-diretores</Eyebrow>
-        <h3 className="font-display mt-5 uppercase leading-[1] text-xl sm:text-2xl lg:text-3xl">
-          <MaskLine>Estratégia, dados e</MaskLine>
-          <MaskLine delay={0.08}>pessoas que fazem</MaskLine>
-          <MaskLine delay={0.16} className="text-[#FFC400]">a diferença.</MaskLine>
+        <h3 className="font-display mt-5 uppercase leading-[1.05] text-xl sm:text-2xl xl:text-3xl">
+          <MaskLine>Estratégia, dados e pessoas que fazem <span className="text-[#FFC400]">a diferença.</span></MaskLine>
         </h3>
-        <Reveal><p className="mt-4 max-w-sm text-sm text-[#d5d7db] leading-relaxed">Uma liderança com visão de futuro, experiência prática e compromisso real com o crescimento dos nossos clientes.</p></Reveal>
+        <Reveal><p className="mt-4 max-w-md text-sm text-[#d5d7db] leading-relaxed">Uma liderança com visão de futuro, experiência prática e compromisso real com o crescimento dos nossos clientes.</p></Reveal>
       </div>
     </div>
   );
