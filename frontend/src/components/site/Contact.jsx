@@ -5,7 +5,7 @@ import { ArrowRight, Check, Loader2, Mail, MapPin, Phone, Instagram } from "luci
 import { CONTACT } from "@/lib/content";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 const EMPTY = { name: "", email: "", phone: "", company: "", revenue: "", service: "", message: "" };
 const REVENUES = ["Até R$ 50 mil/mês", "R$ 50 a 200 mil/mês", "R$ 200 mil a 1 mi/mês", "Acima de R$ 1 mi/mês"];
 const SERVICES = ["Tráfego Pago", "SEO + GEO", "CRM e Automação", "IA para Vendas", "Site / E-commerce", "Ainda não sei"];
