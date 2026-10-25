@@ -2,6 +2,10 @@
   "version": 2,
   "rewrites": [
     {
+      "source": "/api/leads/:id",
+      "destination": "/api/delete-lead?id=:id"
+    },
+    {
       "source": "/servicos",
       "destination": "/servicos/index.html"
     },
@@ -60,6 +64,23 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/api/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
     }
-  ]
+  ],
+  "framework": "create-react-app",
+  "installCommand": "yarn install --no-frozen-lockfile",
+  "buildCommand": "yarn build",
+  "outputDirectory": "build"
 }
