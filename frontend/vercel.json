@@ -78,5 +78,9 @@
         }
       ]
     }
-  ]
+  ],
+  "framework": "create-react-app",
+  "installCommand": "yarn install --no-frozen-lockfile",
+  "buildCommand": "yarn build",
+  "outputDirectory": "build"
 }
