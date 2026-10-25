@@ -6,16 +6,24 @@ import { Nav } from "@/components/site/Nav";
 import { Footer, WhatsFloat } from "@/components/site/Footer";
 import Home from "@/pages/Home";
 import { BlogList, BlogPost } from "@/pages/Blog";
+import { ServicesPage, MethodPage, AboutPage, ContactPage } from "@/pages/Pages";
+import { scrollTop } from "@/lib/scroll";
+import { useEffect } from "react";
 import Admin from "@/pages/Admin";
 
 const Shell = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+  useEffect(() => { if (!hash) scrollTop(); }, [pathname, hash]);
   if (pathname.startsWith("/admin")) return <Admin />;
   return (
     <>
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/servicos" element={<ServicesPage />} />
+        <Route path="/metodologia" element={<MethodPage />} />
+        <Route path="/quem-somos" element={<AboutPage />} />
+        <Route path="/fale-conosco" element={<ContactPage />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="*" element={<Home />} />

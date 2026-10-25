@@ -3,7 +3,7 @@ import { motion, useMotionValue, useScroll, useSpring, useTransform } from "fram
 import { ArrowRight, MessageSquare, Play } from "lucide-react";
 import { STATS } from "@/lib/content";
 import { Counter } from "./Counter";
-import { useGoTo } from "./Nav";
+import { useNavigate } from "react-router-dom";
 
 const ease = [0.76, 0, 0.24, 1];
 const lines = [
@@ -43,7 +43,7 @@ const HeroImage = ({ y }) => {
 
 export const Hero = () => {
   const ref = useRef(null);
-  const goTo = useGoTo();
+  const navigate = useNavigate();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
@@ -70,12 +70,12 @@ export const Hero = () => {
             Conectamos estratégia, tecnologia e performance de pessoas para gerar resultados mensuráveis — integrando marketing, inteligência artificial, automação e vendas.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <button data-testid="hero-cta-primary" onClick={() => goTo("contato")}
+            <button data-testid="hero-cta-primary" onClick={() => navigate("/fale-conosco")}
               className="group inline-flex items-center gap-2.5 rounded-full bg-[#FFC400] px-6 py-3.5 text-sm font-bold text-[#070809] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(255,196,0,0.7)]">
               <MessageSquare className="h-4 w-4" /> Quero impulsionar minha receita
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
-            <button data-testid="hero-cta-method" onClick={() => goTo("metodologia")}
+            <button data-testid="hero-cta-method" onClick={() => navigate("/metodologia")}
               className="inline-flex items-center gap-2.5 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-[#FFC400] hover:text-[#FFC400]">
               Conheça o método <Play className="h-4 w-4" />
             </button>

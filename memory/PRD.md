@@ -22,6 +22,10 @@ Respostas: endereço R. Urbâno Lopes, 277 B - Cristo Rei, Curitiba - PR, 80050-
 - Serviços em carrossel automático da direita para a esquerda (pausa no hover)
 - Foto dos sócios trocada pela original em moldura
 
+## Update (2026-10-25) Páginas
+- Páginas próprias: /servicos (grade 10 serviços), /metodologia (PRIMA + comparação), /quem-somos (Grupo GGV, empresas, sócios, clientes), /blog, /fale-conosco (formulário + mapa)
+- Cabeçalho/rodapé com links para as páginas, item ativo destacado; títulos de aba por página
+
 ## Backlog
 - P1: Páginas de Política de Privacidade/Termos; nomes e bios dos sócios; aprovação dos depoimentos e logos de clientes
 - P1: Notificação por e-mail/WhatsApp a cada novo lead

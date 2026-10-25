@@ -111,10 +111,8 @@ export const Contact = () => (
     <div className="relative mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[0.9fr_1.2fr]">
       <div>
         <Eyebrow>Fale com especialista</Eyebrow>
-        <h2 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl">
-          <MaskLine>Pronto para</MaskLine>
-          <MaskLine delay={0.08}>escalar seus</MaskLine>
-          <MaskLine delay={0.16} className="text-[#FFC400]">resultados?</MaskLine>
+        <h2 className="font-display mt-6 uppercase leading-[1] text-3xl sm:text-4xl lg:text-5xl">
+          <MaskLine>Pronto para escalar seus <span className="text-[#FFC400]">resultados?</span></MaskLine>
         </h2>
         <Reveal>
           <p className="mt-6 max-w-md text-[#c2c4c9] leading-relaxed">Receba um diagnóstico do seu cenário atual e descubra as oportunidades reais para crescer, com orientações e um plano personalizado.</p>

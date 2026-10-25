@@ -13,10 +13,11 @@ export const CONTACT = {
 };
 
 export const NAV = [
-  { id: "servicos", label: "Serviços" },
-  { id: "metodologia", label: "Metodologia" },
-  { id: "sobre", label: "Sobre" },
-  { id: "blog", label: "Blog" },
+  { id: "servicos", to: "/servicos", label: "Serviços" },
+  { id: "metodologia", to: "/metodologia", label: "Metodologia" },
+  { id: "quem-somos", to: "/quem-somos", label: "Quem Somos" },
+  { id: "blog", to: "/blog", label: "Blog" },
+  { id: "fale-conosco", to: "/fale-conosco", label: "Fale Conosco" },
 ];
 
 export const STATS = [

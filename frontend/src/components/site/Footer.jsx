@@ -1,11 +1,10 @@
+import { Link } from "react-router-dom";
 import { Instagram } from "lucide-react";
 import { CONTACT, NAV } from "@/lib/content";
 import { Logo } from "./Logo";
-import { useGoTo } from "./Nav";
 import { WhatsIcon } from "./Contact";
 
 export const Footer = () => {
-  const goTo = useGoTo();
   return (
     <footer data-testid="site-footer" className="border-t border-[#FFC400]/30 px-5 pt-20 md:px-10">
       <div className="mx-auto grid max-w-[1400px] gap-12 md:grid-cols-[1.4fr_1fr_1.4fr]">
@@ -19,7 +18,7 @@ export const Footer = () => {
         </div>
         <ul className="space-y-3">
           {NAV.map((n) => (
-            <li key={n.id}><button data-testid={`footer-link-${n.id}`} onClick={() => goTo(n.id)} className="text-sm text-[#d5d7db] hover:text-[#FFC400] transition-colors">{n.label}</button></li>
+            <li key={n.id}><Link to={n.to} data-testid={`footer-link-${n.id}`} className="text-sm text-[#d5d7db] hover:text-[#FFC400] transition-colors">{n.label}</Link></li>
           ))}
         </ul>
         <div className="space-y-3 text-sm text-[#d5d7db]">

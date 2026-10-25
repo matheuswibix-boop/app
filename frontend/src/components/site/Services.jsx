@@ -1,15 +1,15 @@
 import { Palette, Megaphone, Share2, Search, ShoppingCart, MousePointerClick, MonitorSmartphone, FileText, Clapperboard, Sparkles, ArrowUpRight } from "lucide-react";
 import { SERVICES } from "@/lib/content";
-import { Eyebrow, MaskLine } from "./Reveal";
+import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 
 const ICONS = { branding: Palette, meta: Megaphone, social: Share2, seo: Search, ecommerce: ShoppingCart, google: MousePointerClick, sites: MonitorSmartphone, materiais: FileText, videos: Clapperboard, geo: Sparkles };
 
-const Card = ({ s, dup }) => {
+const Card = ({ s, dup, grid }) => {
   const Icon = ICONS[s.key];
   return (
     <article
       data-testid={dup ? undefined : `service-card-${s.key}`} aria-hidden={dup}
-      className="group relative flex h-[320px] w-[280px] shrink-0 flex-col rounded-3xl border border-white/10 bg-[#111316] p-7 transition-[border-color,background-color] duration-500 hover:border-[#FFC400]/60 hover:bg-[#15181c] md:h-[320px] md:w-[340px]"
+      className={`group relative flex shrink-0 flex-col rounded-3xl border border-white/10 bg-[#111316] p-7 transition-[border-color,background-color,transform] duration-500 hover:border-[#FFC400]/60 hover:bg-[#15181c] ${grid ? "h-full min-h-[300px] hover:-translate-y-1" : "h-[320px] w-[280px] md:h-[320px] md:w-[340px]"}`}
     >
       <div className="flex items-center justify-between">
         <span className="grid h-12 w-12 place-items-center rounded-2xl border border-[#FFC400]/30 text-[#FFC400] transition-colors duration-500 group-hover:bg-[#FFC400] group-hover:text-[#070809]">
@@ -27,6 +27,16 @@ const Card = ({ s, dup }) => {
     </article>
   );
 };
+
+export const ServicesGrid = () => (
+  <section data-testid="services-grid-section" className="px-5 pb-24 md:px-10 md:pb-32">
+    <div className="mx-auto grid max-w-[1400px] gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {SERVICES.map((s, i) => (
+        <Reveal key={s.key} delay={(i % 4) * 0.06} className="h-full"><Card s={s} grid /></Reveal>
+      ))}
+    </div>
+  </section>
+);
 
 export const Services = () => (
   <section id="servicos" data-testid="services-section" className="py-24 md:py-32">

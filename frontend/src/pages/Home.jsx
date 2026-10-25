@@ -13,6 +13,7 @@ import { scrollToId } from "@/lib/scroll";
 
 export default function Home() {
   const { hash } = useLocation();
+  useEffect(() => { document.title = "INSALES | Marketing que vira receita"; }, []);
   useEffect(() => {
     if (!hash) return undefined;
     const t = setTimeout(() => scrollToId(hash.slice(1)), 300);
