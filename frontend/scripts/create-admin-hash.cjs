@@ -1,0 +1,2 @@
+const crypto=require('node:crypto');const readline=require('node:readline');const rl=readline.createInterface({input:process.stdin,output:process.stdout});
+rl.question('Senha de administrador (mínimo 16 caracteres): ',p=>{rl.close();if(p.length<16){console.error('Senha curta.');process.exitCode=1;return;}const salt=crypto.randomBytes(16);console.log('ADMIN_PASSWORD_HASH=scrypt$'+salt.toString('hex')+'$'+crypto.scryptSync(p,salt,64).toString('hex'));});
