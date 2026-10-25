@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { Download, Loader2, LogOut, Trash2 } from "lucide-react";
 import { Logo } from "@/components/site/Logo";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 const http = axios.create({ baseURL: API, withCredentials: true });
 
 const fmtErr = (d) => (typeof d === "string" ? d : Array.isArray(d) ? d.map((e) => e?.msg).join(" ") : "Erro ao entrar.");
