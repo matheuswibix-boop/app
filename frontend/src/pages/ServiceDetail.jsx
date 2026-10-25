@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowUpRight, CheckCircle2, ChevronDown, ChevronRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, ChevronDown, ChevronRight } from "lucide-react";
 import { PageHeader, CtaBand } from "@/components/site/PageHeader";
 import { Eyebrow, Reveal } from "@/components/site/Reveal";
 import servicePages from "@/lib/servicePages.json";
