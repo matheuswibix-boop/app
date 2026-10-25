@@ -1,8 +1,16 @@
-import { Palette, Megaphone, Share2, Search, ShoppingCart, MousePointerClick, MonitorSmartphone, FileText, Clapperboard, Sparkles, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import servicePages from "@/lib/servicePages.json";
+import { Palette, Megaphone, Share2, Search, ShoppingCart, MousePointerClick, MonitorSmartphone, FileText, Clapperboard, Sparkles, ArrowUpRight, Bot, Workflow, TrendingUp } from "lucide-react";
 import { SERVICES } from "@/lib/content";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 
-const ICONS = { branding: Palette, meta: Megaphone, social: Share2, seo: Search, ecommerce: ShoppingCart, google: MousePointerClick, sites: MonitorSmartphone, materiais: FileText, videos: Clapperboard, geo: Sparkles };
+const ICONS = { branding: Palette, meta: Megaphone, social: Share2, seo: Search, ecommerce: ShoppingCart, google: MousePointerClick, sites: MonitorSmartphone, materiais: FileText, videos: Clapperboard, geo: Sparkles, trafego: TrendingUp, ia: Bot, crm: Workflow };
+const SERVICE_PATHS = Object.fromEntries(servicePages.map(s => [s.key, "/servicos/"+s.slug]));
+const NEW_SERVICES = [
+  {key:"trafego", n:"11", title:"Tráfego Pago", tag:"Performance", text:"Google e Meta trabalhando com dados e foco em oportunidades comerciais."},
+  {key:"ia", n:"12", title:"IA de Atendimento", tag:"Inteligência artificial", text:"Pré-atendimento, qualificação e encaminhamento de leads com contexto."},
+  {key:"crm", n:"13", title:"CRM e Automação Comercial", tag:"Processos de vendas", text:"Funil estruturado, integrações e automações para acompanhar cada oportunidade."}
+];
 
 const Card = ({ s, dup, grid }) => {
   const Icon = ICONS[s.key];
@@ -23,6 +31,7 @@ const Card = ({ s, dup, grid }) => {
         <div className="my-4 h-px w-full bg-white/10" />
         <p className="min-h-[4.5em] text-sm leading-relaxed text-[#c2c4c9]">{s.text}</p>
       </div>
+      <Link to={SERVICE_PATHS[s.key]} aria-label={"Conheça o serviço "+s.title} tabIndex={dup ? -1 : 0} className="absolute inset-0 z-10 rounded-3xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFC400]" />
       <ArrowUpRight className="absolute right-7 top-[88px] h-5 w-5 text-[#FFC400] opacity-0 -translate-x-2 translate-y-2 transition-[opacity,transform] duration-500 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0" />
     </article>
   );
@@ -31,7 +40,7 @@ const Card = ({ s, dup, grid }) => {
 export const ServicesGrid = () => (
   <section data-testid="services-grid-section" className="px-5 pb-24 md:px-10 md:pb-32">
     <div className="mx-auto grid max-w-[1400px] gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {SERVICES.map((s, i) => (
+      {[...SERVICES, ...NEW_SERVICES].map((s, i) => (
         <Reveal key={s.key} delay={(i % 4) * 0.06} className="h-full"><Card s={s} grid /></Reveal>
       ))}
     </div>

@@ -1,0 +1,405 @@
+[
+  {
+    "key": "branding",
+    "slug": "branding",
+    "name": "Branding",
+    "tag": "Marca",
+    "description": "Posicionamento de marca, identidade visual e comunicação para ser reconhecido pelo cliente ideal.",
+    "deliverables": [
+      "Diagnóstico e posicionamento de marca",
+      "Diretrizes de identidade visual",
+      "Aplicações e consistência da comunicação"
+    ],
+    "metrics": "Reconhecimento de marca, procura pela empresa e conversão por origem.",
+    "seo": {
+      "title": "Branding para Empresas | INSALES Marketing",
+      "description": "Posicionamento de marca, identidade visual e comunicação para ser reconhecido pelo cliente ideal. Conheça a metodologia de Branding da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é Branding?",
+        "answer": "Posicionamento de marca, identidade visual e comunicação para ser reconhecido pelo cliente ideal."
+      },
+      {
+        "question": "O que está incluído no serviço de Branding?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: diagnóstico e posicionamento de marca; diretrizes de identidade visual; aplicações e consistência da comunicação. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de Branding?",
+        "answer": "Os principais indicadores são reconhecimento de marca, procura pela empresa e conversão por origem. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "meta",
+    "slug": "meta-ads",
+    "name": "Meta Ads",
+    "tag": "Facebook e Instagram",
+    "description": "Campanhas orientadas a geração de leads e vendas no Facebook e Instagram com rastreabilidade.",
+    "deliverables": [
+      "Estrutura de campanhas e públicos",
+      "Criativos e testes de anúncios",
+      "Eventos, públicos e otimização contínua"
+    ],
+    "metrics": "Custo por lead, taxa de oportunidade e custo de aquisição.",
+    "seo": {
+      "title": "Meta Ads para Empresas | INSALES Marketing",
+      "description": "Campanhas orientadas a geração de leads e vendas no Facebook e Instagram com rastreabilidade. Conheça a metodologia de Meta Ads da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é Meta Ads?",
+        "answer": "Campanhas orientadas a geração de leads e vendas no Facebook e Instagram com rastreabilidade."
+      },
+      {
+        "question": "O que está incluído no serviço de Meta Ads?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: estrutura de campanhas e públicos; criativos e testes de anúncios; eventos, públicos e otimização contínua. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de Meta Ads?",
+        "answer": "Os principais indicadores são custo por lead, taxa de oportunidade e custo de aquisição. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "social",
+    "slug": "social-media",
+    "name": "Social Media",
+    "tag": "Conteúdo e presença",
+    "description": "Gestão de conteúdo e presença de marca em canais sociais com estratégia comercial.",
+    "deliverables": [
+      "Planejamento editorial",
+      "Produção e publicação de conteúdo",
+      "Análise de interação e evolução de audiência"
+    ],
+    "metrics": "Alcance qualificado, engajamento relevante e oportunidades originadas.",
+    "seo": {
+      "title": "Social Media para Empresas | INSALES Marketing",
+      "description": "Gestão de conteúdo e presença de marca em canais sociais com estratégia comercial. Conheça a metodologia de Social Media da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é Social Media?",
+        "answer": "Gestão de conteúdo e presença de marca em canais sociais com estratégia comercial."
+      },
+      {
+        "question": "O que está incluído no serviço de Social Media?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: planejamento editorial; produção e publicação de conteúdo; análise de interação e evolução de audiência. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de Social Media?",
+        "answer": "Os principais indicadores são alcance qualificado, engajamento relevante e oportunidades originadas. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "seo",
+    "slug": "seo",
+    "name": "SEO",
+    "tag": "Busca orgânica",
+    "description": "SEO técnico, estratégico e de conteúdo para conquistar demanda qualificada no Google.",
+    "deliverables": [
+      "Auditoria técnica e Core Web Vitals",
+      "Arquitetura, páginas e palavras-chave",
+      "Conteúdo, interlinking e autoridade"
+    ],
+    "metrics": "Cliques orgânicos, posição por busca e conversões assistidas.",
+    "seo": {
+      "title": "SEO para Empresas | INSALES Marketing",
+      "description": "SEO técnico, estratégico e de conteúdo para conquistar demanda qualificada no Google. Conheça a metodologia de SEO da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é SEO?",
+        "answer": "SEO técnico, estratégico e de conteúdo para conquistar demanda qualificada no Google."
+      },
+      {
+        "question": "O que está incluído no serviço de SEO?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: auditoria técnica e core web vitals; arquitetura, páginas e palavras-chave; conteúdo, interlinking e autoridade. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de SEO?",
+        "answer": "Os principais indicadores são cliques orgânicos, posição por busca e conversões assistidas. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "ecommerce",
+    "slug": "ecommerce",
+    "name": "Criação de E-commerce",
+    "tag": "Lojas virtuais",
+    "description": "Estruturação de lojas virtuais com experiência de compra, rastreamento e foco em vendas.",
+    "deliverables": [
+      "Arquitetura de categorias e produtos",
+      "Jornada e checkout com menos atritos",
+      "Mensuração de pedidos e desempenho"
+    ],
+    "metrics": "Conversão de compras, receita e abandono de checkout.",
+    "seo": {
+      "title": "Criação de E-commerce para Empresas | INSALES Marketing",
+      "description": "Estruturação de lojas virtuais com experiência de compra, rastreamento e foco em vendas. Conheça a metodologia de Criação de E-commerce da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é Criação de E-commerce?",
+        "answer": "Estruturação de lojas virtuais com experiência de compra, rastreamento e foco em vendas."
+      },
+      {
+        "question": "O que está incluído no serviço de Criação de E-commerce?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: arquitetura de categorias e produtos; jornada e checkout com menos atritos; mensuração de pedidos e desempenho. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de Criação de E-commerce?",
+        "answer": "Os principais indicadores são conversão de compras, receita e abandono de checkout. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "google",
+    "slug": "google-ads",
+    "name": "Google Ads",
+    "tag": "Pesquisa e performance",
+    "description": "Anúncios na Pesquisa, YouTube e outros formatos para alcançar consumidores com intenção de compra.",
+    "deliverables": [
+      "Planejamento de termos e intenção",
+      "Campanhas, anúncios e negativas",
+      "Mensuração de leads e otimização por qualidade"
+    ],
+    "metrics": "Custo por conversão qualificada, vendas e retorno.",
+    "seo": {
+      "title": "Google Ads para Empresas | INSALES Marketing",
+      "description": "Anúncios na Pesquisa, YouTube e outros formatos para alcançar consumidores com intenção de compra. Conheça a metodologia de Google Ads da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é Google Ads?",
+        "answer": "Anúncios na Pesquisa, YouTube e outros formatos para alcançar consumidores com intenção de compra."
+      },
+      {
+        "question": "O que está incluído no serviço de Google Ads?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: planejamento de termos e intenção; campanhas, anúncios e negativas; mensuração de leads e otimização por qualidade. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de Google Ads?",
+        "answer": "Os principais indicadores são custo por conversão qualificada, vendas e retorno. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "sites",
+    "slug": "sites-institucionais",
+    "name": "Sites Institucionais",
+    "tag": "Presença digital",
+    "description": "Sites rápidos e responsivos para apresentar autoridade, captar oportunidades e crescer organicamente.",
+    "deliverables": [
+      "Design responsivo e arquitetura",
+      "Performance e SEO técnico",
+      "Formulários e eventos de conversão"
+    ],
+    "metrics": "Velocidade, tráfego qualificado e contatos gerados.",
+    "seo": {
+      "title": "Sites Institucionais para Empresas | INSALES Marketing",
+      "description": "Sites rápidos e responsivos para apresentar autoridade, captar oportunidades e crescer organicamente. Conheça a metodologia de Sites Institucionais da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é Sites Institucionais?",
+        "answer": "Sites rápidos e responsivos para apresentar autoridade, captar oportunidades e crescer organicamente."
+      },
+      {
+        "question": "O que está incluído no serviço de Sites Institucionais?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: design responsivo e arquitetura; performance e seo técnico; formulários e eventos de conversão. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de Sites Institucionais?",
+        "answer": "Os principais indicadores são velocidade, tráfego qualificado e contatos gerados. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "materiais",
+    "slug": "materiais-de-venda",
+    "name": "Materiais de Venda",
+    "tag": "Apoio comercial",
+    "description": "Materiais comerciais para comunicar valor de serviços e aumentar a qualidade de apresentações e propostas.",
+    "deliverables": [
+      "Diagnóstico da jornada de decisão",
+      "Propostas e apresentações comerciais",
+      "Conteúdo e materiais de apoio"
+    ],
+    "metrics": "Uso de materiais, avanço no funil e fechamento.",
+    "seo": {
+      "title": "Materiais de Venda para Empresas | INSALES Marketing",
+      "description": "Materiais comerciais para comunicar valor de serviços e aumentar a qualidade de apresentações e propostas. Conheça a metodologia de Materiais de Venda da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é Materiais de Venda?",
+        "answer": "Materiais comerciais para comunicar valor de serviços e aumentar a qualidade de apresentações e propostas."
+      },
+      {
+        "question": "O que está incluído no serviço de Materiais de Venda?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: diagnóstico da jornada de decisão; propostas e apresentações comerciais; conteúdo e materiais de apoio. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de Materiais de Venda?",
+        "answer": "Os principais indicadores são uso de materiais, avanço no funil e fechamento. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "videos",
+    "slug": "videos",
+    "name": "Vídeos Sociais e Institucionais",
+    "tag": "Audiovisual",
+    "description": "Vídeos para explicar soluções, fortalecer posicionamento e gerar conexão com clientes.",
+    "deliverables": [
+      "Roteiros e direção criativa",
+      "Produção e edição de vídeos",
+      "Versões adequadas aos canais"
+    ],
+    "metrics": "Retenção, alcance qualificado e respostas comerciais.",
+    "seo": {
+      "title": "Vídeos Sociais e Institucionais para Empresas | INSALES Marketing",
+      "description": "Vídeos para explicar soluções, fortalecer posicionamento e gerar conexão com clientes. Conheça a metodologia de Vídeos Sociais e Institucionais da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é Vídeos Sociais e Institucionais?",
+        "answer": "Vídeos para explicar soluções, fortalecer posicionamento e gerar conexão com clientes."
+      },
+      {
+        "question": "O que está incluído no serviço de Vídeos Sociais e Institucionais?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: roteiros e direção criativa; produção e edição de vídeos; versões adequadas aos canais. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de Vídeos Sociais e Institucionais?",
+        "answer": "Os principais indicadores são retenção, alcance qualificado e respostas comerciais. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "geo",
+    "slug": "geo",
+    "name": "GEO: SEO para Inteligência Artificial",
+    "tag": "Busca com IA",
+    "description": "Estruturação de conteúdo e autoridade para melhorar a descoberta da marca em experiências de busca com IA.",
+    "deliverables": [
+      "Diagnóstico de presença em buscas com IA",
+      "Conteúdo claro, entidades e fontes",
+      "Dados estruturados e validação de informações"
+    ],
+    "metrics": "Visibilidade observável, referência de marca e tráfego de busca.",
+    "seo": {
+      "title": "GEO: SEO para Inteligência Artificial para Empresas | INSALES Marketing",
+      "description": "Estruturação de conteúdo e autoridade para melhorar a descoberta da marca em experiências de busca com IA. Conheça a metodologia de GEO: SEO para Inteligência Artificial da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é GEO: SEO para Inteligência Artificial?",
+        "answer": "Estruturação de conteúdo e autoridade para melhorar a descoberta da marca em experiências de busca com IA."
+      },
+      {
+        "question": "O que está incluído no serviço de GEO: SEO para Inteligência Artificial?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: diagnóstico de presença em buscas com ia; conteúdo claro, entidades e fontes; dados estruturados e validação de informações. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de GEO: SEO para Inteligência Artificial?",
+        "answer": "Os principais indicadores são visibilidade observável, referência de marca e tráfego de busca. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "trafego",
+    "slug": "trafego-pago",
+    "name": "Tráfego Pago",
+    "tag": "Aquisição de clientes",
+    "description": "Estratégia integrada de mídia paga com Google e Meta conectados ao CRM para gerar oportunidades comerciais.",
+    "deliverables": [
+      "Diagnóstico de ofertas, público e canais",
+      "Campanhas, landing pages e rastreamento",
+      "Otimização por lead qualificado e venda"
+    ],
+    "metrics": "Custo por aquisição, taxa de qualificação e receita atribuída.",
+    "seo": {
+      "title": "Tráfego Pago para Empresas | INSALES Marketing",
+      "description": "Estratégia integrada de mídia paga com Google e Meta conectados ao CRM para gerar oportunidades comerciais. Conheça a metodologia de Tráfego Pago da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é Tráfego Pago?",
+        "answer": "Estratégia integrada de mídia paga com Google e Meta conectados ao CRM para gerar oportunidades comerciais."
+      },
+      {
+        "question": "O que está incluído no serviço de Tráfego Pago?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: diagnóstico de ofertas, público e canais; campanhas, landing pages e rastreamento; otimização por lead qualificado e venda. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de Tráfego Pago?",
+        "answer": "Os principais indicadores são custo por aquisição, taxa de qualificação e receita atribuída. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "ia",
+    "slug": "ia-atendimento",
+    "name": "IA de Atendimento",
+    "tag": "Automação inteligente",
+    "description": "Atendimento com IA para responder, qualificar e encaminhar leads com agilidade e contexto.",
+    "deliverables": [
+      "Mapeamento de conversas e objeções",
+      "Automação e integração com atendimento",
+      "Regras para transferência ao humano"
+    ],
+    "metrics": "Tempo de primeira resposta, agendamentos e leads qualificados.",
+    "seo": {
+      "title": "IA de Atendimento para Empresas | INSALES Marketing",
+      "description": "Atendimento com IA para responder, qualificar e encaminhar leads com agilidade e contexto. Conheça a metodologia de IA de Atendimento da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é IA de Atendimento?",
+        "answer": "Atendimento com IA para responder, qualificar e encaminhar leads com agilidade e contexto."
+      },
+      {
+        "question": "O que está incluído no serviço de IA de Atendimento?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: mapeamento de conversas e objeções; automação e integração com atendimento; regras para transferência ao humano. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de IA de Atendimento?",
+        "answer": "Os principais indicadores são tempo de primeira resposta, agendamentos e leads qualificados. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  },
+  {
+    "key": "crm",
+    "slug": "crm-automacao-comercial",
+    "name": "CRM e Automação Comercial",
+    "tag": "Gestão de vendas",
+    "description": "Organização do funil comercial, integrações e automações para acompanhar oportunidades do início ao fechamento.",
+    "deliverables": [
+      "Implantação do funil e etapas",
+      "Integração com formulários e canais",
+      "Indicadores, automações e acompanhamento"
+    ],
+    "metrics": "Velocidade comercial, conversão por etapa e receita do funil.",
+    "seo": {
+      "title": "CRM e Automação Comercial para Empresas | INSALES Marketing",
+      "description": "Organização do funil comercial, integrações e automações para acompanhar oportunidades do início ao fechamento. Conheça a metodologia de CRM e Automação Comercial da INSALES e solicite um diagnóstico."
+    },
+    "faq": [
+      {
+        "question": "O que é CRM e Automação Comercial?",
+        "answer": "Organização do funil comercial, integrações e automações para acompanhar oportunidades do início ao fechamento."
+      },
+      {
+        "question": "O que está incluído no serviço de CRM e Automação Comercial?",
+        "answer": "A estratégia é definida no diagnóstico e pode incluir: implantação do funil e etapas; integração com formulários e canais; indicadores, automações e acompanhamento. O escopo contratado define as entregas específicas."
+      },
+      {
+        "question": "Como avaliar os resultados de CRM e Automação Comercial?",
+        "answer": "Os principais indicadores são velocidade comercial, conversão por etapa e receita do funil. O acompanhamento depende dos canais e integrações disponíveis."
+      }
+    ]
+  }
+]

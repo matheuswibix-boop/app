@@ -1,0 +1,14 @@
+const fs=require("fs"),path=require("path");const root=path.join(__dirname,"..");const services=require("../src/lib/servicePages.json");
+const meta={"/":{title:"Marketing que vira receita | INSALES Marketing",description:"Agência de marketing, mídia paga, SEO, GEO, IA e processos comerciais para gerar crescimento previsível."},"/servicos":{title:"Serviços de Marketing e Vendas | INSALES",description:"Tráfego pago, SEO, GEO, IA de atendimento, CRM, sites e soluções integradas para sua empresa."},"/metodologia":{title:"Método PRIMA | INSALES Marketing",description:"Planejar, rastrear, integrar, melhorar e acelerar o crescimento com dados."},"/quem-somos":{title:"Quem Somos | INSALES Marketing",description:"Mais de 15 anos no mercado e mais de 2.000 empresas atendidas."},"/fale-conosco":{title:"Fale com a INSALES | Diagnóstico de Marketing",description:"Solicite diagnóstico comercial e de marketing."},"/blog":{title:"Blog | INSALES Marketing",description:"Conteúdos sobre marketing, vendas, SEO e inteligência artificial."}};
+const blogs=["o-que-e-data-marketing","pago-e-organico-motor-de-vendas","ia-no-funil-comercial"];
+for(const slug of blogs)meta["/blog/"+slug]={title:slug.replaceAll("-"," ")+" | INSALES",description:"Conteúdo sobre dados, marketing e vendas da INSALES."};
+for(const s of services) meta["/servicos/"+s.slug]=s.seo;
+const urls=Object.keys(meta);const base="https://insales.com.br";
+const xml=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+fs.writeFileSync(path.join(root,"public/sitemap.xml"),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls.map(u=>'  <url><loc>'+xml(base+(u==="/"?"/":u))+'</loc></url>').join("\n")+'\n</urlset>\n');
+fs.writeFileSync(path.join(root,"public/robots.txt"),"User-agent: *\nDisallow: /admin\n\nSitemap: "+base+"/sitemap.xml\n");
+if(process.argv[2]!=="after"){console.log("SEO: "+urls.length+" rotas");process.exit(0);}
+const built=path.join(root,"build");const index=fs.readFileSync(path.join(built,"index.html"),"utf8");const esc=s=>xml(s);
+for(const [url,m] of Object.entries(meta)){let html=index.replace(/<title>[\s\S]*?<\/title>/i,"<title>"+esc(m.title)+"</title>");const tags='<meta name="description" content="'+esc(m.description)+'" />\n<link rel="canonical" href="'+base+(url==="/"?"/":url)+'" />\n<meta name="robots" content="noindex, follow" />\n<meta property="og:title" content="'+esc(m.title)+'" />\n<meta property="og:description" content="'+esc(m.description)+'" />';
+html=html.replace(/<meta name="description"[^>]*>/i,"").replace(/<\/head>/i,tags+"\n</head>");const dest=url==="/"?path.join(built,"index.html"):path.join(built,url.slice(1),"index.html");fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,html);}
+console.log("SEO: "+urls.length+" HTMLs com metadados individuais");

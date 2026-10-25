@@ -17,7 +17,7 @@ export function ServicesPage() {
   return (
     <main data-testid="services-page">
       <PageHeader crumb="Serviços" eyebrow="Nossos serviços" title="Soluções completas para o seu" accent="crescimento."
-        text="Um ecossistema único de aquisição, do posicionamento da marca à venda fechada: mídia paga, SEO, conteúdo, sites, e-commerce e materiais comerciais trabalhando juntos." />
+        text="Um ecossistema único de aquisição, do posicionamento da marca à venda fechada: mídia paga, SEO, IA de atendimento, CRM, conteúdo, sites, e-commerce e materiais comerciais trabalhando juntos." />
       <ServicesGrid />
       <CtaBand />
     </main>

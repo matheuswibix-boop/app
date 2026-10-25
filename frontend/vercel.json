@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/servicos",
+      "destination": "/servicos/index.html"
+    },
+    {
+      "source": "/servicos/:slug",
+      "destination": "/servicos/:slug/index.html"
+    },
+    {
+      "source": "/metodologia",
+      "destination": "/metodologia/index.html"
+    },
+    {
+      "source": "/quem-somos",
+      "destination": "/quem-somos/index.html"
+    },
+    {
+      "source": "/fale-conosco",
+      "destination": "/fale-conosco/index.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog/:slug/index.html"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/admin/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/admin",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}

@@ -10,17 +10,21 @@ import { ServicesPage, MethodPage, AboutPage, ContactPage } from "@/pages/Pages"
 import { scrollTop } from "@/lib/scroll";
 import { useEffect } from "react";
 import Admin from "@/pages/Admin";
+import SeoHead from "@/components/seo/SeoHead";
+import ServiceDetail from "@/pages/ServiceDetail";
 
 const Shell = () => {
   const { pathname, hash } = useLocation();
   useEffect(() => { if (!hash) scrollTop(); }, [pathname, hash]);
-  if (pathname.startsWith("/admin")) return <Admin />;
+  if (pathname.startsWith("/admin")) return <><SeoHead /><Admin /></>;
   return (
     <>
+      <SeoHead />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/servicos" element={<ServicesPage />} />
+        <Route path="/servicos/:slug" element={<ServiceDetail />} />
         <Route path="/metodologia" element={<MethodPage />} />
         <Route path="/quem-somos" element={<AboutPage />} />
         <Route path="/fale-conosco" element={<ContactPage />} />
