@@ -12,7 +12,7 @@ import { T, useLanguage } from "@/lib/i18n";
 
 const useTitle = (title) => {
   const {t,lang} = useLanguage();
-  useEffect(() => { document.title = `${t(title)} | INSALES`; }, [title,lang]);
+  useEffect(() => { document.title = `${t(title)} | INSALES`; }, [title,lang,t]);
 };
 
 export function ServicesPage() {
