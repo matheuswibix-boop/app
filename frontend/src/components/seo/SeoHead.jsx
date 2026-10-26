@@ -29,6 +29,6 @@ export default function SeoHead(){
   setMeta('meta[property="og:title"]',["property","og:title"],title);
   setMeta('meta[property="og:description"]',["property","og:description"],description);
   setMeta('meta[property="og:locale"]',["property","og:locale"],lang==="pt"?"pt_BR":lang==="es"?"es_ES":"en_GB");
- },[pathname,lang]);
+ },[pathname,lang,t]);
  return null;
 }
