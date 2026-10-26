@@ -918,3 +918,158 @@ Object.assign(translations, {
     "en": "An initial 90-day action plan with opportunities, priorities, relevant metrics, and next steps discussed during the consultation."
   }
 });
+
+Object.assign(translations, {
+  "Reconhecimento de marca, procura pela empresa e conversão por origem.": {
+    "es": "Reconocimiento de marca, búsquedas de la empresa y conversión por origen.",
+    "en": "Brand awareness, company searches, and conversion by source."
+  },
+  "Custo por lead, taxa de oportunidade e custo de aquisição.": {
+    "es": "Costo por prospecto, tasa de oportunidad y costo de adquisición.",
+    "en": "Cost per lead, opportunity rate, and acquisition cost."
+  },
+  "Alcance qualificado, engajamento relevante e oportunidades originadas.": {
+    "es": "Alcance cualificado, interacción relevante y oportunidades generadas.",
+    "en": "Qualified reach, meaningful engagement, and generated opportunities."
+  },
+  "Cliques orgânicos, posição por busca e conversões assistidas.": {
+    "es": "Clics orgánicos, posición por búsqueda y conversiones asistidas.",
+    "en": "Organic clicks, search rankings, and assisted conversions."
+  },
+  "Conversão de compras, receita e abandono de checkout.": {
+    "es": "Conversión de compras, ingresos y abandono de checkout.",
+    "en": "Purchase conversion, revenue, and checkout abandonment."
+  },
+  "Custo por conversão qualificada, vendas e retorno.": {
+    "es": "Costo por conversión cualificada, ventas y retorno.",
+    "en": "Cost per qualified conversion, sales, and return."
+  },
+  "Velocidade, tráfego qualificado e contatos gerados.": {
+    "es": "Velocidad, tráfico cualificado y contactos generados.",
+    "en": "Speed, qualified traffic, and generated leads."
+  },
+  "Uso de materiais, avanço no funil e fechamento.": {
+    "es": "Uso de materiales, avance por el embudo y cierres.",
+    "en": "Material usage, pipeline progression, and closings."
+  },
+  "Retenção, alcance qualificado e respostas comerciais.": {
+    "es": "Retención, alcance cualificado y respuestas comerciales.",
+    "en": "Retention, qualified reach, and sales inquiries."
+  },
+  "Visibilidade observável, referência de marca e tráfego de busca.": {
+    "es": "Visibilidad observable, referencias de marca y tráfico de búsqueda.",
+    "en": "Observable visibility, brand references, and search traffic."
+  },
+  "Custo por aquisição, taxa de qualificação e receita atribuída.": {
+    "es": "Costo por adquisición, tasa de cualificación e ingresos atribuidos.",
+    "en": "Acquisition cost, qualification rate, and attributed revenue."
+  },
+  "Tempo de primeira resposta, agendamentos e leads qualificados.": {
+    "es": "Tiempo de primera respuesta, citas y prospectos cualificados.",
+    "en": "First-response time, bookings, and qualified leads."
+  },
+  "Velocidade comercial, conversão por etapa e receita do funil.": {
+    "es": "Velocidad comercial, conversión por etapa e ingresos del embudo.",
+    "en": "Sales velocity, stage conversion, and pipeline revenue."
+  },
+  "Facebook e Instagram": {
+    "es": "Facebook e Instagram",
+    "en": "Facebook and Instagram"
+  },
+  "Conteúdo e presença": {
+    "es": "Contenido y presencia",
+    "en": "Content and presence"
+  },
+  "Busca orgânica": {
+    "es": "Búsqueda orgánica",
+    "en": "Organic search"
+  },
+  "Lojas virtuais": {
+    "es": "Tiendas online",
+    "en": "Online stores"
+  },
+  "Pesquisa e performance": {
+    "es": "Búsqueda y rendimiento",
+    "en": "Search and performance"
+  },
+  "Apoio comercial": {
+    "es": "Soporte comercial",
+    "en": "Sales enablement"
+  },
+  "Busca com IA": {
+    "es": "Búsqueda con IA",
+    "en": "AI search"
+  },
+  "Aquisição de clientes": {
+    "es": "Adquisición de clientes",
+    "en": "Customer acquisition"
+  },
+  "Automação inteligente": {
+    "es": "Automatización inteligente",
+    "en": "Intelligent automation"
+  },
+  "Gestão de vendas": {
+    "es": "Gestión de ventas",
+    "en": "Sales management"
+  },
+  "GEO: SEO para Inteligência Artificial": {
+    "es": "GEO: SEO para Inteligencia Artificial",
+    "en": "GEO: SEO for Artificial Intelligence"
+  },
+  "Estratégia INSALES": {
+    "es": "Estrategia INSALES",
+    "en": "INSALES Strategy"
+  },
+  "Do diagnóstico à": {
+    "es": "Del diagnóstico a la",
+    "en": "From diagnosis to"
+  },
+  "execução.": {
+    "es": "ejecución.",
+    "en": "execution."
+  },
+  "Solicitar diagnóstico": {
+    "es": "Solicitar diagnóstico",
+    "en": "Request an assessment"
+  },
+  "Principais entregas": {
+    "es": "Entregables principales",
+    "en": "Key deliverables"
+  },
+  "Indicadores relevantes": {
+    "es": "Indicadores relevantes",
+    "en": "Relevant metrics"
+  },
+  "Perguntas frequentes": {
+    "es": "Preguntas frecuentes",
+    "en": "Frequently asked questions"
+  },
+  "Entenda a": {
+    "es": "Descubre la",
+    "en": "Understand the"
+  },
+  "solução.": {
+    "es": "solución.",
+    "en": "solution."
+  },
+  "Conheça também": {
+    "es": "Conoce también",
+    "en": "Explore related services"
+  },
+  "Conhecer serviço": {
+    "es": "Conocer el servicio",
+    "en": "Explore service"
+  },
+  "que gera receita.": {
+    "es": "que genera ingresos.",
+    "en": "that generates revenue."
+  },
+  "Serviço não encontrado": {
+    "es": "Servicio no encontrado",
+    "en": "Service not found"
+  },
+  "Ver todos os serviços": {
+    "es": "Ver todos los servicios",
+    "en": "View all services"
+  }
+});
