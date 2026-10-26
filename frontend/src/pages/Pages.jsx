@@ -8,6 +8,7 @@ import { ClientsStrip } from "@/components/site/Marquee";
 import { Contact } from "@/components/site/Contact";
 import { PageHeader, CtaBand } from "@/components/site/PageHeader";
 import { CONTACT } from "@/lib/content";
+import { T, useLanguage } from "@/lib/i18n";
 
 const useTitle = (t) => {
   useEffect(() => { document.title = `${t} | INSALES`; }, [t]);
@@ -38,11 +39,20 @@ export function MethodPage() {
 }
 
 export function AboutPage() {
-  useTitle("Quem Somos");
+  const {t} = useLanguage();
+  useTitle(t("Quem Somos"));
   return (
     <main data-testid="about-page">
-      <PageHeader crumb="Quem Somos" eyebrow="Quem somos" title="Hub de Data Marketing" accent="e Vendas."
-        text="Somos um hub de data marketing focado em aceleração digital e crescimento previsível. Estruturamos dados, integramos canais e decidimos por indicadores." />
+      <PageHeader crumb={t("Quem Somos")} eyebrow={t("Quem Somos")} title={t("Hub de Data Marketing")} accent={t("e Vendas.")}
+        text={t("Somos um hub de data marketing focado em aceleração digital e crescimento previsível. Estruturamos dados, integramos canais e decidimos por indicadores.")} />
+      <section data-testid="who-we-are-manifesto" className="px-5 pb-16 md:px-10">
+        <div className="mx-auto max-w-[1400px] rounded-3xl border border-[#FFC400]/25 bg-[#111316] px-7 py-10 md:px-12 md:py-14">
+          <p className="font-mono text-xs uppercase tracking-[.2em] text-[#FFC400]"><T>Nosso compromisso</T></p>
+          <h2 className="font-display mt-5 text-4xl uppercase leading-[1] sm:text-5xl md:text-6xl">
+            <T>Vivemos o que</T> <span className="text-[#FFC400]"><T>vendemos.</T></span>
+          </h2>
+        </div>
+      </section>
       <About />
       <ClientsStrip />
       <CtaBand />
