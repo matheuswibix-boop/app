@@ -1396,3 +1396,330 @@ Object.assign(translations, {
     "en": "Progressive scaling based on margins, CAC, demand, and sales capacity."
   }
 });
+
+Object.assign(translations, {
+  "Diagnóstico antes de qualquer campanha": {
+    "es": "Diagnóstico antes de cualquier campaña",
+    "en": "Assessment before any campaign"
+  },
+  "Consultoria Estratégica": {
+    "es": "Consultoría Estratégica",
+    "en": "Strategic Consultation"
+  },
+  "Uma hora para enxergar": {
+    "es": "Una hora para descubrir",
+    "en": "One hour to see"
+  },
+  "o próximo passo.": {
+    "es": "el siguiente paso.",
+    "en": "the next step."
+  },
+  "Entenda o seu setor, a demanda real pelo que você vende e os gargalos que dificultam o crescimento. Saia da conversa com prioridades claras, não com uma apresentação genérica.": {
+    "es": "Entiende tu sector, la demanda real de lo que vendes y los obstáculos que limitan el crecimiento. Termina la conversación con prioridades claras, no con una presentación genérica.",
+    "en": "Understand your sector, real demand for your offering, and the bottlenecks holding back growth. Leave with clear priorities, not a generic presentation."
+  },
+  "Selecione": {
+    "es": "Selecciona",
+    "en": "Select"
+  },
+  "Nome *": {
+    "es": "Nombre *",
+    "en": "Name *"
+  },
+  "Empresa": {
+    "es": "Empresa",
+    "en": "Company"
+  },
+  "E-mail *": {
+    "es": "Correo electrónico *",
+    "en": "Email *"
+  },
+  "WhatsApp *": {
+    "es": "WhatsApp *",
+    "en": "WhatsApp *"
+  },
+  "Faturamento": {
+    "es": "Facturación",
+    "en": "Revenue"
+  },
+  "Interesse": {
+    "es": "Interés",
+    "en": "Interest"
+  },
+  "Conte sobre seu desafio": {
+    "es": "Cuéntanos tu desafío",
+    "en": "Tell us about your challenge"
+  },
+  "Seu nome": {
+    "es": "Tu nombre",
+    "en": "Your name"
+  },
+  "Nome da empresa": {
+    "es": "Nombre de la empresa",
+    "en": "Company name"
+  },
+  "Ex.: queremos reduzir o CAC e escalar as vendas online": {
+    "es": "Ej.: queremos reducir el CAC y aumentar las ventas online",
+    "en": "E.g. we want to reduce CAC and scale online sales"
+  },
+  "Até R$ 50 mil/mês": {
+    "es": "Hasta R$ 50 mil/mes",
+    "en": "Up to R$ 50k/month"
+  },
+  "R$ 50 a 200 mil/mês": {
+    "es": "R$ 50–200 mil/mes",
+    "en": "R$ 50k–200k/month"
+  },
+  "R$ 200 mil a 1 mi/mês": {
+    "es": "R$ 200 mil–1 millón/mes",
+    "en": "R$ 200k–1m/month"
+  },
+  "Acima de R$ 1 mi/mês": {
+    "es": "Más de R$ 1 millón/mes",
+    "en": "Over R$ 1m/month"
+  },
+  "SEO + GEO": {
+    "es": "SEO + GEO",
+    "en": "SEO + GEO"
+  },
+  "CRM e Automação": {
+    "es": "CRM y automatización",
+    "en": "CRM and Automation"
+  },
+  "IA para Vendas": {
+    "es": "IA para Ventas",
+    "en": "AI for Sales"
+  },
+  "Site / E-commerce": {
+    "es": "Sitio web / E-commerce",
+    "en": "Website / E-commerce"
+  },
+  "Ainda não sei": {
+    "es": "Aún no lo sé",
+    "en": "Not sure yet"
+  },
+  "Seu diagnóstico começa pelo WhatsApp.": {
+    "es": "Tu diagnóstico comienza por WhatsApp.",
+    "en": "Your assessment starts on WhatsApp."
+  },
+  "Nesta etapa, o site não grava formulários. Ao continuar, você confere a mensagem no WhatsApp e decide se deseja enviá-la.": {
+    "es": "En esta etapa, el sitio no almacena formularios. Al continuar, revisarás el mensaje en WhatsApp y decidirás si deseas enviarlo.",
+    "en": "At this stage, the site does not save form submissions. Continue to review the message in WhatsApp and decide whether to send it."
+  },
+  "Continuar pelo WhatsApp": {
+    "es": "Continuar por WhatsApp",
+    "en": "Continue on WhatsApp"
+  },
+  "O envio da mensagem depende da sua confirmação no WhatsApp. O site não confirma recebimento antecipadamente.": {
+    "es": "El envío requiere tu confirmación en WhatsApp. El sitio no confirma la recepción por adelantado.",
+    "en": "Sending requires your confirmation in WhatsApp. The site does not claim to have received the message beforehand."
+  },
+  "Fale com especialista": {
+    "es": "Habla con un especialista",
+    "en": "Talk to an expert"
+  },
+  "Pronto para escalar seus": {
+    "es": "¿Listo para impulsar tus",
+    "en": "Ready to scale your"
+  },
+  "resultados?": {
+    "es": "resultados?",
+    "en": "results?"
+  },
+  "Receba um diagnóstico do seu cenário atual e descubra as oportunidades reais para crescer, com orientações e um plano personalizado.": {
+    "es": "Recibe un diagnóstico de tu situación actual y descubre oportunidades reales de crecimiento con recomendaciones y un plan personalizado.",
+    "en": "Get an assessment of your current situation and discover real growth opportunities with advice and a tailored plan."
+  },
+  "Prefere WhatsApp? Chame agora": {
+    "es": "¿Prefieres WhatsApp? Escríbenos",
+    "en": "Prefer WhatsApp? Message us"
+  },
+  "Olá! Vim pelo site da INSALES e gostaria de agendar minha Consultoria Estratégica.": {
+    "es": "¡Hola! Vengo del sitio de INSALES y me gustaría agendar una Consultoría Estratégica.",
+    "en": "Hello! I came from the INSALES website and would like to schedule a Strategic Consultation."
+  },
+  "Nome: ": {
+    "es": "Nombre: ",
+    "en": "Name: "
+  },
+  "Empresa: ": {
+    "es": "Empresa: ",
+    "en": "Company: "
+  },
+  "Faturamento: ": {
+    "es": "Facturación: ",
+    "en": "Revenue: "
+  },
+  "Interesse: ": {
+    "es": "Interés: ",
+    "en": "Interest: "
+  },
+  "Desafio: ": {
+    "es": "Desafío: ",
+    "en": "Challenge: "
+  },
+  "Origem: ": {
+    "es": "Origen: ",
+    "en": "Source: "
+  },
+  "Não informado": {
+    "es": "No informado",
+    "en": "Not provided"
+  },
+  "Diagnóstico inicial": {
+    "es": "Diagnóstico inicial",
+    "en": "Initial assessment"
+  },
+  "Quero conversar sobre oportunidades de crescimento.": {
+    "es": "Quiero conversar sobre oportunidades de crecimiento.",
+    "en": "I would like to discuss growth opportunities."
+  },
+  "Blog INSALES": {
+    "es": "Blog INSALES",
+    "en": "INSALES Blog"
+  },
+  "Conteúdo para": {
+    "es": "Contenido para",
+    "en": "Content for"
+  },
+  "quem vende.": {
+    "es": "quien vende.",
+    "en": "people who sell."
+  },
+  "Insights para": {
+    "es": "Ideas para",
+    "en": "Insights to"
+  },
+  "vender mais.": {
+    "es": "vender más.",
+    "en": "sell more."
+  },
+  "Ver todos os artigos →": {
+    "es": "Ver todos los artículos →",
+    "en": "Read all articles →"
+  },
+  "Artigo não encontrado": {
+    "es": "Artículo no encontrado",
+    "en": "Article not found"
+  },
+  "Voltar ao blog": {
+    "es": "Volver al blog",
+    "en": "Back to blog"
+  },
+  "Quer aplicar isso no seu negócio?": {
+    "es": "¿Quieres aplicar esto a tu negocio?",
+    "en": "Want to apply this to your business?"
+  },
+  "Conhecer consultoria": {
+    "es": "Conocer la consultoría",
+    "en": "Explore consultation"
+  },
+  "Continue lendo": {
+    "es": "Sigue leyendo",
+    "en": "Keep reading"
+  },
+  "Estratégia": {
+    "es": "Estrategia",
+    "en": "Strategy"
+  },
+  "Performance": {
+    "es": "Rendimiento",
+    "en": "Performance"
+  },
+  "Diagnóstico e estratégia": {
+    "es": "Diagnóstico y estrategia",
+    "en": "Assessment and strategy"
+  },
+  "Data Marketing": {
+    "es": "Data Marketing",
+    "en": "Data Marketing"
+  },
+  "Gestão comercial": {
+    "es": "Gestión comercial",
+    "en": "Sales management"
+  },
+  "O que é Data Marketing e por que ele substitui o marketing por achismo": {
+    "es": "Qué es Data Marketing y por qué sustituye el marketing basado en suposiciones",
+    "en": "What is Data Marketing and why it replaces guesswork"
+  },
+  "O motor de vendas: venda com dados do pago, escale no orgânico": {
+    "es": "El motor de ventas: vende con datos de anuncios y crece con tráfico orgánico",
+    "en": "The sales engine: use paid media data to scale organic growth"
+  },
+  "IA no funil comercial: onde ela realmente gera produtividade": {
+    "es": "IA en el embudo de ventas: dónde genera productividad",
+    "en": "AI in the sales funnel: where it truly boosts productivity"
+  },
+  "Diagnóstico estratégico de marketing: o que analisar antes de investir em anúncios": {
+    "es": "Diagnóstico estratégico de marketing: qué analizar antes de invertir en anuncios",
+    "en": "Strategic marketing assessment: what to analyze before running ads"
+  },
+  "Do clique à venda: como rastrear o marketing e identificar os canais que trazem receita": {
+    "es": "Del clic a la venta: cómo medir el marketing e identificar canales rentables",
+    "en": "From click to sale: how to track marketing and revenue-generating channels"
+  },
+  "Seu CRM vende ou apenas armazena contatos? Como melhorar conversão e ticket médio": {
+    "es": "¿Tu CRM vende o solo guarda contactos? Cómo mejorar la conversión y el ticket promedio",
+    "en": "Does your CRM sell or just store contacts? Improve conversion and deal value"
+  },
+  "Quando cada real investido tem origem, destino e resultado rastreáveis, marketing deixa de ser custo e vira motor de receita.": {
+    "es": "Cuando cada real invertido tiene un origen, destino y resultado medibles, el marketing deja de ser un costo y se convierte en motor de ingresos.",
+    "en": "When every invested real has a traceable source, destination, and outcome, marketing becomes a revenue engine instead of a cost."
+  },
+  "A mídia paga traz receita e dados no curto prazo. O SEO transforma essa inteligência em ativo permanente.": {
+    "es": "Los medios pagos generan ingresos y datos a corto plazo. El SEO convierte esa inteligencia en un activo duradero.",
+    "en": "Paid media brings revenue and data quickly. SEO turns those insights into a long-term asset."
+  },
+  "Inteligência artificial não substitui o vendedor. Ela elimina o trabalho que impede o vendedor de vender.": {
+    "es": "La IA no sustituye al vendedor. Elimina tareas que le impiden vender.",
+    "en": "AI doesn't replace salespeople. It removes the work that stops them from selling."
+  },
+  "Uma campanha pode gerar cliques e ainda assim não trazer clientes. Saiba como avaliar mercado, concorrentes, intenção de compra e estrutura comercial antes de investir.": {
+    "es": "Una campaña puede generar clics y aun así no atraer clientes. Aprende a evaluar el mercado, la competencia, la intención de compra y la estructura comercial antes de invertir.",
+    "en": "A campaign can get clicks without winning customers. Learn to evaluate the market, competitors, purchase intent, and sales capacity before spending."
+  },
+  "Cliques e leads não bastam. Veja como conectar campanha, palavra-chave, CRM, ticket médio e receita para tomar decisões melhores.": {
+    "es": "Los clics y prospectos no bastan. Conecta campañas, palabras clave, CRM, ticket promedio e ingresos para decidir mejor.",
+    "en": "Clicks and leads aren't enough. Connect campaigns, keywords, CRM, average deal value, and revenue to make better decisions."
+  },
+  "Descubra como priorização de oportunidades, velocidade de atendimento e indicadores comerciais se conectam ao retorno do marketing.": {
+    "es": "Descubre cómo priorizar oportunidades, responder rápidamente y medir las ventas para mejorar el retorno del marketing.",
+    "en": "See how prioritizing opportunities, responding quickly, and tracking sales metrics connects to marketing returns."
+  },
+  "12 out 2026": {
+    "es": "12 oct 2026",
+    "en": "Oct 12, 2026"
+  },
+  "28 set 2026": {
+    "es": "28 sep 2026",
+    "en": "Sep 28, 2026"
+  },
+  "15 set 2026": {
+    "es": "15 sep 2026",
+    "en": "Sep 15, 2026"
+  },
+  "25 out 2026": {
+    "es": "25 oct 2026",
+    "en": "Oct 25, 2026"
+  },
+  "6 min": {
+    "es": "6 min",
+    "en": "6 min"
+  },
+  "5 min": {
+    "es": "5 min",
+    "en": "5 min"
+  },
+  "4 min": {
+    "es": "4 min",
+    "en": "4 min"
+  },
+  "7 min": {
+    "es": "7 min",
+    "en": "7 min"
+  },
+  "8 min": {
+    "es": "8 min",
+    "en": "8 min"
+  }
+});
