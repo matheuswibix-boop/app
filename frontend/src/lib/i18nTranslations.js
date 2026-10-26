@@ -1073,3 +1073,326 @@ Object.assign(translations, {
     "en": "View all services"
   }
 });
+
+Object.assign(translations, {
+  "O que controlamos": {
+    "es": "Lo que controlamos",
+    "en": "What we track"
+  },
+  "O clique é o começo.": {
+    "es": "El clic es el comienzo.",
+    "en": "The click is just the beginning."
+  },
+  "O destino é a receita.": {
+    "es": "El destino son los ingresos.",
+    "en": "Revenue is the destination."
+  },
+  "Grande parte das empresas conhece o custo por clique e o volume de leads, mas não consegue ligar o investimento aos contatos qualificados e às vendas. O PRIMA organiza a leitura desse caminho, dentro dos limites de rastreamento de cada negócio.": {
+    "es": "Muchas empresas conocen el costo por clic y el volumen de prospectos, pero no logran relacionar la inversión con contactos cualificados y ventas. PRIMA organiza esta lectura dentro de los límites de medición de cada negocio.",
+    "en": "Many companies know their cost per click and lead volume but cannot connect investment to qualified leads and sales. PRIMA helps track that journey within each company's measurement limitations."
+  },
+  "A jornada completa": {
+    "es": "El recorrido completo",
+    "en": "The complete journey"
+  },
+  "Origem do contato → qualidade do lead → avanço comercial → fechamento → receita.": {
+    "es": "Origen del contacto → calidad del prospecto → avance comercial → cierre → ingresos.",
+    "en": "Lead source → lead quality → sales progress → closing → revenue."
+  },
+  "Os cinco pilares": {
+    "es": "Los cinco pilares",
+    "en": "The five pillars"
+  },
+  "PRIMA não é um slogan.": {
+    "es": "PRIMA no es un eslogan.",
+    "en": "PRIMA is not a slogan."
+  },
+  "É um processo de gestão.": {
+    "es": "Es un proceso de gestión.",
+    "en": "It's a management process."
+  },
+  "Diagnóstico do empresário": {
+    "es": "Diagnóstico del empresario",
+    "en": "Business owner assessment"
+  },
+  "Você tem dados para": {
+    "es": "¿Tienes datos para",
+    "en": "Do you have data to"
+  },
+  "decidir?": {
+    "es": "decidir?",
+    "en": "make decisions?"
+  },
+  "O desafio não é gerar mais relatórios. É saber onde agir para aumentar vendas e proteger a rentabilidade.": {
+    "es": "El desafío no es generar más informes, sino saber dónde actuar para vender más y proteger la rentabilidad.",
+    "en": "The challenge isn't creating more reports. It's knowing where to act to increase sales and protect profitability."
+  },
+  "Comece pelo diagnóstico estratégico": {
+    "es": "Empieza con el diagnóstico estratégico",
+    "en": "Start with a strategic assessment"
+  },
+  "Indicadores sem complicação": {
+    "es": "Indicadores sin complicaciones",
+    "en": "Metrics made simple"
+  },
+  "Dados que ajudam a": {
+    "es": "Datos que ayudan a",
+    "en": "Data that helps you"
+  },
+  "decidir.": {
+    "es": "decidir.",
+    "en": "decide."
+  },
+  "Ritmo de trabalho": {
+    "es": "Ritmo de trabajo",
+    "en": "Delivery roadmap"
+  },
+  "Um plano de 90 dias.": {
+    "es": "Un plan de 90 días.",
+    "en": "A 90-day plan."
+  },
+  "Uma visão de seis meses.": {
+    "es": "Una visión de seis meses.",
+    "en": "A six-month outlook."
+  },
+  "A consultoria inicial define prioridades. A execução contínua, quando contratada, aprofunda testes e ajustes. A escala depende de demanda, margem, estrutura comercial e dados suficientes, sem garantia de faturamento.": {
+    "es": "La consultoría inicial define prioridades. La ejecución continua, cuando se contrata, profundiza pruebas y ajustes. La escala depende de la demanda, márgenes, estructura comercial y datos suficientes, sin garantizar ingresos.",
+    "en": "The initial consultation sets priorities. Ongoing execution, if contracted, deepens testing and optimization. Scaling depends on demand, margins, sales capacity, and sufficient data, without guaranteed revenue."
+  },
+  "Comece por uma decisão baseada em dados.": {
+    "es": "Empieza con una decisión basada en datos.",
+    "en": "Start with a data-driven decision."
+  },
+  "Uma hora de diagnóstico antes de falar em campanhas.": {
+    "es": "Una hora de diagnóstico antes de hablar de campañas.",
+    "en": "One hour of assessment before discussing campaigns."
+  },
+  "Busca e origem": {
+    "es": "Búsqueda y origen",
+    "en": "Search and source"
+  },
+  "Canal, campanha, palavra-chave, região e primeira página acessada.": {
+    "es": "Canal, campaña, palabra clave, región y primera página visitada.",
+    "en": "Channel, campaign, keyword, region, and first landing page."
+  },
+  "Lead qualificado": {
+    "es": "Prospecto cualificado",
+    "en": "Qualified lead"
+  },
+  "ICP, MQL, intenção de compra e contexto do contato.": {
+    "es": "ICP, MQL, intención de compra y contexto del contacto.",
+    "en": "ICP, MQL, purchase intent, and lead context."
+  },
+  "Processo comercial": {
+    "es": "Proceso comercial",
+    "en": "Sales process"
+  },
+  "Tempo de resposta, responsável, etapas, proposta e follow-up.": {
+    "es": "Tiempo de respuesta, responsable, etapas, propuesta y seguimiento.",
+    "en": "Response time, owner, stages, proposal, and follow-up."
+  },
+  "Venda e receita": {
+    "es": "Venta e ingresos",
+    "en": "Sale and revenue"
+  },
+  "Fechamento, ticket médio, CAC e retorno por origem identificável.": {
+    "es": "Cierre, ticket promedio, CAC y retorno por origen identificable.",
+    "en": "Closed deals, average deal value, CAC, and return by identifiable source."
+  },
+  "Começar pelas perguntas certas.": {
+    "es": "Empezar con las preguntas correctas.",
+    "en": "Start with the right questions."
+  },
+  "Identificar de onde vêm as oportunidades.": {
+    "es": "Identificar de dónde vienen las oportunidades.",
+    "en": "Know where opportunities come from."
+  },
+  "Marketing e vendas no mesmo funil.": {
+    "es": "Marketing y ventas en el mismo embudo.",
+    "en": "Marketing and sales in one funnel."
+  },
+  "Trocar achismo por decisões.": {
+    "es": "Sustituir suposiciones por decisiones.",
+    "en": "Replace guesswork with decisions."
+  },
+  "Escalar com controle.": {
+    "es": "Escalar con control.",
+    "en": "Scale with control."
+  },
+  "Demanda, concorrentes e oportunidades de fundo de funil": {
+    "es": "Demanda, competidores y oportunidades de fondo de embudo",
+    "en": "Demand, competitors, and bottom-of-funnel opportunities"
+  },
+  "ICP, MQL, jornada de compra e proposta de valor": {
+    "es": "ICP, MQL, proceso de compra y propuesta de valor",
+    "en": "ICP, MQL, buying journey, and value proposition"
+  },
+  "Metas comerciais, linha de base e plano de ação": {
+    "es": "Objetivos comerciales, línea base y plan de acción",
+    "en": "Sales targets, baseline, and action plan"
+  },
+  "Eventos, GA4, UTMs e rastreio de formulários e WhatsApp": {
+    "es": "Eventos, GA4, UTM y seguimiento de formularios y WhatsApp",
+    "en": "Events, GA4, UTMs, and form/WhatsApp tracking"
+  },
+  "Relacionar campanhas, termos e origem aos negócios no CRM": {
+    "es": "Vincular campañas, términos y origen con negocios en el CRM",
+    "en": "Connect campaigns, keywords, and sources to deals in CRM"
+  },
+  "Medir resultado atribuível até a venda, respeitando limitações de dados": {
+    "es": "Medir resultados atribuibles hasta la venta, respetando limitaciones de datos",
+    "en": "Measure attributable outcomes through the sale, within data limitations"
+  },
+  "Alinhar mídia paga, SEO/GEO e comercial": {
+    "es": "Alinear medios pagos, SEO/GEO y ventas",
+    "en": "Align paid media, SEO/GEO, and sales"
+  },
+  "Definir SLAs e responsáveis pelo atendimento": {
+    "es": "Definir SLA y responsables de atención",
+    "en": "Set response SLAs and accountable owners"
+  },
+  "Padronizar etapas e classificação de leads no CRM": {
+    "es": "Estandarizar etapas y clasificación de prospectos en el CRM",
+    "en": "Standardize pipeline stages and lead classifications in CRM"
+  },
+  "Analisar MQL, SQL, propostas, vendas, CAC e ticket médio": {
+    "es": "Analizar MQL, SQL, propuestas, ventas, CAC y ticket promedio",
+    "en": "Analyze MQLs, SQLs, proposals, sales, CAC, and average deal value"
+  },
+  "Corrigir perdas por demora ou baixa qualificação": {
+    "es": "Corregir pérdidas por demora o baja cualificación",
+    "en": "Fix losses caused by slow response or weak qualification"
+  },
+  "Realocar orçamento por oportunidades que realmente convertem": {
+    "es": "Reasignar presupuesto a oportunidades que realmente convierten",
+    "en": "Shift budget toward opportunities that actually convert"
+  },
+  "Priorizar campanhas, canais e ofertas rentáveis": {
+    "es": "Priorizar campañas, canales y ofertas rentables",
+    "en": "Prioritize profitable campaigns, channels, and offers"
+  },
+  "Considerar capacidade do time, margem e retorno": {
+    "es": "Considerar capacidad del equipo, margen y retorno",
+    "en": "Account for team capacity, margins, and return"
+  },
+  "Revisar hipóteses, ROI, ROAS e metas de crescimento": {
+    "es": "Revisar hipótesis, ROI, ROAS y objetivos de crecimiento",
+    "en": "Review hypotheses, ROI, ROAS, and growth goals"
+  },
+  "Você sabe qual canal gera mais vendas, e não apenas cliques?": {
+    "es": "¿Sabes qué canal genera más ventas y no solo clics?",
+    "en": "Do you know which channel drives the most sales, not just clicks?"
+  },
+  "Qual palavra-chave traz mais clientes e maior ticket médio?": {
+    "es": "¿Qué palabra clave atrae más clientes y un ticket promedio mayor?",
+    "en": "Which keyword brings more customers and higher deal values?"
+  },
+  "Se dobrar a verba hoje, consegue atribuir o retorno?": {
+    "es": "Si duplicas hoy la inversión, ¿puedes atribuir el retorno?",
+    "en": "If you doubled your ad spend today, could you attribute the return?"
+  },
+  "Seu CRM mostra quais oportunidades o vendedor deve priorizar?": {
+    "es": "¿Tu CRM muestra qué oportunidades debe priorizar el vendedor?",
+    "en": "Does your CRM show which opportunities sales reps should prioritize?"
+  },
+  "Você acompanha CAC, ROI, ROAS e conversão por etapa?": {
+    "es": "¿Sigues CAC, ROI, ROAS y conversión por etapa?",
+    "en": "Do you track CAC, ROI, ROAS, and stage-by-stage conversion?"
+  },
+  "Possui um plano de seis meses para crescer com indicadores?": {
+    "es": "¿Tienes un plan de seis meses para crecer con indicadores?",
+    "en": "Do you have a metric-driven six-month growth plan?"
+  },
+  "MQL": {
+    "es": "MQL",
+    "en": "MQL"
+  },
+  "CAC": {
+    "es": "CAC",
+    "en": "CAC"
+  },
+  "ROAS": {
+    "es": "ROAS",
+    "en": "ROAS"
+  },
+  "ROI": {
+    "es": "ROI",
+    "en": "ROI"
+  },
+  "Contato que atende aos critérios acordados de perfil e interesse.": {
+    "es": "Contacto que cumple los criterios acordados de perfil e interés.",
+    "en": "A lead that matches the agreed profile and interest criteria."
+  },
+  "Custo considerado para conquistar um cliente, não apenas gerar um lead.": {
+    "es": "Costo considerado para adquirir un cliente, no solo un prospecto.",
+    "en": "Cost considered to acquire a customer, not merely generate a lead."
+  },
+  "Receita atribuída às campanhas dividida pelo gasto com publicidade.": {
+    "es": "Ingresos atribuidos a campañas divididos por gasto publicitario.",
+    "en": "Campaign-attributed revenue divided by advertising spend."
+  },
+  "Resultado financeiro comparado aos custos incluídos na análise.": {
+    "es": "Resultado financiero comparado con los costos incluidos en el análisis.",
+    "en": "Financial return compared with the costs included in the analysis."
+  },
+  "Custo de aquisição": {
+    "es": "Costo de adquisición",
+    "en": "Acquisition cost"
+  },
+  "Retorno dos anúncios": {
+    "es": "Retorno publicitario",
+    "en": "Ad return"
+  },
+  "Retorno do investimento": {
+    "es": "Retorno de la inversión",
+    "en": "Return on investment"
+  },
+  "0–30 dias": {
+    "es": "0–30 días",
+    "en": "Days 0–30"
+  },
+  "31–60 dias": {
+    "es": "31–60 días",
+    "en": "Days 31–60"
+  },
+  "61–90 dias": {
+    "es": "61–90 días",
+    "en": "Days 61–90"
+  },
+  "3–6 meses": {
+    "es": "3–6 meses",
+    "en": "Months 3–6"
+  },
+  "Fundamentos": {
+    "es": "Fundamentos",
+    "en": "Foundations"
+  },
+  "Validação": {
+    "es": "Validación",
+    "en": "Validation"
+  },
+  "Otimização": {
+    "es": "Optimización",
+    "en": "Optimization"
+  },
+  "Crescimento": {
+    "es": "Crecimiento",
+    "en": "Growth"
+  },
+  "Diagnóstico, ICP/MQL, instrumentação e prioridades comerciais.": {
+    "es": "Diagnóstico, ICP/MQL, medición y prioridades comerciales.",
+    "en": "Assessment, ICP/MQL, measurement setup, and sales priorities."
+  },
+  "Testes controlados de canais, ofertas, palavras-chave e atendimento.": {
+    "es": "Pruebas controladas de canales, ofertas, palabras clave y atención.",
+    "en": "Controlled tests of channels, offers, keywords, and customer service."
+  },
+  "Análise por qualidade do lead, conversão comercial e receita atribuível.": {
+    "es": "Análisis por calidad de prospecto, conversión comercial e ingresos atribuibles.",
+    "en": "Analysis of lead quality, sales conversion, and attributable revenue."
+  },
+  "Escala progressiva segundo margem, CAC, demanda e capacidade comercial.": {
+    "es": "Crecimiento progresivo según margen, CAC, demanda y capacidad comercial.",
+    "en": "Progressive scaling based on margins, CAC, demand, and sales capacity."
+  }
+});
