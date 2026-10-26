@@ -639,3 +639,282 @@ Object.assign(translations, {
     "en": "KPIs, automations, and monitoring"
   }
 });
+
+Object.assign(translations, {
+  "Pronto para escalar seus resultados?": {
+    "es": "¿Listo para impulsar tus resultados?",
+    "en": "Ready to scale your results?"
+  },
+  "Consultoria estratégica inicial": {
+    "es": "Consultoría estratégica inicial",
+    "en": "Initial strategic consultation"
+  },
+  "Antes de investir,": {
+    "es": "Antes de invertir,",
+    "en": "Before investing,"
+  },
+  "entenda onde crescer.": {
+    "es": "descubre dónde crecer.",
+    "en": "understand where to grow."
+  },
+  "Em uma conversa de aproximadamente uma hora, mergulhamos no seu setor, analisamos a demanda e os gargalos de marketing e vendas e construímos um plano inicial com prioridades para 90 dias. Não recomendamos campanhas sem entender o seu negócio.": {
+    "es": "En una conversación de aproximadamente una hora, profundizamos en tu sector, analizamos la demanda y los obstáculos de marketing y ventas y trazamos un plan inicial de prioridades para 90 días. No recomendamos campañas sin comprender tu negocio.",
+    "en": "In a conversation lasting about an hour, we examine your industry, market demand, and marketing and sales bottlenecks to build an initial 90-day action plan. We never recommend campaigns before understanding your business."
+  },
+  "de conversa estratégica com especialistas": {
+    "es": "de conversación estratégica con especialistas",
+    "en": "of strategic discussion with experts"
+  },
+  "O que você leva da conversa": {
+    "es": "Lo que te llevas de la reunión",
+    "en": "What you take away"
+  },
+  "Oportunidades reais, indicadores prioritários e um plano inicial de ação para os próximos 90 dias.": {
+    "es": "Oportunidades reales, métricas prioritarias y un plan de acción inicial para los próximos 90 días.",
+    "en": "Real opportunities, priority metrics, and an initial 90-day action plan."
+  },
+  "Conhecer a consultoria": {
+    "es": "Conocer la consultoría",
+    "en": "Explore the consultation"
+  },
+  "Mercado e demanda": {
+    "es": "Mercado y demanda",
+    "en": "Market and demand"
+  },
+  "Concorrentes, volume de buscas, palavras-chave de maior intenção de compra, posicionamento regional e presença no Google e nas IAs.": {
+    "es": "Competidores, volumen de búsquedas, palabras clave con intención de compra, posicionamiento regional y presencia en Google y en IA.",
+    "en": "Competitors, search volume, high-purchase-intent keywords, regional rankings, and visibility on Google and AI platforms."
+  },
+  "Cliente e jornada": {
+    "es": "Cliente y recorrido",
+    "en": "Customer and journey"
+  },
+  "Perfil de cliente ideal (ICP), critérios de MQL, objeções, jornada de compra e oportunidades para atrair pessoas mais qualificadas.": {
+    "es": "Perfil de cliente ideal (ICP), criterios MQL, objeciones, recorrido de compra y oportunidades para atraer contactos más cualificados.",
+    "en": "Ideal customer profile (ICP), MQL criteria, objections, buying journey, and opportunities to attract better-qualified prospects."
+  },
+  "Vendas e indicadores": {
+    "es": "Ventas e indicadores",
+    "en": "Sales and metrics"
+  },
+  "CRM, velocidade de atendimento, taxas de conversão, ticket médio e ligação entre investimentos e vendas.": {
+    "es": "CRM, velocidad de atención, tasas de conversión, ticket promedio y relación entre inversión y ventas.",
+    "en": "CRM, response speed, conversion rates, average deal value, and the connection between spending and sales."
+  },
+  "60 minutos · Diagnóstico e plano inicial": {
+    "es": "60 minutos · Diagnóstico y plan inicial",
+    "en": "60 minutes · Assessment and initial plan"
+  },
+  "Solicitar consultoria": {
+    "es": "Solicitar consultoría",
+    "en": "Request consultation"
+  },
+  "O primeiro passo": {
+    "es": "El primer paso",
+    "en": "The first step"
+  },
+  "Não ativamos campanhas": {
+    "es": "No lanzamos campañas",
+    "en": "We don't launch campaigns"
+  },
+  "no escuro.": {
+    "es": "a ciegas.",
+    "en": "in the dark."
+  },
+  "Antes de recomendar investimento e anúncios, analisamos concorrência, comportamento de busca, perfil ideal, jornada de compra e capacidade comercial. Nosso trabalho começa pelo diagnóstico, com dados de mercado e perguntas que revelam oportunidades.": {
+    "es": "Antes de recomendar presupuestos y anuncios, analizamos la competencia, las búsquedas, el perfil ideal, el proceso de compra y la capacidad comercial. Partimos de un diagnóstico respaldado por datos de mercado y preguntas que descubren oportunidades.",
+    "en": "Before recommending ad spend, we analyze competitors, search behavior, ideal customers, buying journeys, and sales capacity. Our work begins with a diagnosis based on market data and questions that uncover opportunities."
+  },
+  "Especialistas, não improviso.": {
+    "es": "Especialistas, no improvisación.",
+    "en": "Experts, not guesswork."
+  },
+  "A INSALES prioriza profissionais plenos e sêniores, selecionados por um processo técnico rigoroso. Cruzamos experiência em marketing e vendas com pesquisa, ferramentas especializadas e leitura de indicadores.": {
+    "es": "INSALES prioriza profesionales con experiencia intermedia y sénior, seleccionados mediante un riguroso proceso técnico. Combinamos experiencia en marketing y ventas con investigación, herramientas especializadas y análisis de indicadores.",
+    "en": "INSALES prioritizes experienced mid-level and senior professionals selected through a rigorous technical process. We combine hands-on marketing and sales expertise with research, specialized tools, and data analysis."
+  },
+  "A profundidade das análises depende dos dados públicos disponíveis e dos acessos que a empresa disponibilizar.": {
+    "es": "La profundidad del análisis depende de los datos públicos disponibles y los accesos que proporcione la empresa.",
+    "en": "The depth of the analysis depends on public data availability and the access the company provides."
+  },
+  "O que analisamos": {
+    "es": "Qué analizamos",
+    "en": "What we analyze"
+  },
+  "Diagnóstico 360° de": {
+    "es": "Diagnóstico 360° de",
+    "en": "360° assessment of"
+  },
+  "marketing e vendas.": {
+    "es": "marketing y ventas.",
+    "en": "marketing and sales."
+  },
+  "A conversa em quatro etapas": {
+    "es": "La conversación en cuatro etapas",
+    "en": "The conversation in four stages"
+  },
+  "Uma hora de": {
+    "es": "Una hora de",
+    "en": "One hour of"
+  },
+  "direcionamento.": {
+    "es": "orientación.",
+    "en": "strategic direction."
+  },
+  "Dúvidas frequentes": {
+    "es": "Preguntas frecuentes",
+    "en": "Frequently asked questions"
+  },
+  "Antes de": {
+    "es": "Antes de",
+    "en": "Before"
+  },
+  "agendar.": {
+    "es": "reservar.",
+    "en": "booking."
+  },
+  "O que você leva": {
+    "es": "Lo que te llevas",
+    "en": "What you take away"
+  },
+  "Clareza para tomar": {
+    "es": "Claridad para tomar",
+    "en": "Clarity to make"
+  },
+  "decisões.": {
+    "es": "decisiones.",
+    "en": "decisions."
+  },
+  "Mapa inicial de oportunidades, gargalos, indicadores a acompanhar e plano de ação de 90 dias. Se fizer sentido trabalhar juntos, a implementação será uma etapa separada.": {
+    "es": "Mapa inicial de oportunidades, obstáculos, indicadores a seguir y plan de acción de 90 días. Si decidimos trabajar juntos, la implementación será una etapa aparte.",
+    "en": "An initial map of opportunities, bottlenecks, KPIs, and a 90-day action plan. If working together makes sense, implementation is a separate phase."
+  },
+  "Cenário do setor": {
+    "es": "Panorama del sector",
+    "en": "Industry landscape"
+  },
+  "Demanda, sazonalidade e regiões com maior potencial de compra": {
+    "es": "Demanda, estacionalidad y regiones con mayor potencial de compra",
+    "en": "Demand, seasonality, and regions with the strongest purchase potential"
+  },
+  "Concorrentes, diferenciais e posicionamento regional": {
+    "es": "Competidores, diferenciadores y posicionamiento regional",
+    "en": "Competitors, differentiators, and regional positioning"
+  },
+  "Termos de busca com intenção comercial e oportunidades de fundo de funil": {
+    "es": "Búsquedas con intención comercial y oportunidades de fondo de embudo",
+    "en": "High-intent search terms and bottom-of-funnel opportunities"
+  },
+  "Presença digital": {
+    "es": "Presencia digital",
+    "en": "Digital presence"
+  },
+  "Histórico acessível do site, visibilidade orgânica e volume de pesquisas": {
+    "es": "Historial disponible del sitio, visibilidad orgánica y volumen de búsquedas",
+    "en": "Available site history, organic visibility, and search volume"
+  },
+  "Posições e palavras-chave que podem gerar contatos e vendas": {
+    "es": "Posiciones y palabras clave que pueden generar contactos y ventas",
+    "en": "Rankings and keywords that can generate leads and sales"
+  },
+  "Menções e referências da marca em ferramentas de IA, quando mensuráveis": {
+    "es": "Menciones y referencias de la marca en herramientas de IA, cuando se puedan medir",
+    "en": "Brand mentions and citations in AI tools, when measurable"
+  },
+  "Cliente ideal e jornada": {
+    "es": "Cliente ideal y recorrido",
+    "en": "Ideal customer and journey"
+  },
+  "ICP: perfil de cliente ideal e seu potencial econômico": {
+    "es": "ICP: perfil del cliente ideal y su potencial económico",
+    "en": "ICP: ideal customer profile and economic potential"
+  },
+  "MQL: critérios de qualificação para marketing e vendas": {
+    "es": "MQL: criterios de cualificación para marketing y ventas",
+    "en": "MQL: marketing and sales qualification criteria"
+  },
+  "Oferta, objeções, decisões de compra e mensagem por perfil": {
+    "es": "Oferta, objeciones, decisiones de compra y mensajes por perfil",
+    "en": "Offer, objections, buying decisions, and messaging by profile"
+  },
+  "Estrutura comercial": {
+    "es": "Estructura comercial",
+    "en": "Sales operations"
+  },
+  "Velocidade do primeiro atendimento, CRM e capacidade operacional": {
+    "es": "Velocidad de primera respuesta, CRM y capacidad operativa",
+    "en": "First-response speed, CRM, and operational capacity"
+  },
+  "Conversão entre lead, agendamento, proposta e venda": {
+    "es": "Conversión de prospecto a cita, propuesta y venta",
+    "en": "Lead-to-meeting, proposal, and sale conversion"
+  },
+  "Ticket médio, metas, follow-up e gargalos do processo": {
+    "es": "Ticket promedio, objetivos, seguimiento y obstáculos del proceso",
+    "en": "Average deal value, targets, follow-up, and process bottlenecks"
+  },
+  "Contexto e meta": {
+    "es": "Contexto y objetivo",
+    "en": "Context and goal"
+  },
+  "Entendemos oferta, margem, ticket médio, setor, operação e a meta comercial da empresa.": {
+    "es": "Entendemos oferta, margen, ticket promedio, sector, operación y objetivo comercial de la empresa.",
+    "en": "We understand your offer, margins, average deal value, market, operations, and sales goals."
+  },
+  "Leitura de dados": {
+    "es": "Lectura de datos",
+    "en": "Data analysis"
+  },
+  "Analisamos os indicadores e sinais disponíveis de demanda, SEO, GEO, mídia, concorrência e CRM.": {
+    "es": "Analizamos indicadores y señales disponibles de demanda, SEO, GEO, medios, competencia y CRM.",
+    "en": "We analyze available signals and metrics for demand, SEO, GEO, media, competitors, and CRM."
+  },
+  "Gargalos e oportunidades": {
+    "es": "Obstáculos y oportunidades",
+    "en": "Bottlenecks and opportunities"
+  },
+  "Priorizamos o que reduz perdas, aumenta qualificação e melhora conversões.": {
+    "es": "Priorizamos lo que reduce pérdidas, mejora la cualificación y aumenta conversiones.",
+    "en": "We prioritize what reduces losses, improves lead quality, and increases conversions."
+  },
+  "Plano inicial": {
+    "es": "Plan inicial",
+    "en": "Initial plan"
+  },
+  "Organizamos ações prioritárias para 90 dias e hipóteses de evolução para seis meses.": {
+    "es": "Organizamos acciones prioritarias para 90 días e hipótesis de crecimiento para seis meses.",
+    "en": "We organize 90-day priorities and growth hypotheses for the next six months."
+  },
+  "Preciso ter CRM e acesso a todas as ferramentas?": {
+    "es": "¿Necesito un CRM y acceso a todas las herramientas?",
+    "en": "Do I need a CRM and access to every tool?"
+  },
+  "Não. Começamos com as informações compartilhadas e os dados públicos disponíveis. Acessos internos podem aprofundar a análise, quando disponibilizados com segurança.": {
+    "es": "No. Empezamos con la información compartida y los datos públicos disponibles. El acceso interno puede profundizar el análisis cuando se facilita de forma segura.",
+    "en": "No. We begin with shared information and available public data. Secure access to internal systems can enable deeper analysis."
+  },
+  "Vocês já sobem campanhas nessa reunião?": {
+    "es": "¿Lanzan campañas durante esa reunión?",
+    "en": "Do you launch campaigns during this meeting?"
+  },
+  "Não. Primeiro diagnosticamos mercado e processo comercial. A execução acontece somente após alinhamento de escopo e contratação.": {
+    "es": "No. Primero diagnosticamos el mercado y el proceso comercial. La ejecución comienza después de acordar el alcance y formalizar la contratación.",
+    "en": "No. We first assess your market and sales process. Execution only begins after scope alignment and engagement."
+  },
+  "O diagnóstico garante mais vendas?": {
+    "es": "¿El diagnóstico garantiza más ventas?",
+    "en": "Does the assessment guarantee more sales?"
+  },
+  "Não. Ele fornece direcionamento e hipóteses sustentadas pelos dados disponíveis. Resultados dependem de mercado, oferta, margem, execução e estrutura comercial.": {
+    "es": "No. Ofrece orientación e hipótesis basadas en los datos disponibles. Los resultados dependen del mercado, la oferta, el margen, la ejecución y la estructura comercial.",
+    "en": "No. It provides direction and hypotheses backed by available data. Results depend on the market, offer, margins, execution, and sales structure."
+  },
+  "O que recebo ao final?": {
+    "es": "¿Qué recibo al finalizar?",
+    "en": "What do I receive at the end?"
+  },
+  "Um plano inicial de ação de 90 dias com oportunidades, prioridades, indicadores relevantes e próximos passos discutidos na própria consultoria.": {
+    "es": "Un plan de acción inicial de 90 días con oportunidades, prioridades, indicadores y próximos pasos definidos durante la consultoría.",
+    "en": "An initial 90-day action plan with opportunities, priorities, relevant metrics, and next steps discussed during the consultation."
+  }
+});
