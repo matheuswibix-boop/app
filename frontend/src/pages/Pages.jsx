@@ -10,8 +10,9 @@ import { PageHeader, CtaBand } from "@/components/site/PageHeader";
 import { CONTACT } from "@/lib/content";
 import { T, useLanguage } from "@/lib/i18n";
 
-const useTitle = (t) => {
-  useEffect(() => { document.title = `${t} | INSALES`; }, [t]);
+const useTitle = (title) => {
+  const {t,lang} = useLanguage();
+  useEffect(() => { document.title = `${t(title)} | INSALES`; }, [title,lang]);
 };
 
 export function ServicesPage() {
