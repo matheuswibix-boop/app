@@ -52,10 +52,11 @@ const toCsv = (rows) => {
 
 const Leads = ({ user, onLogout, onExpired }) => {
   const [leads, setLeads] = useState([]);
+  const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(true);
   const load = useCallback(async () => {
-    try { const { data } = await http.get("/leads"); setLeads(Array.isArray(data) ? data : []); }
-    catch (err) { if (err?.response?.status === 401) onExpired(); toast.error("Não foi possível carregar os leads. Recarregue a página para tentar novamente."); }
+    try { const { data } = await http.get("/leads"); if (!Array.isArray(data)) throw new Error("Resposta inválida"); setLeads(data); setLoadError(false); }
+    catch (err) { setLoadError(true); if (err?.response?.status === 401) onExpired(); toast.error("Não foi possível carregar os leads. Recarregue a página para tentar novamente."); }
     finally { setLoading(false); }
   }, [onExpired]);
   useEffect(() => { load(); }, [load]);
@@ -97,7 +98,8 @@ const Leads = ({ user, onLogout, onExpired }) => {
       </div>
       {loading ? <Loader2 className="mt-10 h-6 w-6 animate-spin text-[#FFC400]" /> : (
         <div className="mt-8 grid gap-3">
-          {!leads.length && <p data-testid="admin-leads-empty" className="rounded-2xl border border-white/10 p-8 text-center text-[#AEB0B6]">Nenhum lead ainda.</p>}
+          {loadError && <p role="alert" className="rounded-2xl border border-white/10 p-8 text-center text-red-400">Não foi possível carregar os contatos. Recarregue a página para tentar novamente.</p>}
+          {!leads.length && !loadError && <p data-testid="admin-leads-empty" className="rounded-2xl border border-white/10 p-8 text-center text-[#AEB0B6]">Nenhum lead ainda.</p>}
           {leads.map((l) => (
             <article key={l.id} data-testid={`admin-lead-${l.id}`} className="grid gap-3 rounded-2xl border border-white/10 bg-[#111316] p-5 md:grid-cols-[1.2fr_1.2fr_1fr_auto] md:items-start">
               <div><p className="font-bold">{l.name}</p><p className="text-sm text-[#AEB0B6]">{l.company || "—"}</p><p className="font-mono mt-1 text-xs text-[#AEB0B6]">{new Date(l.created_at).toLocaleString("pt-BR")}</p></div>

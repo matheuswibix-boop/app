@@ -147,3 +147,16 @@ test('health checks access, missing admin stays 503, failed read stays 503', asy
   unavailable = true;
   assert.equal((await call(api.health, req())).code, 503);
 });
+test('CSV neutralizes formulas and preserves separators, quotes and line breaks', () => {
+  const fs = require('node:fs');
+  const vm = require('node:vm');
+  const source = fs.readFileSync(require('node:path').join(__dirname, '../src/pages/Admin.jsx'), 'utf8');
+  const code = source.slice(source.indexOf('const toCsv ='), source.indexOf('const Leads ='));
+  const toCsv = vm.runInNewContext(code + '; toCsv');
+  const csv = toCsv([{ name: '=HYPERLINK("https://example.invalid")', email: 'a;b@example.invalid', phone: '+5541900000000', message: 'linha 1\nlinha "2"', source: '/teste' }]);
+  assert.ok(csv.includes('"\'=HYPERLINK(""https://example.invalid"")"'));
+  assert.ok(csv.includes('"a;b@example.invalid"'));
+  assert.ok(csv.includes('"\'+5541900000000"'));
+  assert.ok(csv.includes('"linha 1\nlinha ""2"""'));
+  assert.ok(csv.includes('source'));
+});
