@@ -1723,3 +1723,106 @@ Object.assign(translations, {
     "en": "8 min"
   }
 });
+
+Object.assign(translations, {
+  "Aceleradora digital focada em tráfego pago e inbound, com captura de leads qualificados.": {
+    "es": "Aceleradora digital centrada en publicidad digital e inbound, captando prospectos cualificados.",
+    "en": "Digital growth partner focused on paid traffic and inbound marketing, capturing qualified leads."
+  },
+  "Branding e produção de vídeos estratégicos para crescimento e posicionamento de marca.": {
+    "es": "Branding y producción de videos estratégicos para crecimiento y posicionamiento.",
+    "en": "Branding and strategic video production for growth and brand positioning."
+  },
+  "Consultoria e assessoria em SEO técnico e estratégico, com foco em crescimento orgânico previsível.": {
+    "es": "Consultoría y asesoría en SEO técnico y estratégico para un crecimiento orgánico predecible.",
+    "en": "Technical and strategic SEO consulting focused on predictable organic growth."
+  },
+  "Consultoria especializada em e-commerces, performance e estruturação de vendas online.": {
+    "es": "Consultoría especializada en e-commerce, rendimiento y organización de ventas online.",
+    "en": "Specialist e-commerce consulting, performance optimization, and online sales operations."
+  },
+  "Otimização por clique mais barato": {
+    "es": "Optimización por clic más barato",
+    "en": "Optimizing for the cheapest click"
+  },
+  "Otimização por MQL e SQL": {
+    "es": "Optimización por MQL y SQL",
+    "en": "Optimizing for MQLs and SQLs"
+  },
+  "Sem rastreabilidade": {
+    "es": "Sin trazabilidad",
+    "en": "No traceability"
+  },
+  "Rastreabilidade total das campanhas": {
+    "es": "Trazabilidad completa de campañas",
+    "en": "Full campaign traceability"
+  },
+  "Sem integração com CRM": {
+    "es": "Sin integración con CRM",
+    "en": "No CRM integration"
+  },
+  "Integração completa com CRM": {
+    "es": "Integración completa con CRM",
+    "en": "Full CRM integration"
+  },
+  "Otimização por achismo": {
+    "es": "Optimización por suposiciones",
+    "en": "Guesswork-based optimization"
+  },
+  "Otimização por venda e resultado": {
+    "es": "Optimización por ventas y resultados",
+    "en": "Optimization for sales and outcomes"
+  },
+  "Sem escalabilidade": {
+    "es": "Sin escalabilidad",
+    "en": "No scalability"
+  },
+  "Escalabilidade baseada em CPA": {
+    "es": "Escalabilidad basada en CPA",
+    "en": "CPA-based scalability"
+  },
+  "Sem UTM dinâmica": {
+    "es": "Sin UTM dinámica",
+    "en": "No dynamic UTMs"
+  },
+  "Uso de UTM dinâmica": {
+    "es": "Uso de UTM dinámica",
+    "en": "Dynamic UTM tracking"
+  },
+  "Apenas um canal de aquisição": {
+    "es": "Un solo canal de adquisición",
+    "en": "Only one acquisition channel"
+  },
+  "Múltiplos canais de aquisição": {
+    "es": "Múltiples canales de adquisición",
+    "en": "Multiple acquisition channels"
+  },
+  "Google e Meta trabalhando com dados e foco em oportunidades comerciais.": {
+    "es": "Google y Meta trabajando con datos y foco en oportunidades comerciales.",
+    "en": "Google and Meta working together with data to generate sales opportunities."
+  },
+  "Pré-atendimento, qualificação e encaminhamento de leads com contexto.": {
+    "es": "Primera atención, cualificación y derivación contextual de prospectos.",
+    "en": "First response, lead qualification, and context-aware routing."
+  },
+  "Funil estruturado, integrações e automações para acompanhar cada oportunidade.": {
+    "es": "Embudo estructurado, integraciones y automatizaciones para seguir cada oportunidad.",
+    "en": "Structured pipeline, integrations, and automation to follow every opportunity."
+  },
+  "de faturamento em 10 meses": {
+    "es": "de facturación en 10 meses",
+    "en": "revenue growth in 10 months"
+  },
+  "colaboradores, crescendo mais de 120% ao ano": {
+    "es": "empleados, creciendo más del 120% anual",
+    "en": "employees, growing more than 120% annually"
+  },
+  "de crescimento em ARR": {
+    "es": "de crecimiento de ARR",
+    "en": "in ARR growth"
+  },
+  "de receita no e-commerce, com CAC 17% menor": {
+    "es": "de ingresos e-commerce, con un CAC 17% menor",
+    "en": "e-commerce revenue, with 17% lower CAC"
+  }
+});
