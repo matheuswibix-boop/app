@@ -39,14 +39,14 @@ export const Method = ({ interactive = false }) => {
             {PRIMA.map((p, i) => (
               <Reveal key={p.l} delay={i * 0.08}>
                 <li data-testid={`prima-step-${p.l.toLowerCase()}`}
-                  className={`group relative flex gap-6 rounded-3xl border border-white/10 bg-[#111316] p-6 lg:block lg:p-0 ${interactive ? `${interactiveCardHover} lg:border-transparent lg:bg-transparent lg:hover:border-[#FFC400]/60 lg:hover:bg-[#15181c]` : "transition-colors duration-500 hover:border-[#FFC400]/50 lg:border-0 lg:bg-transparent"}`}>
+                  className={`group relative flex min-w-0 gap-6 rounded-3xl border border-white/10 bg-[#111316] p-6 lg:block ${interactive ? `${interactiveCardHover} lg:px-4 xl:px-5 lg:pt-0 lg:pb-6 lg:border-transparent lg:bg-transparent lg:hover:border-[#FFC400]/60 lg:hover:bg-[#15181c]` : "lg:p-0 transition-colors duration-500 hover:border-[#FFC400]/50 lg:border-0 lg:bg-transparent"}`}>
                   <span className="font-display relative z-10 grid h-[88px] w-[88px] shrink-0 place-items-center rounded-full border border-[#FFC400]/50 bg-[#0b0c0e] text-5xl text-[#FFC400] transition-[background-color,color,box-shadow] duration-500 group-hover:bg-[#FFC400] group-hover:text-[#070809] group-hover:shadow-[0_0_40px_rgba(255,196,0,0.5)] lg:mx-0 lg:h-[124px] lg:w-[124px] lg:text-7xl">
                     {p.l}
                   </span>
-                  <div className="lg:mt-8">
+                  <div className="min-w-0 lg:mt-8">
                     <span className="font-mono text-xs text-[#AEB0B6]">0{i + 1}</span>
-                    <h3 className="font-display mt-1 text-xl uppercase">{p.t}</h3>
-                    <p className="mt-2 text-sm text-[#c2c4c9] leading-relaxed">{p.d}</p>
+                    <h3 className="font-display mt-1 break-words text-xl uppercase lg:text-base xl:text-xl">{p.t}</h3>
+                    <p className="mt-2 break-words text-sm text-[#c2c4c9] leading-relaxed">{p.d}</p>
                   </div>
                 </li>
               </Reveal>
