@@ -17,7 +17,7 @@ const phases=[
 const whatsapp="https://wa.me/5541996617279?text="+encodeURIComponent("Olá! Quero agendar a Consultoria Estratégica inicial de uma hora da INSALES para minha empresa.");
 const CTA=({outline=false})=><a href={whatsapp} target="_blank" rel="noopener noreferrer" data-testid="consulting-whatsapp-cta" className={outline?"group inline-flex items-center gap-3 rounded-full border border-[#FFC400] px-7 py-4 text-sm font-bold text-[#FFC400] transition-colors hover:bg-[#FFC400] hover:text-[#070809]":"group inline-flex items-center gap-3 rounded-full bg-[#FFC400] px-7 py-4 text-sm font-bold text-[#070809] transition-transform hover:-translate-y-1"}><T>Solicitar consultoria</T> <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45"/></a>;
 export default function ConsultingPage(){
- const {t,lang} = useLanguage();
+ const {t} = useLanguage();
  return <main data-testid="consulting-page">
   <PageHeader crumb={t("Consultoria Estratégica")} eyebrow={t("Diagnóstico antes de qualquer campanha")} title={t("Uma hora para enxergar")} accent={t("o próximo passo.")} text={t("Entenda o seu setor, a demanda real pelo que você vende e os gargalos que dificultam o crescimento. Saia da conversa com prioridades claras, não com uma apresentação genérica.")}/>
   <div className="px-5 pb-16 md:px-10"><div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center"><span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-[#FFC400]"><Clock3 className="h-5 w-5"/><T>60 minutos · Diagnóstico e plano inicial</T></span><CTA/></div></div>
