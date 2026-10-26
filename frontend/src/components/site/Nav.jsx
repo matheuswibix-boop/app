@@ -107,7 +107,7 @@ export const Nav = () => {
               {NAV.map((n, i) => (
                 <motion.div key={n.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }}>
                   <NavLink to={n.to} data-testid={`nav-mobile-link-${n.id}`}
-                    className={({ isActive }) => `font-display block py-2 text-3xl uppercase ${isActive ? "text-[#FFC400]" : ""}`}>{n.label}</NavLink>
+                    className={({ isActive }) => `font-display block py-2 text-3xl uppercase ${isActive ? "text-[#FFC400]" : ""}`}>{t(n.label)}</NavLink>
                 </motion.div>
               ))}
               <Link to="/fale-conosco" data-testid="nav-mobile-cta"
