@@ -1,5 +1,6 @@
 import {useEffect} from "react";
 import {useLocation} from "react-router-dom";
+import { useLanguage } from "@/lib/i18n";
 import servicePages from "@/lib/servicePages.json";
 import { POSTS } from "@/lib/content";
 const staticMeta={
@@ -14,16 +15,20 @@ const staticMeta={
 const setMeta=(query,attr,val)=>{let el=document.head.querySelector(query);if(!el){el=document.createElement("meta"); el.setAttribute(attr[0],attr[1]);document.head.appendChild(el);}el.setAttribute("content",val);};
 export default function SeoHead(){
  const {pathname}=useLocation();
+ const {lang,t}=useLanguage();
  useEffect(()=>{
   const service=servicePages.find(s=>pathname==="/servicos/"+s.slug);
   const post=POSTS.find(p=>pathname==="/blog/"+p.slug);
-  const [title,description]=service?[service.seo.title,service.seo.description]:post?[post.title+" | INSALES",post.excerpt]:(staticMeta[pathname]||["INSALES Marketing","Estratégia de marketing, inteligência e vendas."]);
+  const [ptTitle,ptDescription]=service?[service.seo.title,service.seo.description]:post?[post.title+" | INSALES",post.excerpt]:(staticMeta[pathname]||["INSALES Marketing","Estratégia de marketing, inteligência e vendas."]);
+  const title=service&&lang!=="pt"?t(service.name)+" | INSALES Marketing":t(ptTitle);
+  const description=service&&lang!=="pt"?t(service.description):t(ptDescription);
   document.title=title;
   setMeta('meta[name="description"]',["name","description"],description);
   setMeta('meta[name="robots"]',["name","robots"],pathname.startsWith("/admin")||location.hostname.endsWith(".vercel.app")?"noindex, nofollow":"index, follow");
   let canonical=document.head.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement("link");canonical.rel="canonical";document.head.appendChild(canonical);} canonical.href="https://insales.com.br"+pathname+(pathname==="/"?"/":"");
   setMeta('meta[property="og:title"]',["property","og:title"],title);
   setMeta('meta[property="og:description"]',["property","og:description"],description);
- },[pathname]);
+  setMeta('meta[property="og:locale"]',["property","og:locale"],lang==="pt"?"pt_BR":lang==="es"?"es_ES":"en_GB");
+ },[pathname,lang]);
  return null;
 }
