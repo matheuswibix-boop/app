@@ -31,11 +31,11 @@ export const BlogPreview = () => (
         <div>
           <Eyebrow><T>Blog</T></Eyebrow>
           <h2 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl">
-            <MaskLine>Insights para</MaskLine>
-            <MaskLine delay={0.1} className="text-[#FFC400]">vender mais.</MaskLine>
+            <MaskLine><T>Insights para</T></MaskLine>
+            <MaskLine delay={0.1} className="text-[#FFC400]"><T>vender mais.</T></MaskLine>
           </h2>
         </div>
-        <Link to="/blog" data-testid="blog-see-all" className="text-sm font-semibold text-[#FFC400] underline-offset-8 hover:underline">Ver todos os artigos →</Link>
+        <Link to="/blog" data-testid="blog-see-all" className="text-sm font-semibold text-[#FFC400] underline-offset-8 hover:underline"><T>Ver todos os artigos →</T></Link>
       </div>
       <div className="mt-14 grid gap-4 md:grid-cols-3">
         {POSTS.map((p, i) => <PostCard key={p.slug} p={p} i={i} />)}
