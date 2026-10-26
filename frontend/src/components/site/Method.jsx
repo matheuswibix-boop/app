@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PRIMA, RESULTS } from "@/lib/content";
+import { T, useLanguage } from "@/lib/i18n";
 import { interactiveCardHover } from "@/lib/interactiveCardHover";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 import { BarChart3, TrendingDown, Rocket } from "lucide-react";
@@ -9,6 +10,7 @@ import { BarChart3, TrendingDown, Rocket } from "lucide-react";
 const RICONS = [BarChart3, TrendingDown, Rocket];
 
 export const Method = ({ interactive = false }) => {
+  const {t} = useLanguage();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.8", "end 0.6"] });
   const line = useTransform(scrollYProgress, [0, 1], [0, 1]);
@@ -18,20 +20,20 @@ export const Method = ({ interactive = false }) => {
       <div className="mx-auto max-w-[1400px]">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
-            <Eyebrow>Nosso método</Eyebrow>
+            <Eyebrow><T>Nosso método</T></Eyebrow>
             <h2 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl">
-              <MaskLine>Método</MaskLine>
-              <MaskLine delay={0.1} className="text-[#FFC400]">PRIMA.</MaskLine>
+              <MaskLine><T>Método</T></MaskLine>
+              <MaskLine delay={0.1} className="text-[#FFC400]"><T>PRIMA.</T></MaskLine>
             </h2>
           </div>
           <Reveal>
             <p className="text-lg text-[#c2c4c9] leading-relaxed">
-              O Método PRIMA transforma dados de marketing e vendas em decisões comerciais. Planejamos antes de anunciar, rastreamos a origem de cada oportunidade, integramos o CRM e melhoramos a operação para crescer com controle — <span className="text-white font-semibold">do clique ao fechamento e à receita.</span>
+              <T>O Método PRIMA transforma dados de marketing e vendas em decisões comerciais. Planejamos antes de anunciar, rastreamos a origem de cada oportunidade, integramos o CRM e melhoramos a operação para crescer com controle —</T> <span className="text-white font-semibold"><T>do clique ao fechamento e à receita.</T></span>
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-9 flex flex-wrap gap-4"><Link to="/metodologia" className="inline-flex rounded-full border border-[#FFC400]/70 px-6 py-3 font-bold text-[#FFC400] transition-colors hover:bg-[#FFC400] hover:text-[#070809]">Entenda o método completo →</Link><Link to="/consultoria-estrategica" className="inline-flex rounded-full bg-[#FFC400] px-6 py-3 font-bold text-[#070809] transition-transform hover:-translate-y-1">Solicitar consultoria estratégica →</Link></div>
+        <div className="mt-9 flex flex-wrap gap-4"><Link to="/metodologia" className="inline-flex rounded-full border border-[#FFC400]/70 px-6 py-3 font-bold text-[#FFC400] transition-colors hover:bg-[#FFC400] hover:text-[#070809]"><T>Entenda o método completo →</T></Link><Link to="/consultoria-estrategica" className="inline-flex rounded-full bg-[#FFC400] px-6 py-3 font-bold text-[#070809] transition-transform hover:-translate-y-1"><T>Solicitar consultoria estratégica →</T></Link></div>
         <div ref={ref} className="relative mt-20">
           <div className="absolute left-0 right-0 top-[62px] hidden h-px bg-white/10 lg:block" />
           <motion.div style={{ scaleX: line }} className="absolute left-0 right-0 top-[62px] hidden h-px origin-left bg-[#FFC400] lg:block" />
@@ -45,8 +47,8 @@ export const Method = ({ interactive = false }) => {
                   </span>
                   <div className="min-w-0 lg:mt-8">
                     <span className="font-mono text-xs text-[#AEB0B6]">0{i + 1}</span>
-                    <h3 className="font-display mt-1 break-words text-xl uppercase lg:text-base xl:text-xl">{p.t}</h3>
-                    <p className="mt-2 break-words text-sm text-[#c2c4c9] leading-relaxed">{p.d}</p>
+                    <h3 className="font-display mt-1 break-words text-xl uppercase lg:text-base xl:text-xl">{t(p.t)}</h3>
+                    <p className="mt-2 break-words text-sm text-[#c2c4c9] leading-relaxed">{t(p.d)}</p>
                   </div>
                 </li>
               </Reveal>
@@ -63,13 +65,13 @@ export const Method = ({ interactive = false }) => {
                   <Icon className={`h-10 w-10 shrink-0 text-[#FFC400] ${interactive ? "transition-colors duration-500 group-hover:text-white" : ""}`} />
                   <div>
                     <p className="font-display text-4xl md:text-5xl text-[#FFC400]">{r.v}</p>
-                    <p className="mt-1 text-sm text-[#c2c4c9]">{r.l}</p>
+                    <p className="mt-1 text-sm text-[#c2c4c9]">{t(r.l)}</p>
                   </div>
                 </div>
               );
             })}
           </div>
-          <p className="mt-3 text-xs text-[#AEB0B6]">Médias de projetos acompanhados pela INSALES. Resultados variam conforme mercado e investimento.</p>
+          <p className="mt-3 text-xs text-[#AEB0B6]"><T>Médias de projetos acompanhados pela INSALES. Resultados variam conforme mercado e investimento.</T></p>
         </Reveal>
       </div>
     </section>

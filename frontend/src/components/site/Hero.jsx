@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useMotionValue, useScroll, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, MessageSquare, Play } from "lucide-react";
 import { STATS } from "@/lib/content";
+import { T, useLanguage } from "@/lib/i18n";
 import { Counter } from "./Counter";
 import { useNavigate } from "react-router-dom";
 
@@ -42,6 +43,7 @@ const HeroImage = ({ y }) => {
 };
 
 export const Hero = () => {
+  const {t} = useLanguage();
   const ref = useRef(null);
   const navigate = useNavigate();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
@@ -54,30 +56,30 @@ export const Hero = () => {
       <motion.div style={{ y: textY }} className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1400px] flex-col justify-end px-5 pb-12 pt-32 md:px-10 md:pb-16">
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
           className="font-mono mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#FFC400]">
-          <span className="h-2 w-2 rounded-full bg-[#FFC400] animate-pulse" /> Hub de Marketing e Vendas — Brasil
+          <span className="h-2 w-2 rounded-full bg-[#FFC400] animate-pulse" /> <T>Hub de Marketing e Vendas — Brasil</T>
         </motion.p>
         <h1 data-testid="hero-title" className="font-display uppercase leading-[0.9] text-[10.5vw] sm:text-6xl lg:text-7xl xl:text-[6.4rem]">
           {lines.map((l, i) => (
             <span key={l.t} className="block overflow-hidden pb-[0.04em]">
               <motion.span className={`block ${l.c}`} initial={{ y: "115%" }} animate={{ y: "0%" }}
-                transition={{ duration: 1.1, ease, delay: 0.45 + i * 0.13 }}>{l.t}</motion.span>
+                transition={{ duration: 1.1, ease, delay: 0.45 + i * 0.13 }}>{t(l.t)}</motion.span>
             </span>
           ))}
         </h1>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1, duration: 0.8 }}
           className="mt-8 max-w-xl">
           <p className="text-base md:text-lg text-[#c9cbd0] leading-relaxed">
-            Conectamos estratégia, tecnologia e performance de pessoas para gerar resultados mensuráveis — integrando marketing, inteligência artificial, automação e vendas.
+            <T>Conectamos estratégia, tecnologia e performance de pessoas para gerar resultados mensuráveis — integrando marketing, inteligência artificial, automação e vendas.</T>
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <button data-testid="hero-cta-primary" onClick={() => navigate("/fale-conosco")}
               className="group inline-flex items-center gap-2.5 rounded-full bg-[#FFC400] px-6 py-3.5 text-sm font-bold text-[#070809] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(255,196,0,0.7)]">
-              <MessageSquare className="h-4 w-4" /> Quero impulsionar minha receita
+              <MessageSquare className="h-4 w-4" /> <T>Quero impulsionar minha receita</T>
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
             <button data-testid="hero-cta-method" onClick={() => navigate("/metodologia")}
               className="inline-flex items-center gap-2.5 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-[#FFC400] hover:text-[#FFC400]">
-              Conheça o método <Play className="h-4 w-4" />
+              <T>Conheça o método</T> <Play className="h-4 w-4" />
             </button>
           </div>
         </motion.div>
@@ -86,7 +88,7 @@ export const Hero = () => {
           {STATS.map((s, i) => (
             <div key={s.label} data-testid={`hero-stat-${i}`} className={i ? "border-l border-white/10 pl-4" : ""}>
               <Counter to={s.n} pre={s.pre} suf={s.suf} className="font-display block text-2xl sm:text-3xl md:text-4xl text-[#FFC400]" />
-              <span className="mt-1 block text-xs sm:text-sm text-[#c9cbd0]">{s.label}</span>
+              <span className="mt-1 block text-xs sm:text-sm text-[#c9cbd0]">{t(s.label)}</span>
             </div>
           ))}
         </motion.div>
