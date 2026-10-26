@@ -40,11 +40,11 @@ export const SERVICES = [
 ];
 
 export const PRIMA = [
-  { l: "P", t: "Planejar", d: "Diagnóstico de mercado, dados e oportunidades. Projeto de aceleração de 12 meses." },
-  { l: "R", t: "Rastrear", d: "GA4, UTMs dinâmicas e rastreio até o CRM. Cada venda com origem clara." },
-  { l: "I", t: "Integrar", d: "Mídia paga, SEO e comercial conectados. Marketing e vendas no mesmo funil." },
-  { l: "M", t: "Melhorar", d: "Otimização por venda e resultado, com dashboard completo de indicadores." },
-  { l: "A", t: "Acelerar", d: "Escala baseada em CPA. Dados temporários viram ativos digitais permanentes." },
+  { l: "P", t: "Planejar", d: "Pesquisa de mercado, concorrentes, ICP, MQL, demanda e plano comercial com prioridades claras." },
+  { l: "R", t: "Rastrear", d: "Eventos, UTMs e CRM para relacionar canais e palavras-chave a oportunidades, vendas e receita." },
+  { l: "I", t: "Integrar", d: "Mídia paga, SEO/GEO, atendimento e comercial integrados numa mesma jornada de dados." },
+  { l: "M", t: "Melhorar", d: "Análise de conversão, CAC, ticket, ROI e ROAS para corrigir gargalos e priorizar ações." },
+  { l: "A", t: "Acelerar", d: "Escala controlada por margem, capacidade comercial e indicadores de retorno reais." },
 ];
 
 export const RESULTS = [
@@ -158,4 +158,75 @@ export const POSTS = [
       "Escolha um gargalo mensurável — tempo de primeira resposta, por exemplo — implemente, meça e só então expanda. IA sem indicador é só mais uma ferramenta.",
     ],
   },
+{
+  "slug": "diagnostico-estrategico-marketing-antes-de-anunciar",
+  "title": "Diagnóstico estratégico de marketing: o que analisar antes de investir em anúncios",
+  "category": "Diagnóstico e estratégia",
+  "date": "25 out 2026",
+  "read": "7 min",
+  "excerpt": "Uma campanha pode gerar cliques e ainda assim não trazer clientes. Saiba como avaliar mercado, concorrentes, intenção de compra e estrutura comercial antes de investir.",
+  "body": [
+    "O erro mais caro de uma campanha pode acontecer antes do primeiro anúncio: investir sem conhecer o setor, a demanda real, a margem e a jornada de compra. Uma boa operação começa por perguntas e dados, não por escolher uma plataforma de mídia.",
+    "## 1. Existe procura pelo que sua empresa vende?",
+    "Pesquise a demanda por serviços e produtos em cada região, a sazonalidade e o comportamento de busca. Volume de pesquisa é um sinal de interesse, mas não equivale a volume de vendas. Entenda também como a concorrência se posiciona e onde existem necessidades ainda mal atendidas.",
+    "## 2. Qual busca indica intenção de compra?",
+    "Palavras-chave de fundo de funil revelam intenções distintas: comparar alternativas, pedir orçamento, agendar, contratar ou comprar. Priorize termos compatíveis com sua oferta e sua margem. É necessário separar procura informacional de demanda comercial antes de estimar retorno.",
+    "## 3. Quem vale a pena atrair?",
+    "O ICP descreve o cliente ideal: perfil, necessidade, potencial de compra e compatibilidade com a entrega. O MQL define critérios mensuráveis para identificar contatos que merecem abordagem. Sem alinhamento com vendas, o marketing pode aumentar o volume de contatos e piorar a eficiência da equipe.",
+    "## 4. Seu negócio consegue atender a nova demanda?",
+    "Antes de aumentar o orçamento, avalie o tempo de primeira resposta, quem assume cada oportunidade, as etapas do CRM e o histórico de conversões. Uma operação lenta pode desperdiçar investimento, mesmo com campanhas tecnicamente bem executadas.",
+    "## 5. O que o diagnóstico precisa entregar?",
+    "Ao final, o empresário deve entender os principais gargalos, oportunidades e indicadores que precisam ser organizados. O plano inicial de 90 dias pode começar pela instrumentação de dados, melhoria do atendimento ou testes de mensagens e canais, em vez de exigir mais verba imediatamente.",
+    "## Comece com clareza",
+    "A Consultoria Estratégica inicial da INSALES foi desenhada para mergulhar nesse cenário em cerca de uma hora. O aprofundamento depende dos dados disponíveis; o diagnóstico orienta decisões, sem prometer faturamento ou resultados garantidos."
+  ]
+},
+{
+  "slug": "metodo-prima-rastreio-do-clique-a-venda",
+  "title": "Do clique à venda: como rastrear o marketing e identificar os canais que trazem receita",
+  "category": "Data Marketing",
+  "date": "25 out 2026",
+  "read": "8 min",
+  "excerpt": "Cliques e leads não bastam. Veja como conectar campanha, palavra-chave, CRM, ticket médio e receita para tomar decisões melhores.",
+  "body": [
+    "Você sabe qual canal trouxe mais faturamento no mês passado? E qual palavra-chave gerou o cliente de maior ticket? Se a resposta depende de planilhas desconectadas ou de memória, a empresa ainda não controla todo o seu processo de aquisição.",
+    "## O que medir além do lead",
+    "O custo por lead é útil, mas pode esconder baixa qualificação. O caminho completo relaciona origem e campanha, primeiro contato, qualificação, atendimento, proposta, venda e valor recebido. Nem toda venda pode ser atribuída perfeitamente; o importante é combinar fontes de dados com critérios consistentes.",
+    "## Como o rastreio começa",
+    "Uma implementação inicial verifica eventos de conversão, GA4, identificadores de campanha e UTMs. O registro precisa acompanhar o contato quando ele chega ao CRM, respeitando privacidade e consentimentos aplicáveis. Se o usuário liga ou retorna por outro canal, vale documentar a incerteza da atribuição.",
+    "## O papel do CRM",
+    "O CRM deve mostrar quem atendeu, quando respondeu, qual é a próxima atividade e em que etapa está cada negociação. Sem essas informações, a equipe não consegue separar um problema de geração de demanda de um problema de atendimento ou fechamento.",
+    "## Quais indicadores ajudam o empresário",
+    "CAC indica custos de aquisição segundo os itens incluídos no cálculo. ROAS compara receita atribuída à publicidade com a verba de mídia. ROI examina o retorno financeiro frente ao investimento definido. Taxas de passagem no funil e ticket médio ajudam a descobrir onde a receita está sendo perdida.",
+    "## Onde entra o Método PRIMA",
+    "Planejar o mercado, Rastrear as origens, Integrar canais e vendas, Melhorar as conversões e Acelerar investimentos de forma fundamentada. A lógica é simples: não aumentar o gasto sem saber quais oportunidades foram geradas e se existe capacidade para convertê-las.",
+    "## Próxima ação",
+    "Mapeie uma única campanha, sua chegada ao CRM e a receita efetiva obtida. Se não conseguir seguir esse trajeto, organizar dados pode ser mais importante do que aumentar o orçamento."
+  ]
+},
+{
+  "slug": "crm-conversao-ticket-medio-marketing-vendas",
+  "title": "Seu CRM vende ou apenas armazena contatos? Como melhorar conversão e ticket médio",
+  "category": "Gestão comercial",
+  "date": "25 out 2026",
+  "read": "7 min",
+  "excerpt": "Descubra como priorização de oportunidades, velocidade de atendimento e indicadores comerciais se conectam ao retorno do marketing.",
+  "body": [
+    "Gerar mais oportunidades não garante crescimento. É comum investir em anúncios, receber contatos e perder vendas por demora no atendimento, falta de priorização e ausência de uma rotina de acompanhamento.",
+    "## A velocidade da primeira resposta",
+    "Registre quanto tempo leva para o primeiro contato e qual é a taxa de resposta por canal, unidade e vendedor. Um lead com alta intenção comercial pode desistir enquanto aguarda. Compare horários, equipes e etapas antes de automatizar indiscriminadamente.",
+    "## Priorizar não é só distribuir leads",
+    "Um CRM pode ajudar a definir critérios de prioridade: perfil do ICP, urgência, orçamento, estágio da jornada e interesse declarado. As regras precisam ser simples, transparentes e revisadas com base nas vendas realizadas.",
+    "## Diagnosticar perdas no funil",
+    "Compare as taxas de conversão entre recebimento, qualificação, agendamento, proposta e fechamento. Observe também no-shows, follow-up, motivos de perda e tempo médio em cada etapa. Esses números mostram onde treinar, ajustar abordagem ou redesenhar o processo.",
+    "## Como trabalhar o ticket médio",
+    "Ticket não aumenta apenas oferecendo um serviço mais caro. Analise adequação da solução, pacotes complementares, percepção de valor, segmentação de clientes e condições comerciais. Respeite capacidade de entrega e margem para não crescer com rentabilidade menor.",
+    "## Marketing e vendas precisam dividir os indicadores",
+    "Se o tráfego pago é otimizado apenas por quantidade de leads enquanto o vendedor é cobrado por faturamento, os incentivos ficam desalinhados. Acompanhe custo por oportunidade qualificada, taxa de fechamento, receita por campanha e eventual retorno dos clientes no tempo.",
+    "## Um plano inicial de 90 dias",
+    "Nos primeiros 30 dias, estruture dados e etapas do CRM. Nos 30 seguintes, teste SLAs e priorizações. Até o dia 90, revise conversões, qualidade e ticket para decidir onde expandir. Os prazos são um exemplo de organização, ajustável à maturidade de cada operação.",
+    "## Próxima ação",
+    "Comece perguntando: meu vendedor sabe hoje quais oportunidades têm maior probabilidade de avanço? Se não, a próxima otimização talvez esteja no processo comercial, não em comprar mais cliques."
+  ]
+}
 ];
