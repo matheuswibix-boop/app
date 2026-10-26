@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { Download, Loader2, LogOut, Trash2 } from "lucide-react";
 import { Logo } from "@/components/site/Logo";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 const http = axios.create({ baseURL: API, withCredentials: true });
 
 const fmtErr = (d) => (typeof d === "string" ? d : Array.isArray(d) ? d.map((e) => e?.msg).join(" ") : "Erro ao entrar.");
@@ -41,31 +41,43 @@ const Login = ({ onDone }) => {
 };
 
 const toCsv = (rows) => {
-  const cols = ["created_at", "name", "email", "phone", "company", "revenue", "service", "message"];
-  const esc = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+  const cols = ["created_at", "name", "email", "phone", "company", "revenue", "service", "message", "source"];
+  const esc = (v) => {
+    const text = String(v ?? "");
+    const safe = /^[\s]*[=+@-]/.test(text) || /^[\t\r\n]/.test(text) ? "'" + text : text;
+    return `"${safe.replace(/"/g, '\"\"')}"`;
+  };
   return [cols.join(";"), ...rows.map((r) => cols.map((c) => esc(r[c])).join(";"))].join("\n");
 };
 
-const Leads = ({ user, onLogout }) => {
+const Leads = ({ user, onLogout, onExpired }) => {
   const [leads, setLeads] = useState([]);
+  const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(true);
   const load = useCallback(async () => {
-    try { const { data } = await http.get("/leads"); setLeads(Array.isArray(data) ? data : []); }
-    catch { toast.error("Não foi possível carregar os leads."); }
+    try { const { data } = await http.get("/leads"); if (!Array.isArray(data)) throw new Error("Resposta inválida"); setLeads(data); setLoadError(false); }
+    catch (err) { setLoadError(true); if (err?.response?.status === 401) onExpired(); toast.error("Não foi possível carregar os leads. Recarregue a página para tentar novamente."); }
     finally { setLoading(false); }
-  }, []);
+  }, [onExpired]);
   useEffect(() => { load(); }, [load]);
 
   const remove = async (id) => {
     if (!window.confirm("Excluir este lead?")) return;
-    await http.delete(`/leads/${id}`);
-    setLeads((l) => l.filter((x) => x.id !== id));
-    toast.success("Lead excluído.");
+    try {
+      await http.delete(`/leads/${id}`);
+      setLeads((l) => l.filter((x) => x.id !== id));
+      toast.success("Lead excluído.");
+    } catch (err) {
+      if (err?.response?.status === 401) onExpired();
+      toast.error("Não foi possível excluir o lead. Tente novamente.");
+    }
   };
   const exportCsv = () => {
     const blob = new Blob(["\uFEFF" + toCsv(leads)], { type: "text/csv;charset=utf-8" });
     const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob); a.download = "leads-insales.csv"; a.click();
+    const url = URL.createObjectURL(blob);
+    a.href = url; a.download = "leads-insales.csv"; a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   return (
@@ -86,12 +98,13 @@ const Leads = ({ user, onLogout }) => {
       </div>
       {loading ? <Loader2 className="mt-10 h-6 w-6 animate-spin text-[#FFC400]" /> : (
         <div className="mt-8 grid gap-3">
-          {!leads.length && <p data-testid="admin-leads-empty" className="rounded-2xl border border-white/10 p-8 text-center text-[#AEB0B6]">Nenhum lead ainda.</p>}
+          {loadError && <p role="alert" className="rounded-2xl border border-white/10 p-8 text-center text-red-400">Não foi possível carregar os contatos. Recarregue a página para tentar novamente.</p>}
+          {!leads.length && !loadError && <p data-testid="admin-leads-empty" className="rounded-2xl border border-white/10 p-8 text-center text-[#AEB0B6]">Nenhum lead ainda.</p>}
           {leads.map((l) => (
             <article key={l.id} data-testid={`admin-lead-${l.id}`} className="grid gap-3 rounded-2xl border border-white/10 bg-[#111316] p-5 md:grid-cols-[1.2fr_1.2fr_1fr_auto] md:items-start">
               <div><p className="font-bold">{l.name}</p><p className="text-sm text-[#AEB0B6]">{l.company || "—"}</p><p className="font-mono mt-1 text-xs text-[#AEB0B6]">{new Date(l.created_at).toLocaleString("pt-BR")}</p></div>
               <div className="text-sm"><a href={`mailto:${l.email}`} className="block text-[#FFC400]">{l.email}</a><a href={`https://wa.me/55${l.phone.replace(/\D/g, "").replace(/^55/, "")}`} target="_blank" rel="noreferrer" className="block">{l.phone}</a></div>
-              <div className="text-sm text-[#c2c4c9]"><p>{l.service || "—"} · {l.revenue || "—"}</p>{l.message && <p className="mt-1 text-[#AEB0B6]">{l.message}</p>}</div>
+              <div className="text-sm text-[#c2c4c9]"><p>{l.service || "—"} · {l.revenue || "—"}</p>{l.message && <p className="mt-1 text-[#AEB0B6]">{l.message}</p>}{l.source && <p className="mt-1 text-xs text-[#AEB0B6]">Origem: {l.source}</p>}</div>
               <button onClick={() => remove(l.id)} data-testid={`admin-delete-${l.id}`} aria-label="Excluir" className="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-[#AEB0B6] hover:border-red-400 hover:text-red-400"><Trash2 className="h-4 w-4" /></button>
             </article>
           ))}
@@ -106,7 +119,11 @@ export default function Admin() {
   useEffect(() => {
     http.get("/auth/me").then(({ data }) => setUser(data)).catch(() => setUser(false));
   }, []);
-  const logout = async () => { await http.post("/auth/logout"); setUser(false); };
+  const onExpired = useCallback(() => setUser(false), []);
+  const logout = async () => {
+    try { await http.post("/auth/logout"); setUser(false); }
+    catch { toast.error("Não foi possível encerrar a sessão. Tente novamente."); }
+  };
   if (user === null) return <div className="grid min-h-screen place-items-center"><Loader2 className="h-6 w-6 animate-spin text-[#FFC400]" /></div>;
-  return user ? <Leads user={user} onLogout={logout} /> : <Login onDone={setUser} />;
+  return user ? <Leads user={user} onLogout={logout} onExpired={onExpired} /> : <Login onDone={setUser} />;
 }

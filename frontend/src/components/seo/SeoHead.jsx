@@ -1,6 +1,7 @@
 import {useEffect} from "react";
 import {useLocation} from "react-router-dom";
 import servicePages from "@/lib/servicePages.json";
+import { POSTS } from "@/lib/content";
 const staticMeta={
 "/": ["Marketing que vira receita | INSALES Marketing","Agência de marketing, mídia paga, SEO, GEO, IA e processos comerciais para gerar crescimento previsível."],
 "/servicos":["Serviços de Marketing e Vendas | INSALES","Tráfego pago, SEO, GEO, IA de atendimento, CRM, sites e mais soluções integradas para sua empresa."],
@@ -14,11 +15,12 @@ export default function SeoHead(){
  const {pathname}=useLocation();
  useEffect(()=>{
   const service=servicePages.find(s=>pathname==="/servicos/"+s.slug);
-  const [title,description]=service?[service.seo.title,service.seo.description]:(staticMeta[pathname]||["INSALES Marketing","Estratégia de marketing, inteligência e vendas."]);
+  const post=POSTS.find(p=>pathname==="/blog/"+p.slug);
+  const [title,description]=post?[post.title+" | INSALES",post.excerpt]:service?[service.seo.title,service.seo.description]:(staticMeta[pathname]||["INSALES Marketing","Estratégia de marketing, inteligência e vendas."]);
   document.title=title;
   setMeta('meta[name="description"]',["name","description"],description);
   setMeta('meta[name="robots"]',["name","robots"],pathname.startsWith("/admin")||location.hostname.endsWith(".vercel.app")?"noindex, nofollow":"index, follow");
-  let canonical=document.head.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement("link");canonical.rel="canonical";document.head.appendChild(canonical);} canonical.href="https://insales.com.br"+pathname+(pathname==="/"?"/":"");
+  let canonical=document.head.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement("link");canonical.rel="canonical";document.head.appendChild(canonical);} canonical.href="https://insales.com.br"+pathname;
   setMeta('meta[property="og:title"]',["property","og:title"],title);
   setMeta('meta[property="og:description"]',["property","og:description"],description);
  },[pathname]);

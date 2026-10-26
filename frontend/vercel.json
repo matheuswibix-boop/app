@@ -2,6 +2,10 @@
   "version": 2,
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
       "source": "/servicos",
       "destination": "/servicos/index.html"
     },
@@ -44,6 +48,27 @@
   ],
   "headers": [
     {
+      "source": "/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    },
+    {
       "source": "/admin/:path*",
       "headers": [
         {
@@ -60,6 +85,31 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/api/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
     }
-  ]
+  ],
+  "framework": "create-react-app",
+  "installCommand": "yarn install --no-frozen-lockfile",
+  "buildCommand": "yarn build",
+  "outputDirectory": "build",
+  "regions": [
+    "gru1"
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 60
+    }
+  }
 }
