@@ -27,7 +27,7 @@ const WhatsIcon = (p) => (
 export { WhatsIcon };
 
 const Form = () => {
-  const {t,lang} = useLanguage();
+  const {t} = useLanguage();
   const [f, setF] = useState(EMPTY);
   const set = (k) => (e) => setF(current => ({ ...current, [k]: e.target.value }));
   const submit = (e) => {
