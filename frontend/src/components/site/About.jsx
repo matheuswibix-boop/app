@@ -38,7 +38,7 @@ const Group = () => (
     </div>
     <Reveal>
       <p className="text-[#c2c4c9] leading-relaxed text-lg">
-        Um grupo de empresas especializado em Gestão, Marketing e Vendas, com mais de 100 colaboradores e mais de 2.000 empresas atendidas no Brasil, Estados Unidos, Reino Unido e China. <span className="text-white font-semibold"><T>Somos Gente Gerando Valor.</T></span>
+        <T>Um grupo de empresas especializado em Gestão, Marketing e Vendas, com mais de 100 colaboradores e mais de 2.000 empresas atendidas no Brasil, Estados Unidos, Reino Unido e China.</T> <span className="text-white font-semibold"><T>Somos Gente Gerando Valor.</T></span>
       </p>
     </Reveal>
   </div>
