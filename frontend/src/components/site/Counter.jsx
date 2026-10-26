@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { animate, useInView } from "framer-motion";
+import { useLanguage } from "@/lib/i18n";
 
 export const Counter = ({ to, pre = "", suf = "", className = "" }) => {
+  const {lang} = useLanguage();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
   const [val, setVal] = useState(to);
@@ -14,7 +16,7 @@ export const Counter = ({ to, pre = "", suf = "", className = "" }) => {
 
   return (
     <span ref={ref} className={className}>
-      {pre}{val.toLocaleString("pt-BR")}{suf}
+      {pre}{val.toLocaleString(lang==="en"?"en-GB":lang==="es"?"es-ES":"pt-BR")}{suf}
     </span>
   );
 };
