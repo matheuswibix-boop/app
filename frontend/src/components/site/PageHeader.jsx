@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
-import { T, useLanguage } from "@/lib/i18n";
+import { T } from "@/lib/i18n";
 
 export const PageHeader = ({ eyebrow, title, accent, text, crumb }) => {
- const {t} = useLanguage();
  return (
   <section data-testid="page-header" className="relative overflow-hidden px-5 pb-16 pt-36 md:px-10 md:pb-20 md:pt-44">
     <div className="pointer-events-none absolute inset-0 grid-lines [mask-image:radial-gradient(ellipse_at_top_left,black,transparent_65%)]" />
