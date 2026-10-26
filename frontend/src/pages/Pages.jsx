@@ -29,7 +29,7 @@ export function MethodPage() {
   useTitle("Metodologia");
   return (
     <main data-testid="method-page" className="pt-16">
-      <Method />
+      <Method interactive />
       <PrimaDeepDive />
       <Compare />
       <CtaBand />
