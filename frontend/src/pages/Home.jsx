@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Hero } from "@/components/site/Hero";
+import { StrategicConsulting } from "@/components/site/StrategicConsulting";
 import { Manifesto } from "@/components/site/Manifesto";
 import { ClientsStrip } from "@/components/site/Marquee";
 import { Services } from "@/components/site/Services";
@@ -23,6 +24,7 @@ export default function Home() {
   return (
     <main data-testid="home-page">
       <Hero />
+      <StrategicConsulting />
       <Manifesto />
       <Services />
       <Method />

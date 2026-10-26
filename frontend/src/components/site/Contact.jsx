@@ -1,18 +1,14 @@
 import { useState } from "react";
-import axios from "axios";
-import { toast } from "sonner";
-import { ArrowRight, Check, Loader2, Mail, MapPin, Phone, Instagram } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone, Instagram } from "lucide-react";
 import { CONTACT } from "@/lib/content";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const EMPTY = { name: "", email: "", phone: "", company: "", revenue: "", service: "", message: "" };
 const REVENUES = ["Até R$ 50 mil/mês", "R$ 50 a 200 mil/mês", "R$ 200 mil a 1 mi/mês", "Acima de R$ 1 mi/mês"];
 const SERVICES = ["Tráfego Pago", "SEO + GEO", "CRM e Automação", "IA para Vendas", "Site / E-commerce", "Ainda não sei"];
 
 const inputCls = "w-full rounded-xl border border-white/15 bg-[#070809] px-4 py-3.5 text-sm text-white placeholder:text-[#8d9096] outline-none transition-[border-color,box-shadow] focus:border-[#FFC400] focus:shadow-[0_0_0_3px_rgba(255,196,0,0.15)]";
 
-const errText = (d) => (typeof d === "string" ? d : Array.isArray(d) ? "Verifique os campos: e-mail e telefone válidos são obrigatórios." : "Não foi possível enviar. Tente novamente.");
 
 const Field = ({ label, children }) => (
   <label className="block">
@@ -28,60 +24,39 @@ export { WhatsIcon };
 
 const Form = () => {
   const [f, setF] = useState(EMPTY);
-  const [state, setState] = useState("idle");
-  const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
-
-  const submit = async (e) => {
+  const set = (k) => (e) => setF(current => ({ ...current, [k]: e.target.value }));
+  const submit = (e) => {
     e.preventDefault();
-    setState("loading");
-    try {
-      await axios.post(`${API}/leads`, f);
-      setState("done");
-      setF(EMPTY);
-      toast.success("Recebemos seu contato! Um especialista vai falar com você em breve.");
-    } catch (err) {
-      setState("idle");
-      toast.error(errText(err?.response?.data?.detail));
-    }
+    const lines = [
+      "Olá! Vim pelo site da INSALES e gostaria de agendar minha Consultoria Estratégica.",
+      "Nome: " + f.name,
+      "Empresa: " + (f.company || "Não informado"),
+      "E-mail: " + f.email,
+      "WhatsApp: " + f.phone,
+      "Faturamento: " + (f.revenue || "Não informado"),
+      "Interesse: " + (f.service || "Diagnóstico inicial"),
+      "Desafio: " + (f.message || "Quero conversar sobre oportunidades de crescimento."),
+      "Origem: " + window.location.pathname
+    ];
+    window.location.assign("https://wa.me/5541996617279?text=" + encodeURIComponent(lines.join("\n")));
   };
-
-  if (state === "done") {
-    return (
-      <div data-testid="lead-form-success" className="flex min-h-[420px] flex-col items-start justify-center rounded-3xl border border-[#FFC400]/40 bg-[#111316] p-8 md:p-10">
-        <span className="grid h-14 w-14 place-items-center rounded-full bg-[#FFC400] text-[#070809]"><Check className="h-6 w-6" /></span>
-        <h3 className="font-display mt-6 text-3xl uppercase">Recebido!</h3>
-        <p className="mt-3 max-w-md text-[#c2c4c9]">Nossa equipe vai analisar seu cenário e entrar em contato. Quer agilizar? Chame no WhatsApp.</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" data-testid="lead-success-whatsapp" className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-bold text-[#070809]"><WhatsIcon className="h-4 w-4" /> Chamar no WhatsApp</a>
-          <button data-testid="lead-form-new" onClick={() => setState("idle")} className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold">Enviar outro</button>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <form onSubmit={submit} data-testid="lead-form" className="grid gap-4 rounded-3xl border border-white/10 bg-[#111316] p-6 sm:grid-cols-2 md:p-10">
+      <div className="sm:col-span-2 rounded-2xl border border-[#FFC400]/30 bg-[#FFC400]/5 px-5 py-4">
+        <p className="font-semibold text-[#FFC400]">Seu diagnóstico começa pelo WhatsApp.</p>
+        <p className="mt-2 text-sm leading-relaxed text-[#d5d7db]">Nesta etapa, o site não grava formulários. Ao continuar, você confere a mensagem no WhatsApp e decide se deseja enviá-la.</p>
+      </div>
       <Field label="Nome *"><input required minLength={2} value={f.name} onChange={set("name")} data-testid="lead-input-name" className={inputCls} placeholder="Seu nome" /></Field>
       <Field label="Empresa"><input value={f.company} onChange={set("company")} data-testid="lead-input-company" className={inputCls} placeholder="Nome da empresa" /></Field>
       <Field label="E-mail *"><input required type="email" value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder="voce@empresa.com.br" /></Field>
       <Field label="WhatsApp *"><input required minLength={8} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder="(41) 90000-0000" /></Field>
-      <Field label="Faturamento">
-        <select value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls}>
-          <option value="">Selecione</option>{REVENUES.map((r) => <option key={r}>{r}</option>)}
-        </select>
-      </Field>
-      <Field label="Interesse">
-        <select value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls}>
-          <option value="">Selecione</option>{SERVICES.map((r) => <option key={r}>{r}</option>)}
-        </select>
-      </Field>
-      <div className="sm:col-span-2">
-        <Field label="Conte sobre seu desafio"><textarea rows={4} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder="Ex.: queremos reduzir o CAC e escalar as vendas online" /></Field>
-      </div>
-      <button type="submit" disabled={state === "loading"} data-testid="lead-form-submit-button"
-        className="group sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC400] px-6 py-4 font-bold text-[#070809] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(255,196,0,0.7)] disabled:opacity-70">
-        {state === "loading" ? <Loader2 className="h-5 w-5 animate-spin" /> : <>Quero meu diagnóstico <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></>}
+      <Field label="Faturamento"><select value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls}><option value="">Selecione</option>{REVENUES.map(r=><option key={r}>{r}</option>)}</select></Field>
+      <Field label="Interesse"><select value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls}><option value="">Selecione</option>{SERVICES.map(r=><option key={r}>{r}</option>)}</select></Field>
+      <div className="sm:col-span-2"><Field label="Conte sobre seu desafio"><textarea rows={4} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder="Ex.: queremos reduzir o CAC e escalar as vendas online" /></Field></div>
+      <button type="submit" data-testid="lead-form-submit-button" className="group sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC400] px-6 py-4 font-bold text-[#070809] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(255,196,0,0.7)]">
+        Continuar pelo WhatsApp <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1"/>
       </button>
+      <p className="sm:col-span-2 text-center text-xs leading-relaxed text-[#AEB0B6]">O envio da mensagem depende da sua confirmação no WhatsApp. O site não confirma recebimento antecipadamente.</p>
     </form>
   );
 };

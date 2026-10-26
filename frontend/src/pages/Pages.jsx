@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { ServicesGrid } from "@/components/site/Services";
 import { Method } from "@/components/site/Method";
+import { PrimaDeepDive } from "@/components/site/PrimaDeepDive";
 import { Compare } from "@/components/site/Compare";
 import { About } from "@/components/site/About";
 import { ClientsStrip } from "@/components/site/Marquee";
@@ -29,6 +30,7 @@ export function MethodPage() {
   return (
     <main data-testid="method-page" className="pt-16">
       <Method />
+      <PrimaDeepDive />
       <Compare />
       <CtaBand />
     </main>

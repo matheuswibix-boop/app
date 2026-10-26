@@ -51,9 +51,9 @@ export function BlogPost() {
         <Reveal className="prose-insales mt-12 border-t border-white/10 pt-10">
           {post.body.map((b, i) => (b.startsWith("## ") ? <h2 key={i}>{b.slice(3)}</h2> : <p key={i}>{b}</p>))}
         </Reveal>
-        <Link to="/fale-conosco" data-testid="blog-post-cta" className="mt-12 flex items-center justify-between gap-6 rounded-3xl bg-[#FFC400] p-8 text-[#070809] transition-transform hover:-translate-y-1">
+        <Link to="/consultoria-estrategica" data-testid="blog-post-cta" className="mt-12 flex items-center justify-between gap-6 rounded-3xl bg-[#FFC400] p-8 text-[#070809] transition-transform hover:-translate-y-1">
           <span className="font-display text-xl uppercase md:text-2xl">Quer aplicar isso no seu negócio?</span>
-          <span className="shrink-0 rounded-full bg-[#070809] px-5 py-3 text-sm font-bold text-[#FFC400]">Fale com Especialista</span>
+          <span className="shrink-0 rounded-full bg-[#070809] px-5 py-3 text-sm font-bold text-[#FFC400]">Conhecer consultoria</span>
         </Link>
       </article>
       <div className="mx-auto mt-24 max-w-[1400px]">

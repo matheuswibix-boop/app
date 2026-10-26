@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PRIMA, RESULTS } from "@/lib/content";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
@@ -24,11 +25,12 @@ export const Method = () => {
           </div>
           <Reveal>
             <p className="text-lg text-[#c2c4c9] leading-relaxed">
-              O tráfego pago é o combustível imediato. O SEO é o motor de autoridade. O Método PRIMA integra os dois em um ecossistema de aquisição orientado a dados — <span className="text-white font-semibold">usamos o pago para validar e o SEO para dominar.</span>
+              O Método PRIMA transforma dados de marketing e vendas em decisões comerciais. Planejamos antes de anunciar, rastreamos a origem de cada oportunidade, integramos o CRM e melhoramos a operação para crescer com controle — <span className="text-white font-semibold">do clique ao fechamento e à receita.</span>
             </p>
           </Reveal>
         </div>
 
+        <div className="mt-9 flex flex-wrap gap-4"><Link to="/metodologia" className="inline-flex rounded-full border border-[#FFC400]/70 px-6 py-3 font-bold text-[#FFC400] transition-colors hover:bg-[#FFC400] hover:text-[#070809]">Entenda o método completo →</Link><Link to="/consultoria-estrategica" className="inline-flex rounded-full bg-[#FFC400] px-6 py-3 font-bold text-[#070809] transition-transform hover:-translate-y-1">Solicitar consultoria estratégica →</Link></div>
         <div ref={ref} className="relative mt-20">
           <div className="absolute left-0 right-0 top-[62px] hidden h-px bg-white/10 lg:block" />
           <motion.div style={{ scaleX: line }} className="absolute left-0 right-0 top-[62px] hidden h-px origin-left bg-[#FFC400] lg:block" />
