@@ -23,7 +23,7 @@ export const Method = ({ interactive = false }) => {
             <Eyebrow><T>Nosso método</T></Eyebrow>
             <h2 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl">
               <MaskLine><T>Método</T></MaskLine>
-              <MaskLine delay={0.1} className="text-[#FFC400]">PRIMA.</MaskLine>
+              <MaskLine delay={0.1} className="text-[#FFC400]"><T>PRIMA.</T></MaskLine>
             </h2>
           </div>
           <Reveal>
