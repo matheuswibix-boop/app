@@ -1889,3 +1889,5 @@ Object.assign(translations, {
     "en": "Articles on data marketing, SEO, paid advertising, AI, and sales operations."
   }
 });
+
+Object.assign(translations, {"Vídeos Sociais e Institucionais": {"es":"Videos sociales y corporativos","en":"Social and Corporate Videos"}});
