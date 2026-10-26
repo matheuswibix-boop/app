@@ -1,3 +1,4 @@
+import { T } from "@/lib/i18n";
 import { CLIENTS } from "@/lib/content";
 
 export const LogoMarquee = ({ logos }) => (
