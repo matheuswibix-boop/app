@@ -60,9 +60,9 @@ export const Hero = () => {
         </motion.p>
         <h1 data-testid="hero-title" className="font-display uppercase leading-[0.9] text-[10.5vw] sm:text-6xl lg:text-7xl xl:text-[6.4rem]">
           {lines.map((l, i) => (
-            <span key={t(l.t)} className="block overflow-hidden pb-[0.04em]">
+            <span key={l.t} className="block overflow-hidden pb-[0.04em]">
               <motion.span className={`block ${l.c}`} initial={{ y: "115%" }} animate={{ y: "0%" }}
-                transition={{ duration: 1.1, ease, delay: 0.45 + i * 0.13 }}>{l.t}</motion.span>
+                transition={{ duration: 1.1, ease, delay: 0.45 + i * 0.13 }}>{t(l.t)}</motion.span>
             </span>
           ))}
         </h1>
@@ -86,9 +86,9 @@ export const Hero = () => {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.4, duration: 1 }}
           className="mt-14 grid grid-cols-3 gap-4 border-t border-white/10 pt-6 md:max-w-3xl">
           {STATS.map((s, i) => (
-            <div key={t(s.label)} data-testid={`hero-stat-${i}`} className={i ? "border-l border-white/10 pl-4" : ""}>
+            <div key={s.label} data-testid={`hero-stat-${i}`} className={i ? "border-l border-white/10 pl-4" : ""}>
               <Counter to={s.n} pre={s.pre} suf={s.suf} className="font-display block text-2xl sm:text-3xl md:text-4xl text-[#FFC400]" />
-              <span className="mt-1 block text-xs sm:text-sm text-[#c9cbd0]">{s.label}</span>
+              <span className="mt-1 block text-xs sm:text-sm text-[#c9cbd0]">{t(s.label)}</span>
             </div>
           ))}
         </motion.div>
