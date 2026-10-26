@@ -1826,3 +1826,66 @@ Object.assign(translations, {
     "en": "e-commerce revenue, with 17% lower CAC"
   }
 });
+
+Object.assign(translations, {
+  "Trabalhamos com plano documentado, integração de canais e leitura contínua dos resultados.": {
+    "es": "Trabajamos con un plan documentado, canales integrados y seguimiento continuo de resultados.",
+    "en": "We work with a documented plan, integrated channels, and ongoing performance monitoring."
+  },
+  "Marketing que vira receita | INSALES Marketing": {
+    "es": "Marketing que genera ingresos | INSALES Marketing",
+    "en": "Marketing that drives revenue | INSALES Marketing"
+  },
+  "Agência de marketing, mídia paga, SEO, GEO, IA e processos comerciais para gerar crescimento previsível.": {
+    "es": "Agencia de marketing, publicidad digital, SEO, GEO, IA y procesos comerciales para un crecimiento predecible.",
+    "en": "Marketing agency specializing in paid media, SEO, GEO, AI, and sales operations for predictable growth."
+  },
+  "Serviços de Marketing e Vendas | INSALES": {
+    "es": "Servicios de Marketing y Ventas | INSALES",
+    "en": "Marketing and Sales Services | INSALES"
+  },
+  "Tráfego pago, SEO, GEO, IA de atendimento, CRM, sites e mais soluções integradas para sua empresa.": {
+    "es": "Publicidad digital, SEO, GEO, atención con IA, CRM, sitios web y otras soluciones integradas para tu empresa.",
+    "en": "Paid advertising, SEO, GEO, AI service, CRM, websites, and more integrated business solutions."
+  },
+  "Método PRIMA: do clique à receita | INSALES": {
+    "es": "Método PRIMA: del clic a los ingresos | INSALES",
+    "en": "PRIMA Method: from click to revenue | INSALES"
+  },
+  "Conheça os cinco pilares do Método PRIMA: diagnóstico, rastreio até a venda, integração com CRM, indicadores e crescimento com controle.": {
+    "es": "Conoce los cinco pilares del Método PRIMA: diagnóstico, seguimiento hasta la venta, integración con CRM, indicadores y crecimiento controlado.",
+    "en": "Learn the five PRIMA Method pillars: assessment, tracking through sales, CRM integration, performance indicators, and controlled growth."
+  },
+  "Consultoria Estratégica de Marketing e Vendas | INSALES": {
+    "es": "Consultoría Estratégica de Marketing y Ventas | INSALES",
+    "en": "Strategic Marketing and Sales Consultation | INSALES"
+  },
+  "Diagnóstico de 60 minutos com análise de mercado, concorrentes, ICP, MQL, SEO, GEO, CRM e plano inicial de ação de 90 dias.": {
+    "es": "Diagnóstico de 60 minutos con análisis del mercado, competencia, ICP, MQL, SEO, GEO, CRM y plan de acción inicial de 90 días.",
+    "en": "60-minute assessment of the market, competitors, ICP, MQL, SEO, GEO, CRM, and an initial 90-day action plan."
+  },
+  "Quem Somos | INSALES Marketing": {
+    "es": "Quiénes somos | INSALES Marketing",
+    "en": "About Us | INSALES Marketing"
+  },
+  "Mais de 15 anos no mercado e mais de 2.000 empresas atendidas. Conheça a INSALES.": {
+    "es": "Más de 15 años en el mercado y más de 2.000 empresas atendidas. Conoce INSALES.",
+    "en": "More than 15 years in business and over 2,000 companies served. Meet INSALES."
+  },
+  "Fale com um Especialista | INSALES": {
+    "es": "Habla con un especialista | INSALES",
+    "en": "Talk to an Expert | INSALES"
+  },
+  "Solicite um diagnóstico de marketing, SEO, performance e vendas com a INSALES.": {
+    "es": "Solicita un diagnóstico de marketing, SEO, rendimiento y ventas con INSALES.",
+    "en": "Request a marketing, SEO, performance, and sales assessment with INSALES."
+  },
+  "Blog sobre Marketing e Vendas | INSALES": {
+    "es": "Blog sobre Marketing y Ventas | INSALES",
+    "en": "Marketing and Sales Blog | INSALES"
+  },
+  "Artigos sobre data marketing, SEO, tráfego pago, IA e operações comerciais.": {
+    "es": "Artículos sobre data marketing, SEO, anuncios, IA y procesos comerciales.",
+    "en": "Articles on data marketing, SEO, paid advertising, AI, and sales operations."
+  }
+});
