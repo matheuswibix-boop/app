@@ -33,7 +33,7 @@ const Group = () => (
       <Eyebrow><T>Sobre nós</T></Eyebrow>
       <h2 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl">
         <MaskLine><T>Fazemos parte</T></MaskLine>
-        <MaskLine delay={0.1}>do <span className="text-[#FFC400]"><T>Grupo GGV.</T></span></MaskLine>
+        <MaskLine delay={0.1}><T>do</T> <span className="text-[#FFC400]"><T>Grupo GGV.</T></span></MaskLine>
       </h2>
     </div>
     <Reveal>
