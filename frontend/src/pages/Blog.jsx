@@ -14,10 +14,10 @@ export function BlogList() {
   return (
     <main data-testid="blog-list-page" className="px-5 pb-24 pt-36 md:px-10">
       <div className="mx-auto max-w-[1400px]">
-        <Eyebrow>Blog INSALES</Eyebrow>
+        <Eyebrow><T>Blog INSALES</T></Eyebrow>
         <h1 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl">
-          <MaskLine>Conteúdo para</MaskLine>
-          <MaskLine delay={0.1} className="text-[#FFC400]">quem vende.</MaskLine>
+          <MaskLine><T>Conteúdo para</T></MaskLine>
+          <MaskLine delay={0.1} className="text-[#FFC400]"><T>quem vende.</T></MaskLine>
         </h1>
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {POSTS.map((p, i) => <PostCard key={p.slug} p={p} i={i} />)}
@@ -36,8 +36,8 @@ export function BlogPost() {
   if (!post) {
     return (
       <main className="px-5 pb-24 pt-40 text-center">
-        <h1 className="font-display text-3xl uppercase">Artigo não encontrado</h1>
-        <Link to="/blog" className="mt-6 inline-block text-[#FFC400]">Voltar ao blog</Link>
+        <h1 className="font-display text-3xl uppercase"><T>Artigo não encontrado</T></h1>
+        <Link to="/blog" className="mt-6 inline-block text-[#FFC400]"><T>Voltar ao blog</T></Link>
       </main>
     );
   }
@@ -57,12 +57,12 @@ export function BlogPost() {
           {localizedBody.map((b, i) => (b.startsWith("## ") ? <h2 key={i}><T>{b.slice(3)}</T></h2> : <p key={i}><T>{b}</T></p>))}
         </Reveal>
         <Link to="/consultoria-estrategica" data-testid="blog-post-cta" className="mt-12 flex items-center justify-between gap-6 rounded-3xl bg-[#FFC400] p-8 text-[#070809] transition-transform hover:-translate-y-1">
-          <span className="font-display text-xl uppercase md:text-2xl">Quer aplicar isso no seu negócio?</span>
-          <span className="shrink-0 rounded-full bg-[#070809] px-5 py-3 text-sm font-bold text-[#FFC400]">Conhecer consultoria</span>
+          <span className="font-display text-xl uppercase md:text-2xl"><T>Quer aplicar isso no seu negócio?</T></span>
+          <span className="shrink-0 rounded-full bg-[#070809] px-5 py-3 text-sm font-bold text-[#FFC400]"><T>Conhecer consultoria</T></span>
         </Link>
       </article>
       <div className="mx-auto mt-24 max-w-[1400px]">
-        <p className="font-mono mb-6 text-xs uppercase tracking-[0.28em] text-[#AEB0B6]">Continue lendo</p>
+        <p className="font-mono mb-6 text-xs uppercase tracking-[0.28em] text-[#AEB0B6]"><T>Continue lendo</T></p>
         <div className="grid gap-4 md:grid-cols-2">{others.map((p, i) => <PostCard key={p.slug} p={p} i={i} />)}</div>
       </div>
     </main>
