@@ -7,10 +7,18 @@ import { Logo } from "./Logo";
 import { NAV } from "@/lib/content";
 
 const LANGUAGE_OPTIONS = [
-  { code: "pt", flag: "🇧🇷", label: "Português" },
-  { code: "es", flag: "🇪🇸", label: "Español" },
-  { code: "en", flag: "🇬🇧", label: "English" }
+  { code: "pt", label: "Português" },
+  { code: "es", label: "Español" },
+  { code: "en", label: "English" }
 ];
+// Vector flags render consistently on Windows, macOS, Android and iOS.
+const FlagIcon = ({code}) => (
+  <svg viewBox="0 0 24 16" aria-hidden="true" focusable="false" className="h-4 w-6 shrink-0 overflow-hidden rounded-[2px] shadow-sm">
+    {code==="pt"?<><rect width="24" height="16" fill="#199447"/><path d="M12 1 22 8 12 15 2 8Z" fill="#FFDF00"/><circle cx="12" cy="8" r="4" fill="#002776"/><path d="M8.2 6.5a12 12 0 0 1 7.6 2.3" fill="none" stroke="#fff" strokeWidth="1"/></>:
+      code==="es"?<><rect width="24" height="16" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/><rect x="7" y="6" width="2" height="4" fill="#AA151B"/></>:
+      <><rect width="24" height="16" fill="#012169"/><path d="M0 0 24 16 M24 0 0 16" stroke="#fff" strokeWidth="4"/><path d="M0 0 24 16 M24 0 0 16" stroke="#C8102E" strokeWidth="1.7"/><path d="M12 0V16 M0 8H24" stroke="#fff" strokeWidth="5"/><path d="M12 0V16 M0 8H24" stroke="#C8102E" strokeWidth="2.5"/></>}
+  </svg>
+);
 
 const LanguageSelector = () => {
   const {lang,setLang} = useLanguage();
@@ -34,7 +42,7 @@ const LanguageSelector = () => {
         aria-label="Selecionar idioma / Select language / Elegir idioma"
         data-testid="language-switcher-trigger"
         className="flex h-10 items-center gap-1.5 rounded-full border border-white/20 bg-[#111316]/80 px-2.5 text-xs font-bold text-white transition-colors hover:border-[#FFC400]/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFC400]">
-        <span aria-hidden="true" className="text-lg leading-none">{active.flag}</span><span>{lang.toUpperCase()}</span>
+        <FlagIcon code={active.code}/><span>{lang.toUpperCase()}</span>
         <ChevronDown className={`h-3 w-3 text-[#FFC400] transition-transform ${expanded ? "rotate-180" : ""}`}/>
       </button>
       {expanded && <div role="group" aria-label="Site language" className="absolute right-0 top-full z-[80] mt-2 min-w-[176px] overflow-hidden rounded-2xl border border-[#FFC400]/25 bg-[#101114] p-1.5 shadow-2xl">
@@ -42,7 +50,7 @@ const LanguageSelector = () => {
           aria-pressed={lang===option.code} onClick={()=>{setLang(option.code);setExpanded(false);}}
           data-testid={`language-option-${option.code}`}
           className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-colors hover:bg-white/10 ${lang===option.code?"bg-[#FFC400]/10 text-[#FFC400]":"text-white"}`}>
-          <span aria-hidden="true" className="text-xl leading-none">{option.flag}</span><span>{option.label}</span>
+          <FlagIcon code={option.code}/><span>{option.label}</span>
         </button>)}
       </div>}
     </div>
