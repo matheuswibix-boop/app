@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import Admin from "@/pages/Admin";
 import SeoHead from "@/components/seo/SeoHead";
 import ServiceDetail from "@/pages/ServiceDetail";
+import ConsultingPage from "@/pages/ConsultingPage";
 
 const Shell = () => {
   const { pathname, hash } = useLocation();
@@ -26,6 +27,7 @@ const Shell = () => {
         <Route path="/servicos" element={<ServicesPage />} />
         <Route path="/servicos/:slug" element={<ServiceDetail />} />
         <Route path="/metodologia" element={<MethodPage />} />
+        <Route path="/consultoria-estrategica" element={<ConsultingPage />} />
         <Route path="/quem-somos" element={<AboutPage />} />
         <Route path="/fale-conosco" element={<ContactPage />} />
         <Route path="/blog" element={<BlogList />} />
