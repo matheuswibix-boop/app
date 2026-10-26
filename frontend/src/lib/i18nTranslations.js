@@ -304,3 +304,338 @@ export const translations = {
     "en": "Companies that trust us"
   }
 };
+
+Object.assign(translations, {
+  "Nosso compromisso": {
+    "es": "Nuestro compromiso",
+    "en": "Our commitment"
+  },
+  "Sócios-diretores da INSALES": {
+    "es": "Socios directores de INSALES",
+    "en": "INSALES managing partners"
+  },
+  "Marca": {
+    "es": "Marca",
+    "en": "Brand"
+  },
+  "Mídia paga": {
+    "es": "Medios pagos",
+    "en": "Paid media"
+  },
+  "Conteúdo": {
+    "es": "Contenido",
+    "en": "Content"
+  },
+  "Orgânico": {
+    "es": "Orgánico",
+    "en": "Organic"
+  },
+  "Loja virtual": {
+    "es": "Tienda en línea",
+    "en": "Online store"
+  },
+  "Presença digital": {
+    "es": "Presencia digital",
+    "en": "Digital presence"
+  },
+  "Comercial": {
+    "es": "Ventas",
+    "en": "Sales"
+  },
+  "Audiovisual": {
+    "es": "Audiovisual",
+    "en": "Audiovisual"
+  },
+  "Inteligência artificial": {
+    "es": "Inteligencia artificial",
+    "en": "Artificial intelligence"
+  },
+  "Identidade e posicionamento que tornam sua marca reconhecida e desejada.": {
+    "es": "Identidad y posicionamiento que hacen que tu marca sea reconocida y deseada.",
+    "en": "Identity and positioning that make your brand recognizable and desirable."
+  },
+  "Campanhas no Facebook e Instagram otimizadas para gerar leads e vendas.": {
+    "es": "Campañas en Facebook e Instagram optimizadas para generar prospectos y ventas.",
+    "en": "Facebook and Instagram campaigns optimized to generate leads and sales."
+  },
+  "Gestão de redes com estratégia, calendário e conteúdo que engaja.": {
+    "es": "Gestión de redes sociales con estrategia, calendario y contenido atractivo.",
+    "en": "Social media management with strategy, content planning, and engaging posts."
+  },
+  "Suas páginas nas primeiras posições do Google, gerando demanda contínua.": {
+    "es": "Tus páginas en las primeras posiciones de Google, generando demanda continua.",
+    "en": "Your pages ranking prominently on Google and generating ongoing demand."
+  },
+  "Lojas virtuais rápidas, rastreáveis e estruturadas para vender online.": {
+    "es": "Tiendas en línea rápidas, medibles y diseñadas para vender.",
+    "en": "Fast, measurable online stores built to sell."
+  },
+  "Anúncios na pesquisa, YouTube e display para quem já procura o que você vende.": {
+    "es": "Anuncios en Búsqueda, YouTube y display para quienes ya buscan lo que vendes.",
+    "en": "Search, YouTube, and display ads reaching people already looking for what you sell."
+  },
+  "Sites profissionais que transmitem credibilidade e convertem visitantes.": {
+    "es": "Sitios profesionales que transmiten confianza y convierten visitantes.",
+    "en": "Professional websites that build trust and convert visitors."
+  },
+  "Apresentações, propostas e catálogos que ajudam seu time a fechar negócios.": {
+    "es": "Presentaciones, propuestas y catálogos que ayudan a tu equipo a cerrar negocios.",
+    "en": "Presentations, proposals, and catalogs that help your team close deals."
+  },
+  "Vídeos para redes sociais e institucionais que contam a história da sua marca.": {
+    "es": "Videos para redes sociales y corporativos que cuentan la historia de tu marca.",
+    "en": "Social and corporate videos that tell your brand's story."
+  },
+  "Sua empresa citada nas respostas do ChatGPT, Gemini e outras IAs.": {
+    "es": "Tu empresa mencionada en las respuestas de ChatGPT, Gemini y otras IA.",
+    "en": "Your company mentioned in answers from ChatGPT, Gemini, and other AI tools."
+  },
+  "Branding": {
+    "es": "Branding",
+    "en": "Branding"
+  },
+  "SEO — Tráfego Orgânico": {
+    "es": "SEO — Tráfico Orgánico",
+    "en": "SEO — Organic Traffic"
+  },
+  "Criação de E-commerce": {
+    "es": "Creación de tiendas online",
+    "en": "E-commerce Development"
+  },
+  "Sites Institucionais": {
+    "es": "Sitios corporativos",
+    "en": "Corporate Websites"
+  },
+  "Materiais de Venda": {
+    "es": "Materiales comerciales",
+    "en": "Sales Materials"
+  },
+  "Vídeos Social e Institucionais": {
+    "es": "Videos sociales y corporativos",
+    "en": "Social and Corporate Videos"
+  },
+  "SEO para IA (GEO)": {
+    "es": "SEO para IA (GEO)",
+    "en": "SEO for AI (GEO)"
+  },
+  "Tráfego Pago": {
+    "es": "Publicidad digital",
+    "en": "Paid Advertising"
+  },
+  "IA de Atendimento": {
+    "es": "IA de atención al cliente",
+    "en": "AI Customer Service"
+  },
+  "CRM e Automação Comercial": {
+    "es": "CRM y automatización comercial",
+    "en": "CRM and Sales Automation"
+  },
+  "Posicionamento de marca, identidade visual e comunicação para ser reconhecido pelo cliente ideal.": {
+    "es": "Posicionamiento de marca, identidad visual y comunicación para ser reconocido por el cliente ideal.",
+    "en": "Brand positioning, visual identity, and messaging to be recognized by your ideal customer."
+  },
+  "Campanhas orientadas a geração de leads e vendas no Facebook e Instagram com rastreabilidade.": {
+    "es": "Campañas de Facebook e Instagram orientadas a captar prospectos y ventas medibles.",
+    "en": "Trackable Facebook and Instagram campaigns focused on generating leads and sales."
+  },
+  "Gestão de conteúdo e presença de marca em canais sociais com estratégia comercial.": {
+    "es": "Gestión de contenidos y presencia de marca en redes sociales con estrategia comercial.",
+    "en": "Content and brand presence management on social channels with a commercial strategy."
+  },
+  "SEO técnico, estratégico e de conteúdo para conquistar demanda qualificada no Google.": {
+    "es": "SEO técnico, estratégico y de contenidos para captar demanda cualificada en Google.",
+    "en": "Technical, strategic, and content SEO to capture qualified demand on Google."
+  },
+  "Estruturação de lojas virtuais com experiência de compra, rastreamento e foco em vendas.": {
+    "es": "Desarrollo de tiendas online con una mejor experiencia de compra, medición y foco en ventas.",
+    "en": "Building online stores with a strong shopping experience, tracking, and a sales focus."
+  },
+  "Anúncios na Pesquisa, YouTube e outros formatos para alcançar consumidores com intenção de compra.": {
+    "es": "Anuncios en Búsqueda, YouTube y otros formatos para llegar a consumidores con intención de compra.",
+    "en": "Search, YouTube, and other ads that reach buyers with purchase intent."
+  },
+  "Sites rápidos e responsivos para apresentar autoridade, captar oportunidades e crescer organicamente.": {
+    "es": "Sitios rápidos y responsivos para transmitir autoridad, captar oportunidades y crecer orgánicamente.",
+    "en": "Fast, responsive sites that establish authority, capture opportunities, and grow organically."
+  },
+  "Materiais comerciais para comunicar valor de serviços e aumentar a qualidade de apresentações e propostas.": {
+    "es": "Materiales comerciales para comunicar el valor de los servicios y mejorar presentaciones y propuestas.",
+    "en": "Sales materials that communicate service value and improve presentations and proposals."
+  },
+  "Vídeos para explicar soluções, fortalecer posicionamento e gerar conexão com clientes.": {
+    "es": "Videos para explicar soluciones, fortalecer el posicionamiento y conectar con los clientes.",
+    "en": "Videos that explain solutions, strengthen positioning, and connect with customers."
+  },
+  "Estruturação de conteúdo e autoridade para melhorar a descoberta da marca em experiências de busca com IA.": {
+    "es": "Estructuración de contenidos y autoridad para mejorar la visibilidad de marca en búsquedas con IA.",
+    "en": "Structuring content and authority to improve brand discovery in AI search experiences."
+  },
+  "Estratégia integrada de mídia paga com Google e Meta conectados ao CRM para gerar oportunidades comerciais.": {
+    "es": "Estrategia integrada de anuncios en Google y Meta conectados al CRM para generar oportunidades comerciales.",
+    "en": "An integrated Google and Meta advertising strategy connected to CRM to generate sales opportunities."
+  },
+  "Atendimento com IA para responder, qualificar e encaminhar leads com agilidade e contexto.": {
+    "es": "Atención con IA para responder, cualificar y derivar prospectos con rapidez y contexto.",
+    "en": "AI-powered service that responds to, qualifies, and routes leads quickly and in context."
+  },
+  "Organização do funil comercial, integrações e automações para acompanhar oportunidades do início ao fechamento.": {
+    "es": "Organización del embudo de ventas, integraciones y automatizaciones para seguir oportunidades hasta el cierre.",
+    "en": "Sales pipeline organization, integrations, and automations to track opportunities through closing."
+  },
+  "Diagnóstico e posicionamento de marca": {
+    "es": "Diagnóstico y posicionamiento de marca",
+    "en": "Brand assessment and positioning"
+  },
+  "Diretrizes de identidade visual": {
+    "es": "Directrices de identidad visual",
+    "en": "Visual identity guidelines"
+  },
+  "Aplicações e consistência da comunicação": {
+    "es": "Aplicaciones y coherencia de comunicación",
+    "en": "Brand applications and consistent messaging"
+  },
+  "Estrutura de campanhas e públicos": {
+    "es": "Estructura de campañas y audiencias",
+    "en": "Campaign and audience structure"
+  },
+  "Criativos e testes de anúncios": {
+    "es": "Creatividades y pruebas de anuncios",
+    "en": "Ad creatives and testing"
+  },
+  "Eventos, públicos e otimização contínua": {
+    "es": "Eventos, audiencias y optimización continua",
+    "en": "Events, audiences, and continuous optimization"
+  },
+  "Planejamento editorial": {
+    "es": "Planificación editorial",
+    "en": "Editorial planning"
+  },
+  "Produção e publicação de conteúdo": {
+    "es": "Producción y publicación de contenidos",
+    "en": "Content production and publishing"
+  },
+  "Análise de interação e evolução de audiência": {
+    "es": "Análisis de interacción y crecimiento de audiencia",
+    "en": "Interaction analysis and audience growth"
+  },
+  "Auditoria técnica e Core Web Vitals": {
+    "es": "Auditoría técnica y Core Web Vitals",
+    "en": "Technical audit and Core Web Vitals"
+  },
+  "Arquitetura, páginas e palavras-chave": {
+    "es": "Arquitectura, páginas y palabras clave",
+    "en": "Information architecture, pages, and keywords"
+  },
+  "Conteúdo, interlinking e autoridade": {
+    "es": "Contenido, enlaces internos y autoridad",
+    "en": "Content, internal links, and authority"
+  },
+  "Arquitetura de categorias e produtos": {
+    "es": "Arquitectura de categorías y productos",
+    "en": "Category and product structure"
+  },
+  "Jornada e checkout com menos atritos": {
+    "es": "Proceso de compra y checkout con menos fricción",
+    "en": "Shopping journey and lower-friction checkout"
+  },
+  "Mensuração de pedidos e desempenho": {
+    "es": "Medición de pedidos y rendimiento",
+    "en": "Order and performance measurement"
+  },
+  "Planejamento de termos e intenção": {
+    "es": "Planificación de términos e intención de búsqueda",
+    "en": "Keyword and search-intent planning"
+  },
+  "Campanhas, anúncios e negativas": {
+    "es": "Campañas, anuncios y palabras clave negativas",
+    "en": "Campaigns, ads, and negative keywords"
+  },
+  "Mensuração de leads e otimização por qualidade": {
+    "es": "Medición de prospectos y optimización por calidad",
+    "en": "Lead measurement and quality-based optimization"
+  },
+  "Design responsivo e arquitetura": {
+    "es": "Diseño adaptable y arquitectura",
+    "en": "Responsive design and site architecture"
+  },
+  "Performance e SEO técnico": {
+    "es": "Rendimiento y SEO técnico",
+    "en": "Performance and technical SEO"
+  },
+  "Formulários e eventos de conversão": {
+    "es": "Formularios y eventos de conversión",
+    "en": "Forms and conversion events"
+  },
+  "Diagnóstico da jornada de decisão": {
+    "es": "Diagnóstico del proceso de decisión",
+    "en": "Purchase decision journey assessment"
+  },
+  "Propostas e apresentações comerciais": {
+    "es": "Propuestas y presentaciones comerciales",
+    "en": "Proposals and sales presentations"
+  },
+  "Conteúdo e materiais de apoio": {
+    "es": "Contenido y materiales de apoyo",
+    "en": "Supporting content and materials"
+  },
+  "Roteiros e direção criativa": {
+    "es": "Guiones y dirección creativa",
+    "en": "Scripts and creative direction"
+  },
+  "Produção e edição de vídeos": {
+    "es": "Producción y edición de videos",
+    "en": "Video production and editing"
+  },
+  "Versões adequadas aos canais": {
+    "es": "Versiones adaptadas a cada canal",
+    "en": "Versions tailored to each channel"
+  },
+  "Diagnóstico de presença em buscas com IA": {
+    "es": "Diagnóstico de presencia en búsquedas con IA",
+    "en": "AI search visibility assessment"
+  },
+  "Conteúdo claro, entidades e fontes": {
+    "es": "Contenido claro, entidades y fuentes",
+    "en": "Clear content, entities, and sources"
+  },
+  "Dados estruturados e validação de informações": {
+    "es": "Datos estructurados y verificación de información",
+    "en": "Structured data and information validation"
+  },
+  "Diagnóstico de ofertas, público e canais": {
+    "es": "Diagnóstico de ofertas, audiencia y canales",
+    "en": "Offer, audience, and channel assessment"
+  },
+  "Campanhas, landing pages e rastreamento": {
+    "es": "Campañas, landing pages y medición",
+    "en": "Campaigns, landing pages, and tracking"
+  },
+  "Otimização por lead qualificado e venda": {
+    "es": "Optimización por prospecto cualificado y venta",
+    "en": "Optimization for qualified leads and sales"
+  },
+  "Mapeamento de conversas e objeções": {
+    "es": "Mapeo de conversaciones y objeciones",
+    "en": "Conversation and objection mapping"
+  },
+  "Automação e integração com atendimento": {
+    "es": "Automatización e integración con atención",
+    "en": "Automation and service integration"
+  },
+  "Regras para transferência ao humano": {
+    "es": "Reglas de transferencia a personas",
+    "en": "Human handoff rules"
+  },
+  "Implantação do funil e etapas": {
+    "es": "Implementación del embudo y etapas",
+    "en": "Sales pipeline and stage setup"
+  },
+  "Integração com formulários e canais": {
+    "es": "Integración con formularios y canales",
+    "en": "Integration with forms and channels"
+  },
+  "Indicadores, automações e acompanhamento": {
+    "es": "Indicadores, automatizaciones y seguimiento",
+    "en": "KPIs, automations, and monitoring"
+  }
+});
