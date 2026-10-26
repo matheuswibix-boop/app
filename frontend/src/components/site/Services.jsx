@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import servicePages from "@/lib/servicePages.json";
 import { Palette, Megaphone, Share2, Search, ShoppingCart, MousePointerClick, MonitorSmartphone, FileText, Clapperboard, Sparkles, ArrowUpRight, Bot, Workflow, TrendingUp } from "lucide-react";
 import { SERVICES } from "@/lib/content";
+import { T, useLanguage } from "@/lib/i18n";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 
 const ICONS = { branding: Palette, meta: Megaphone, social: Share2, seo: Search, ecommerce: ShoppingCart, google: MousePointerClick, sites: MonitorSmartphone, materiais: FileText, videos: Clapperboard, geo: Sparkles, trafego: TrendingUp, ia: Bot, crm: Workflow };
@@ -13,6 +14,7 @@ const NEW_SERVICES = [
 ];
 
 const Card = ({ s, dup, grid }) => {
+  const {t} = useLanguage();
   const Icon = ICONS[s.key];
   return (
     <article
@@ -26,10 +28,10 @@ const Card = ({ s, dup, grid }) => {
         <span className="font-display text-3xl text-white/10 transition-colors duration-500 group-hover:text-[#FFC400]/40">{s.n}</span>
       </div>
       <div className="mt-8 md:mt-12">
-        <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#FFC400]">{s.tag}</p>
-        <h3 className="font-display mt-3 flex h-[2.4em] items-start uppercase leading-[1.1] text-lg md:text-xl">{s.title}</h3>
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#FFC400]">{t(s.tag)}</p>
+        <h3 className="font-display mt-3 flex h-[2.4em] items-start uppercase leading-[1.1] text-lg md:text-xl">{t(s.title)}</h3>
         <div className="my-4 h-px w-full bg-white/10" />
-        <p className="min-h-[4.5em] text-sm leading-relaxed text-[#c2c4c9]">{s.text}</p>
+        <p className="min-h-[4.5em] text-sm leading-relaxed text-[#c2c4c9]">{t(s.text)}</p>
       </div>
       <Link to={SERVICE_PATHS[s.key]} aria-label={"Conheça o serviço "+s.title} tabIndex={dup ? -1 : 0} className="absolute inset-0 z-10 rounded-3xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFC400]" />
       <ArrowUpRight className="absolute right-7 top-[88px] h-5 w-5 text-[#FFC400] opacity-0 -translate-x-2 translate-y-2 transition-[opacity,transform] duration-500 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0" />
@@ -52,13 +54,13 @@ export const Services = () => (
     <div className="mx-auto max-w-[1400px] px-5 md:px-10">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
-          <Eyebrow>Nossos serviços</Eyebrow>
+          <Eyebrow><T>Nossos serviços</T></Eyebrow>
           <h2 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl">
-            <MaskLine>Soluções completas</MaskLine>
-            <MaskLine delay={0.1}>para o seu <span className="text-[#FFC400]">crescimento</span></MaskLine>
+            <MaskLine><T>Soluções completas</T></MaskLine>
+            <MaskLine delay={0.1}><T>para o seu</T> <span className="text-[#FFC400]"><T>crescimento</T></span></MaskLine>
           </h2>
         </div>
-        <p className="max-w-sm text-[#c2c4c9]">Um ecossistema único de aquisição: do primeiro clique à venda fechada no CRM.</p>
+        <p className="max-w-sm text-[#c2c4c9]"><T>Um ecossistema único de aquisição: do primeiro clique à venda fechada no CRM.</T></p>
       </div>
     </div>
     <div data-testid="services-marquee" className="marquee-wrap mt-14 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_6%,black_94%,transparent)]">
