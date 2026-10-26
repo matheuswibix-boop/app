@@ -14,6 +14,10 @@
       "destination": "/metodologia/index.html"
     },
     {
+      "source": "/consultoria-estrategica",
+      "destination": "/consultoria-estrategica/index.html"
+    },
+    {
       "source": "/quem-somos",
       "destination": "/quem-somos/index.html"
     },
