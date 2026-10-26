@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { POSTS } from "@/lib/content";
 import { T, useLanguage } from "@/lib/i18n";
+import { blogTranslations } from "@/lib/blogTranslations";
 import { PostCard } from "@/components/site/BlogPreview";
 import { Eyebrow, MaskLine, Reveal } from "@/components/site/Reveal";
 import { scrollTop } from "@/lib/scroll";
@@ -41,6 +42,7 @@ export function BlogPost() {
     );
   }
   const others = POSTS.filter((p) => p.slug !== slug);
+  const localizedBody = blogTranslations[post.slug]?.[lang] || post.body;
   return (
     <main data-testid="blog-post-page" className="px-5 pb-24 pt-36 md:px-10">
       <article className="mx-auto max-w-3xl">
@@ -52,7 +54,7 @@ export function BlogPost() {
         <h1 data-testid="blog-post-title" className="mt-6 text-3xl font-extrabold leading-tight md:text-5xl"><T>{post.title}</T></h1>
         <p className="mt-6 text-lg text-[#d5d7db] leading-relaxed"><T>{post.excerpt}</T></p>
         <Reveal className="prose-insales mt-12 border-t border-white/10 pt-10">
-          {post.body.map((b, i) => (b.startsWith("## ") ? <h2 key={i}><T>{b.slice(3)}</T></h2> : <p key={i}><T>{b}</T></p>))}
+          {localizedBody.map((b, i) => (b.startsWith("## ") ? <h2 key={i}><T>{b.slice(3)}</T></h2> : <p key={i}><T>{b}</T></p>))}
         </Reveal>
         <Link to="/consultoria-estrategica" data-testid="blog-post-cta" className="mt-12 flex items-center justify-between gap-6 rounded-3xl bg-[#FFC400] p-8 text-[#070809] transition-transform hover:-translate-y-1">
           <span className="font-display text-xl uppercase md:text-2xl">Quer aplicar isso no seu negócio?</span>
