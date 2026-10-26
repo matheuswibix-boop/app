@@ -31,7 +31,7 @@ export function BlogPost() {
   const { slug } = useParams();
   const {t,lang} = useLanguage();
   const post = POSTS.find((p) => p.slug === slug);
-  useEffect(() => { scrollTop(); if (post) document.title = `${t(post.title)} | INSALES`; }, [slug, post, lang]);
+  useEffect(() => { scrollTop(); if (post) document.title = `${t(post.title)} | INSALES`; }, [slug, post, lang, t]);
 
   if (!post) {
     return (
@@ -49,7 +49,7 @@ export function BlogPost() {
         <Link to="/blog" data-testid="blog-back-link" className="inline-flex items-center gap-2 text-sm text-[#AEB0B6] hover:text-[#FFC400]"><ArrowLeft className="h-4 w-4" /> <T>Blog</T></Link>
         <div className="mt-8 flex items-center gap-3 text-xs">
           <span className="rounded-full bg-[#FFC400]/12 px-3 py-1 font-semibold text-[#FFC400]"><T>{post.category}</T></span>
-          <span className="font-mono text-[#AEB0B6]">{post.date} · {post.read}</span>
+          <span className="font-mono text-[#AEB0B6]">{t(post.date)} · {t(post.read)}</span>
         </div>
         <h1 data-testid="blog-post-title" className="mt-6 text-3xl font-extrabold leading-tight md:text-5xl"><T>{post.title}</T></h1>
         <p className="mt-6 text-lg text-[#d5d7db] leading-relaxed"><T>{post.excerpt}</T></p>
