@@ -11,6 +11,7 @@ import { scrollTop } from "@/lib/scroll";
 import { useEffect } from "react";
 import Admin from "@/pages/Admin";
 import SeoHead from "@/components/seo/SeoHead";
+import { LanguageProvider } from "@/lib/i18n";
 import ServiceDetail from "@/pages/ServiceDetail";
 import ConsultingPage from "@/pages/ConsultingPage";
 
@@ -43,10 +44,10 @@ const Shell = () => {
 function App() {
   return (
     <div className="App grain">
-      <BrowserRouter>
+      <LanguageProvider><BrowserRouter>
         <SmoothScroll />
         <Shell />
-      </BrowserRouter>
+      </BrowserRouter></LanguageProvider>
       <Toaster theme="dark" position="top-center" richColors />
     </div>
   );
