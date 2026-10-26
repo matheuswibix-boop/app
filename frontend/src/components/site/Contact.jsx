@@ -6,13 +6,13 @@ import { CONTACT } from "@/lib/content";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 
 const API = "/api";
-const EMPTY = { name: "", email: "", phone: "", company: "", revenue: "", service: "", message: "" };
+const EMPTY = { name: "", email: "", phone: "", company: "", revenue: "", service: "", message: "", website: "" };
 const REVENUES = ["Até R$ 50 mil/mês", "R$ 50 a 200 mil/mês", "R$ 200 mil a 1 mi/mês", "Acima de R$ 1 mi/mês"];
 const SERVICES = ["Tráfego Pago", "SEO + GEO", "CRM e Automação", "IA para Vendas", "Site / E-commerce", "Ainda não sei"];
 
 const inputCls = "w-full rounded-xl border border-white/15 bg-[#070809] px-4 py-3.5 text-sm text-white placeholder:text-[#8d9096] outline-none transition-[border-color,box-shadow] focus:border-[#FFC400] focus:shadow-[0_0_0_3px_rgba(255,196,0,0.15)]";
 
-const errText = (d) => (typeof d === "string" ? d : Array.isArray(d) ? "Verifique os campos: e-mail e telefone válidos são obrigatórios." : "Não foi possível enviar. Tente novamente.");
+const errText = (d) => (typeof d === "string" ? d : Array.isArray(d) ? "Verifique os campos: e-mail e telefone válidos são obrigatórios." : "Não foi possível salvar seu contato. Tente novamente ou fale conosco pelo WhatsApp ao lado.");
 
 const Field = ({ label, children }) => (
   <label className="block">
@@ -35,7 +35,14 @@ const Form = () => {
     e.preventDefault();
     setState("loading");
     try {
-      await axios.post(`${API}/leads`, f);
+      const params = new URLSearchParams(window.location.search);
+      const attribution = new URLSearchParams();
+      ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach((key) => {
+        if (params.has(key)) attribution.set(key, params.get(key).slice(0, 60));
+      });
+      const source = (window.location.pathname + (attribution.size ? "?" + attribution.toString() : "")).slice(0, 500);
+      const { data } = await axios.post(`${API}/leads`, { ...f, source }, { timeout: 30000 });
+      if (data?.ok !== true || !data.id) throw new Error("Resposta inválida do servidor");
       setState("done");
       setF(EMPTY);
       toast.success("Recebemos seu contato! Um especialista vai falar com você em breve.");
@@ -61,10 +68,11 @@ const Form = () => {
 
   return (
     <form onSubmit={submit} data-testid="lead-form" className="grid gap-4 rounded-3xl border border-white/10 bg-[#111316] p-6 sm:grid-cols-2 md:p-10">
-      <Field label="Nome *"><input required minLength={2} value={f.name} onChange={set("name")} data-testid="lead-input-name" className={inputCls} placeholder="Seu nome" /></Field>
-      <Field label="Empresa"><input value={f.company} onChange={set("company")} data-testid="lead-input-company" className={inputCls} placeholder="Nome da empresa" /></Field>
-      <Field label="E-mail *"><input required type="email" value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder="voce@empresa.com.br" /></Field>
-      <Field label="WhatsApp *"><input required minLength={8} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder="(41) 90000-0000" /></Field>
+      <input name="website" aria-hidden="true" tabIndex={-1} autoComplete="off" hidden value={f.website} onChange={set("website")} />
+      <Field label="Nome *"><input required minLength={2} maxLength={120} value={f.name} onChange={set("name")} data-testid="lead-input-name" className={inputCls} placeholder="Seu nome" /></Field>
+      <Field label="Empresa"><input maxLength={120} value={f.company} onChange={set("company")} data-testid="lead-input-company" className={inputCls} placeholder="Nome da empresa" /></Field>
+      <Field label="E-mail *"><input required type="email" maxLength={254} autoComplete="email" value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder="voce@empresa.com.br" /></Field>
+      <Field label="WhatsApp *"><input required type="tel" inputMode="tel" autoComplete="tel" minLength={10} maxLength={30} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder="(41) 90000-0000" /></Field>
       <Field label="Faturamento">
         <select value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls}>
           <option value="">Selecione</option>{REVENUES.map((r) => <option key={r}>{r}</option>)}
@@ -76,7 +84,7 @@ const Form = () => {
         </select>
       </Field>
       <div className="sm:col-span-2">
-        <Field label="Conte sobre seu desafio"><textarea rows={4} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder="Ex.: queremos reduzir o CAC e escalar as vendas online" /></Field>
+        <Field label="Conte sobre seu desafio"><textarea maxLength={2000} rows={4} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder="Ex.: queremos reduzir o CAC e escalar as vendas online" /></Field>
       </div>
       <button type="submit" disabled={state === "loading"} data-testid="lead-form-submit-button"
         className="group sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC400] px-6 py-4 font-bold text-[#070809] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(255,196,0,0.7)] disabled:opacity-70">

@@ -2,8 +2,8 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/api/leads/:id",
-      "destination": "/api/delete-lead?id=:id"
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
     },
     {
       "source": "/servicos",
@@ -48,6 +48,27 @@
   ],
   "headers": [
     {
+      "source": "/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    },
+    {
       "source": "/admin/:path*",
       "headers": [
         {
@@ -82,5 +103,13 @@
   "framework": "create-react-app",
   "installCommand": "yarn install --no-frozen-lockfile",
   "buildCommand": "yarn build",
-  "outputDirectory": "build"
+  "outputDirectory": "build",
+  "regions": [
+    "gru1"
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 60
+    }
+  }
 }
