@@ -2,12 +2,13 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PRIMA, RESULTS } from "@/lib/content";
+import { interactiveCardHover } from "@/lib/interactiveCardHover";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 import { BarChart3, TrendingDown, Rocket } from "lucide-react";
 
 const RICONS = [BarChart3, TrendingDown, Rocket];
 
-export const Method = () => {
+export const Method = ({ interactive = false }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.8", "end 0.6"] });
   const line = useTransform(scrollYProgress, [0, 1], [0, 1]);
@@ -38,7 +39,7 @@ export const Method = () => {
             {PRIMA.map((p, i) => (
               <Reveal key={p.l} delay={i * 0.08}>
                 <li data-testid={`prima-step-${p.l.toLowerCase()}`}
-                  className="group relative flex gap-6 rounded-3xl border border-white/10 bg-[#111316] p-6 transition-colors duration-500 hover:border-[#FFC400]/50 lg:block lg:border-0 lg:bg-transparent lg:p-0">
+                  className={`group relative flex gap-6 rounded-3xl border border-white/10 bg-[#111316] p-6 lg:block lg:p-0 ${interactive ? `${interactiveCardHover} lg:border-transparent lg:bg-transparent lg:hover:border-[#FFC400]/60 lg:hover:bg-[#15181c]` : "transition-colors duration-500 hover:border-[#FFC400]/50 lg:border-0 lg:bg-transparent"}`}>
                   <span className="font-display relative z-10 grid h-[88px] w-[88px] shrink-0 place-items-center rounded-full border border-[#FFC400]/50 bg-[#0b0c0e] text-5xl text-[#FFC400] transition-[background-color,color,box-shadow] duration-500 group-hover:bg-[#FFC400] group-hover:text-[#070809] group-hover:shadow-[0_0_40px_rgba(255,196,0,0.5)] lg:mx-0 lg:h-[124px] lg:w-[124px] lg:text-7xl">
                     {p.l}
                   </span>
@@ -54,12 +55,12 @@ export const Method = () => {
         </div>
 
         <Reveal className="mt-20">
-          <div data-testid="results-band" className="grid overflow-hidden rounded-3xl border border-[#FFC400]/25 bg-[#111316] md:grid-cols-3">
+          <div data-testid="results-band" className={`grid rounded-3xl border border-[#FFC400]/25 bg-[#111316] md:grid-cols-3 ${interactive ? "overflow-visible" : "overflow-hidden"}`}>
             {RESULTS.map((r, i) => {
               const Icon = RICONS[i];
               return (
-                <div key={r.v} data-testid={`result-${i}`} className={`flex items-center gap-5 p-8 md:p-10 ${i ? "border-t border-white/10 md:border-l md:border-t-0" : ""}`}>
-                  <Icon className="h-10 w-10 shrink-0 text-[#FFC400]" />
+                <div key={r.v} data-testid={`result-${i}`} className={`flex items-center gap-5 p-8 md:p-10 ${i ? "border-t border-white/10 md:border-l md:border-t-0" : ""} ${interactive ? `${interactiveCardHover} relative z-0 rounded-2xl hover:z-10` : ""}`}>
+                  <Icon className={`h-10 w-10 shrink-0 text-[#FFC400] ${interactive ? "transition-colors duration-500 group-hover:text-white" : ""}`} />
                   <div>
                     <p className="font-display text-4xl md:text-5xl text-[#FFC400]">{r.v}</p>
                     <p className="mt-1 text-sm text-[#c2c4c9]">{r.l}</p>
