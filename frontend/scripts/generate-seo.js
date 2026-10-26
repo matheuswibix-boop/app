@@ -1,7 +1,7 @@
 const fs=require("fs"),path=require("path");const root=path.join(__dirname,"..");const services=require("../src/lib/servicePages.json");
 const meta={"/":{title:"Marketing que vira receita | INSALES Marketing",description:"Agência de marketing, mídia paga, SEO, GEO, IA e processos comerciais para gerar crescimento previsível."},"/servicos":{title:"Serviços de Marketing e Vendas | INSALES",description:"Tráfego pago, SEO, GEO, IA de atendimento, CRM, sites e soluções integradas para sua empresa."},"/metodologia":{title:"Método PRIMA | INSALES Marketing",description:"Planejar, rastrear, integrar, melhorar e acelerar o crescimento com dados."},"/quem-somos":{title:"Quem Somos | INSALES Marketing",description:"Mais de 15 anos no mercado e mais de 2.000 empresas atendidas."},"/fale-conosco":{title:"Fale com a INSALES | Diagnóstico de Marketing",description:"Solicite diagnóstico comercial e de marketing."},"/blog":{title:"Blog | INSALES Marketing",description:"Conteúdos sobre marketing, vendas, SEO e inteligência artificial."}};
-const blogs=["o-que-e-data-marketing","pago-e-organico-motor-de-vendas","ia-no-funil-comercial"];
-for(const slug of blogs)meta["/blog/"+slug]={title:slug.replaceAll("-"," ")+" | INSALES",description:"Conteúdo sobre dados, marketing e vendas da INSALES."};
+const posts=require("../src/lib/content.js").POSTS;
+for(const post of posts)meta["/blog/"+post.slug]={title:post.title+" | INSALES",description:post.excerpt};
 for(const s of services) meta["/servicos/"+s.slug]=s.seo;
 const urls=Object.keys(meta);const base="https://insales.com.br";
 const xml=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
