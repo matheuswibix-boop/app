@@ -16,7 +16,7 @@ export const LogoMarquee = ({ logos }) => (
 
 export const ClientsStrip = () => (
   <section data-testid="clients-section" className="py-20 md:py-24">
-    <p className="font-mono mb-6 px-5 text-center text-xs uppercase tracking-[0.28em] text-[#AEB0B6]">Empresas que confiam</p>
+    <p className="font-mono mb-6 px-5 text-center text-xs uppercase tracking-[0.28em] text-[#AEB0B6]"><T>Empresas que confiam</T></p>
     <LogoMarquee logos={CLIENTS} />
   </section>
 );
