@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { ServicesGrid } from "@/components/site/Services";
 import { Method } from "@/components/site/Method";
 import { PrimaDeepDive } from "@/components/site/PrimaDeepDive";
@@ -63,6 +64,12 @@ export function AboutPage() {
 
 export function ContactPage() {
   useTitle("Fale Conosco");
+  const {hash} = useLocation();
+  useEffect(() => {
+    if (hash !== "#formulario") return undefined;
+    const handle = window.setTimeout(() => document.getElementById("formulario")?.scrollIntoView({behavior:"smooth",block:"start"}), 120);
+    return () => clearTimeout(handle);
+  }, [hash]);
   return (
     <main data-testid="contact-page" className="pt-16">
       <Contact />
