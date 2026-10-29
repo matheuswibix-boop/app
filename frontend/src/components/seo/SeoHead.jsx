@@ -5,7 +5,7 @@ import servicePages from "@/lib/servicePages.json";
 import { POSTS } from "@/lib/content";
 const staticMeta={
 "/": ["Marketing que vira receita | INSALES Marketing","Agência de marketing, mídia paga, SEO, GEO, IA e processos comerciais para gerar crescimento previsível."],
-"/servicos":["Serviços de Marketing e Vendas | INSALES","Tráfego pago, SEO, GEO, IA de atendimento, CRM, sites e mais soluções integradas para sua empresa."],
+"/servicos":["Soluções de Marketing e Vendas | INSALES","Tráfego pago, SEO, GEO, IA de atendimento, CRM, sites e mais soluções integradas para sua empresa."],
 "/metodologia":["Método PRIMA: do clique à receita | INSALES","Conheça os cinco pilares do Método PRIMA: diagnóstico, rastreio até a venda, integração com CRM, indicadores e crescimento com controle."],
 "/consultoria-estrategica":["Consultoria Estratégica de Marketing e Vendas | INSALES","Diagnóstico de 60 minutos com análise de mercado, concorrentes, ICP, MQL, SEO, GEO, CRM e plano inicial de ação de 90 dias."],
 "/quem-somos":["Quem Somos | INSALES Marketing","Mais de 15 anos no mercado e mais de 2.000 empresas atendidas. Conheça a INSALES."],
@@ -28,7 +28,7 @@ export default function SeoHead(){
   let canonical=document.head.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement("link");canonical.rel="canonical";document.head.appendChild(canonical);} canonical.href="https://insales.com.br"+pathname+(pathname==="/"?"/":"");
   setMeta('meta[property="og:title"]',["property","og:title"],title);
   setMeta('meta[property="og:description"]',["property","og:description"],description);
-  setMeta('meta[property="og:locale"]',["property","og:locale"],lang==="pt"?"pt_BR":lang==="es"?"es_ES":"en_GB");
+  setMeta('meta[property="og:locale"]',["property","og:locale"],lang==="pt"?"pt_BR":lang==="es"?"es_ES":"en_US");
  },[pathname,lang,t]);
  return null;
 }
