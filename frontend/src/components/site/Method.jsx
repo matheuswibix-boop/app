@@ -33,7 +33,7 @@ export const Method = ({ interactive = false }) => {
           </Reveal>
         </div>
 
-        <div className="mt-9 flex flex-wrap gap-4"><Link to="/metodologia" className="inline-flex rounded-full border border-[#FFC400]/70 px-6 py-3 font-bold text-[#FFC400] transition-colors hover:bg-[#FFC400] hover:text-[#070809]"><T>Entenda o método completo →</T></Link><Link to="/consultoria-estrategica" className="inline-flex rounded-full bg-[#FFC400] px-6 py-3 font-bold text-[#070809] transition-transform hover:-translate-y-1"><T>Solicitar consultoria estratégica →</T></Link></div>
+        <div className="mt-9 flex flex-wrap gap-4"><Link to={interactive ? "/fale-conosco#formulario" : "/metodologia"} data-testid="method-full-cta" className="inline-flex rounded-full border border-[#25D366]/70 px-6 py-3 font-bold text-[#25D366] transition-colors hover:bg-[#25D366] hover:text-[#070809]"><T>Entenda o método completo →</T></Link><Link to="/consultoria-estrategica" className="inline-flex rounded-full bg-[#25D366] px-6 py-3 font-bold text-[#070809] transition-transform hover:-translate-y-1"><T>Solicitar consultoria estratégica →</T></Link></div>
         <div ref={ref} className="relative mt-20">
           <div className="absolute left-0 right-0 top-[62px] hidden h-px bg-white/10 lg:block" />
           <motion.div style={{ scaleX: line }} className="absolute left-0 right-0 top-[62px] hidden h-px origin-left bg-[#FFC400] lg:block" />
