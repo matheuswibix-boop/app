@@ -32,7 +32,7 @@ export function LanguageProvider({children}) {
     } catch { /* persistence unavailable */ }
   }, []);
   useEffect(() => {
-    document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
+    document.documentElement.lang = lang === "pt" ? "pt-BR" : lang === "en" ? "en-US" : lang;
   }, [lang]);
   const value = useMemo(() => ({lang, setLang, t: source => translate(source, lang)}), [lang, setLang]);
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
