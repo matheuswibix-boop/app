@@ -16,7 +16,7 @@ export const Counter = ({ to, pre = "", suf = "", className = "" }) => {
 
   return (
     <span ref={ref} className={className}>
-      {pre}{val.toLocaleString(lang==="en"?"en-GB":lang==="es"?"es-ES":"pt-BR")}{suf}
+      {pre}{val.toLocaleString(lang==="en"?"en-US":lang==="es"?"es-ES":"pt-BR")}{suf}
     </span>
   );
 };
