@@ -10,6 +10,7 @@ import { Compare } from "@/components/site/Compare";
 import { About } from "@/components/site/About";
 import { BlogPreview } from "@/components/site/BlogPreview";
 import { Contact } from "@/components/site/Contact";
+import { HomeMap } from "@/components/site/HomeMap";
 import { scrollToId } from "@/lib/scroll";
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
       <ClientsStrip />
       <About />
       <BlogPreview />
+      <HomeMap />
       <Contact />
     </main>
   );
