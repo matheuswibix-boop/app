@@ -18,7 +18,7 @@ const CTA=({outline=false})=>{
  const {lang} = useLanguage();
  const message = lang==="es"?"¡Hola! Quiero reservar la Consultoría Estratégica inicial de una hora de INSALES para mi empresa.":lang==="en"?"Hello! I would like to book the one-hour initial Strategic Consultation with INSALES for my business.":"Olá! Quero agendar a Consultoria Estratégica inicial de uma hora da INSALES para minha empresa.";
  const whatsapp="https://wa.me/5541996617279?text="+encodeURIComponent(message);
- return <a href={whatsapp} target="_blank" rel="noopener noreferrer" data-testid="consulting-whatsapp-cta" className={outline?"group inline-flex items-center gap-3 rounded-full border border-[#FFC400] px-7 py-4 text-sm font-bold text-[#FFC400] transition-colors hover:bg-[#FFC400] hover:text-[#070809]":"group inline-flex items-center gap-3 rounded-full bg-[#FFC400] px-7 py-4 text-sm font-bold text-[#070809] transition-transform hover:-translate-y-1"}><T>Solicitar consultoria</T> <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45"/></a>;
+ return <a href={whatsapp} target="_blank" rel="noopener noreferrer" data-testid="consulting-whatsapp-cta" className={outline?"group inline-flex items-center gap-3 rounded-full border border-[#25D366] px-7 py-4 text-sm font-bold text-[#25D366] transition-colors hover:bg-[#25D366] hover:text-[#070809]":"group inline-flex items-center gap-3 rounded-full bg-[#25D366] px-7 py-4 text-sm font-bold text-[#070809] transition-transform hover:-translate-y-1"}><T>Solicitar consultoria</T> <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45"/></a>;
 };
 export default function ConsultingPage(){
  const {t} = useLanguage();

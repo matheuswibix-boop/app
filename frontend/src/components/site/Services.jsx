@@ -54,7 +54,7 @@ export const Services = () => (
     <div className="mx-auto max-w-[1400px] px-5 md:px-10">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
-          <Eyebrow><T>Nossos serviços</T></Eyebrow>
+          <Eyebrow><T>Nossas soluções</T></Eyebrow>
           <h2 className="font-display mt-6 uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl">
             <MaskLine><T>Soluções completas</T></MaskLine>
             <MaskLine delay={0.1}><T>para o seu</T> <span className="text-[#FFC400]"><T>crescimento</T></span></MaskLine>

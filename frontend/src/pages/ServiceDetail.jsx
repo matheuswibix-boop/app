@@ -22,7 +22,7 @@ export default function ServiceDetail() {
         <Eyebrow><T>Estratégia INSALES</T></Eyebrow>
         <h2 className="font-display mt-6 text-3xl uppercase leading-tight md:text-5xl"><T>Do diagnóstico à</T> <span className="text-[#FFC400]"><T>execução.</T></span></h2>
         <p className="mt-6 text-[#c2c4c9] leading-relaxed">{service.description} <T>Trabalhamos com plano documentado, integração de canais e leitura contínua dos resultados.</T></p>
-        <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#FFC400] px-7 py-4 font-bold text-[#070809] transition-transform hover:-translate-y-1"><T>Solicitar diagnóstico</T> <ArrowUpRight className="h-4 w-4"/></a>
+        <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-4 font-bold text-[#070809] transition-transform hover:-translate-y-1"><T>Solicitar diagnóstico</T> <ArrowUpRight className="h-4 w-4"/></a>
       </Reveal>
       <Reveal className="rounded-3xl border border-white/10 bg-[#111316] p-7 md:p-12">
         <Eyebrow><T>Principais entregas</T></Eyebrow>

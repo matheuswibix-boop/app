@@ -73,7 +73,7 @@ export const Hero = () => {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <button data-testid="hero-cta-primary" onClick={() => navigate("/fale-conosco")}
-              className="group inline-flex items-center gap-2.5 rounded-full bg-[#FFC400] px-6 py-3.5 text-sm font-bold text-[#070809] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(255,196,0,0.7)]">
+              className="group inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-[#070809] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(37,211,102,0.6)]">
               <MessageSquare className="h-4 w-4" /> <T>Quero impulsionar minha receita</T>
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </button>

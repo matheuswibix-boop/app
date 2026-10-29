@@ -56,9 +56,9 @@ export function BlogPost() {
         <Reveal className="prose-insales mt-12 border-t border-white/10 pt-10">
           {localizedBody.map((b, i) => (b.startsWith("## ") ? <h2 key={i}><T>{b.slice(3)}</T></h2> : <p key={i}><T>{b}</T></p>))}
         </Reveal>
-        <Link to="/consultoria-estrategica" data-testid="blog-post-cta" className="mt-12 flex items-center justify-between gap-6 rounded-3xl bg-[#FFC400] p-8 text-[#070809] transition-transform hover:-translate-y-1">
+        <Link to="/consultoria-estrategica" data-testid="blog-post-cta" className="mt-12 flex items-center justify-between gap-6 rounded-3xl bg-[#25D366] p-8 text-[#070809] transition-transform hover:-translate-y-1">
           <span className="font-display text-xl uppercase md:text-2xl"><T>Quer aplicar isso no seu negócio?</T></span>
-          <span className="shrink-0 rounded-full bg-[#070809] px-5 py-3 text-sm font-bold text-[#FFC400]"><T>Conhecer consultoria</T></span>
+          <span className="shrink-0 rounded-full bg-[#070809] px-5 py-3 text-sm font-bold text-[#25D366]"><T>Conhecer consultoria</T></span>
         </Link>
       </article>
       <div className="mx-auto mt-24 max-w-[1400px]">

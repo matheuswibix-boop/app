@@ -1891,3 +1891,62 @@ Object.assign(translations, {
 });
 
 Object.assign(translations, {"Vídeos Sociais e Institucionais": {"es":"Videos sociales y corporativos","en":"Social and Corporate Videos"}});
+
+Object.assign(translations, {
+  "Soluções": {
+    "es": "Soluciones",
+    "en": "Solutions"
+  },
+  "Nossas soluções": {
+    "es": "Nuestras soluciones",
+    "en": "Our solutions"
+  },
+  "Soluções de Marketing e Vendas | INSALES": {
+    "es": "Soluciones de Marketing y Ventas | INSALES",
+    "en": "Marketing and Sales Solutions | INSALES"
+  },
+  "Ver todas as soluções": {
+    "es": "Ver todas las soluciones",
+    "en": "View all solutions"
+  },
+  "Somos o primeiro": {
+    "es": "Somos el primer",
+    "en": "We are the first"
+  },
+  "Faturamento *": {
+    "es": "Facturación *",
+    "en": "Revenue *"
+  },
+  "Interesse *": {
+    "es": "Interés *",
+    "en": "Interest *"
+  },
+  "Onde estamos": {
+    "es": "Dónde estamos",
+    "en": "Where we are"
+  },
+  "Visite nossa": {
+    "es": "Visita nuestra",
+    "en": "Explore our"
+  },
+  "localização.": {
+    "es": "ubicación.",
+    "en": "location."
+  },
+  "Ver rota no Google Maps": {
+    "es": "Cómo llegar en Google Maps",
+    "en": "Get directions in Google Maps"
+  },
+  "Quer agendar uma consultoria estratégica?": {
+    "es": "¿Quieres agendar una consultoría estratégica?",
+    "en": "Want to schedule a strategic consultation?"
+  },
+  "Agendar consultoria estratégica →": {
+    "es": "Agendar consultoría estratégica →",
+    "en": "Schedule a strategic consultation →"
+  },
+  "Agendar consultoria estratégica": {
+    "es": "Agendar consultoría estratégica",
+    "en": "Schedule a strategic consultation"
+  }
+});

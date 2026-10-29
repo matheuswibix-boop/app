@@ -46,19 +46,19 @@ const Form = () => {
     window.location.assign("https://wa.me/5541996617279?text=" + encodeURIComponent(lines.join("\n")));
   };
   return (
-    <form onSubmit={submit} data-testid="lead-form" className="grid gap-4 rounded-3xl border border-white/10 bg-[#111316] p-6 sm:grid-cols-2 md:p-10">
+    <form id="formulario" onSubmit={submit} data-testid="lead-form" className="scroll-mt-28 grid gap-4 rounded-3xl border border-white/10 bg-[#111316] p-6 sm:grid-cols-2 md:p-10">
       <div className="sm:col-span-2 rounded-2xl border border-[#FFC400]/30 bg-[#FFC400]/5 px-5 py-4">
         <p className="font-semibold text-[#FFC400]"><T>Seu diagnóstico começa pelo WhatsApp.</T></p>
         <p className="mt-2 text-sm leading-relaxed text-[#d5d7db]"><T>Nesta etapa, o site não grava formulários. Ao continuar, você confere a mensagem no WhatsApp e decide se deseja enviá-la.</T></p>
       </div>
-      <Field label="Nome *"><input required minLength={2} value={f.name} onChange={set("name")} data-testid="lead-input-name" className={inputCls} placeholder={t("Seu nome")} /></Field>
+      <Field label="Nome *"><input required minLength={2} value={f.name} onChange={set("name")} name="lead-name" data-testid="lead-input-name" className={inputCls} placeholder={t("Seu nome")} /></Field>
       <Field label="Empresa"><input value={f.company} onChange={set("company")} data-testid="lead-input-company" className={inputCls} placeholder={t("Nome da empresa")} /></Field>
       <Field label="E-mail *"><input required type="email" value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder="voce@empresa.com.br" /></Field>
       <Field label="WhatsApp *"><input required minLength={8} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder="(41) 90000-0000" /></Field>
-      <Field label="Faturamento"><select value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls}><option value="">{t("Selecione")}</option>{REVENUES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
-      <Field label="Interesse"><select value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls}><option value=""><T>Selecione</T></option>{SERVICES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
+      <Field label="Faturamento *"><select required value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls}><option value="">{t("Selecione")}</option>{REVENUES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
+      <Field label="Interesse *"><select required value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls}><option value=""><T>Selecione</T></option>{SERVICES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
       <div className="sm:col-span-2"><Field label="Conte sobre seu desafio"><textarea rows={4} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder={t("Ex.: queremos reduzir o CAC e escalar as vendas online")} /></Field></div>
-      <button type="submit" data-testid="lead-form-submit-button" className="group sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC400] px-6 py-4 font-bold text-[#070809] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(255,196,0,0.7)]">
+      <button type="submit" data-testid="lead-form-submit-button" className="group sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 font-bold text-[#070809] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(255,196,0,0.7)]">
         <T>Continuar pelo WhatsApp</T> <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1"/>
       </button>
       <p className="sm:col-span-2 text-center text-xs leading-relaxed text-[#AEB0B6]"><T>O envio da mensagem depende da sua confirmação no WhatsApp. O site não confirma recebimento antecipadamente.</T></p>

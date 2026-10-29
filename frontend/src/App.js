@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { SmoothScroll } from "@/components/site/SmoothScroll";
 import { Nav } from "@/components/site/Nav";
 import { Footer, WhatsFloat } from "@/components/site/Footer";
+import { WhatsAppLeadGate } from "@/components/site/WhatsAppLeadGate";
 import Home from "@/pages/Home";
 import { BlogList, BlogPost } from "@/pages/Blog";
 import { ServicesPage, MethodPage, AboutPage, ContactPage } from "@/pages/Pages";
@@ -46,6 +47,7 @@ function App() {
     <div className="App grain">
       <LanguageProvider><BrowserRouter>
         <SmoothScroll />
+        <WhatsAppLeadGate />
         <Shell />
       </BrowserRouter></LanguageProvider>
       <Toaster theme="dark" position="top-center" richColors />
