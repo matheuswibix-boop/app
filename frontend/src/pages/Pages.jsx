@@ -17,10 +17,10 @@ const useTitle = (title) => {
 };
 
 export function ServicesPage() {
-  useTitle("Serviços");
+  useTitle("Soluções");
   return (
     <main data-testid="services-page">
-      <PageHeader crumb="Serviços" eyebrow="Nossos serviços" title="Soluções completas para o seu" accent="crescimento."
+      <PageHeader crumb="Soluções" eyebrow="Nossas soluções" title="Soluções completas para o seu" accent="crescimento."
         text="Um ecossistema único de aquisição, do posicionamento da marca à venda fechada: mídia paga, SEO, IA de atendimento, CRM, conteúdo, sites, e-commerce e materiais comerciais trabalhando juntos." />
       <ServicesGrid />
       <CtaBand />
