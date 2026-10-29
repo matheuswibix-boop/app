@@ -20,7 +20,7 @@ export const Manifesto = () => {
       <div className="pointer-events-none absolute inset-0 grid-lines [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFC400]/10 blur-[120px]" />
       <div className="relative mx-auto max-w-[1400px]">
-        <Eyebrow><T>Somos a primeira</T></Eyebrow>
+        <Eyebrow><T>Somos o primeiro</T></Eyebrow>
         <h2 className="font-display mt-6 uppercase leading-[0.92] text-4xl sm:text-6xl lg:text-[5.5rem]">
           <MaskLine><T>Hub</T> <span className="text-[#FFC400]"><T>Data</T></span></MaskLine>
           <MaskLine delay={0.1}><span className="text-[#FFC400]"><T>Marketing</T></span></MaskLine>
