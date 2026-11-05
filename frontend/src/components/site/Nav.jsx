@@ -22,7 +22,7 @@ const FlagIcon = ({code}) => (
 );
 
 const LanguageSelector = () => {
-  const {lang,setLang} = useLanguage();
+  const {lang,setLang,t} = useLanguage();
   const [expanded,setExpanded] = useState(false);
   const root = useRef(null);
   useEffect(() => {
