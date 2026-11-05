@@ -6,6 +6,9 @@
  */
 if (!defined('ABSPATH')) { exit; }
 
+// Backend privado Pipedrive — carregado somente após o WordPress inicializar.
+require_once __DIR__ . '/includes/pipedrive-lead.php';
+
 function insales_theme_dist($path='') {
     return trailingslashit(get_stylesheet_directory()) . 'dist/' . ltrim((string)$path,'/');
 }
