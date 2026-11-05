@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { captureLeadAttribution } from "@/lib/leadAttribution";
 
 // All outbound WhatsApp links require the contact form first.
-// No lead persistence: after completing the form the visitor must confirm send in WhatsApp.
+// WordPress handles Pipedrive persistence first; the WhatsApp form bypasses this click interceptor.
 export function WhatsAppLeadGate() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  useEffect(() => { captureLeadAttribution(); }, [pathname]);
   useEffect(() => {
     const onClick = (event) => {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
