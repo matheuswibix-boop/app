@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, Mail, MapPin, Phone, Instagram } from "lucide-react";
 import { CONTACT, getWhatsAppLink } from "@/lib/content";
 import { T, useLanguage } from "@/lib/i18n";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
+import { getLeadAttribution, newSubmissionId } from "@/lib/leadAttribution";
 
 const EMPTY = { name: "", email: "", phone: "", company: "", revenue: "", service: "", message: "" };
 const REVENUES = ["Até R$ 50 mil/mês", "R$ 50 a 200 mil/mês", "R$ 200 mil a 1 mi/mês", "Acima de R$ 1 mi/mês"];
@@ -27,41 +28,83 @@ const WhatsIcon = (p) => (
 export { WhatsIcon };
 
 const Form = () => {
-  const {t} = useLanguage();
+  const {t,lang} = useLanguage();
   const [f, setF] = useState(EMPTY);
-  const set = (k) => (e) => setF(current => ({ ...current, [k]: e.target.value }));
-  const submit = (e) => {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [website, setWebsite] = useState(""); // Honeypot; should remain blank.
+  const submissionId = useRef(null);
+  const set = (k) => (e) => {
+    setError("");
+    setF(current => ({ ...current, [k]: e.target.value }));
+  };
+  const submit = async (e) => {
     e.preventDefault();
-    const lines = [
-      t("Olá! Vim pelo site da INSALES e gostaria de agendar minha Consultoria Estratégica."),
-      t("Nome: ") + f.name,
-      t("Empresa: ") + (f.company || t("Não informado")),
-      "E-mail: " + f.email,
-      "WhatsApp: " + f.phone,
-      t("Faturamento: ") + (f.revenue ? t(f.revenue) : t("Não informado")),
-      t("Interesse: ") + (f.service ? t(f.service) : t("Diagnóstico inicial")),
-      t("Desafio: ") + (f.message || t("Quero conversar sobre oportunidades de crescimento.")),
-      t("Origem: ") + window.location.pathname
-    ];
-    window.location.assign("https://wa.me/5541996617279?text=" + encodeURIComponent(lines.join("\n")));
+    if(busy) return;
+    if(!submissionId.current) submissionId.current=newSubmissionId();
+    if(!submissionId.current) {setError(t("Não foi possível iniciar o envio. Atualize seu navegador e tente novamente."));return;}
+    setBusy(true);setError("");
+    try {
+      const controller=new AbortController();
+      const timeout=window.setTimeout(()=>controller.abort(),20000);
+      let response;
+      try {
+        response=await fetch("/wp-json/insales/v1/lead",{
+          method:"POST",
+          headers:{"Content-Type":"application/json","Accept":"application/json"},
+          credentials:"same-origin",
+          body:JSON.stringify({
+            ...f,locale:lang,utm:getLeadAttribution(),
+            submission_id:submissionId.current,
+            source_path:window.location.pathname,
+            website
+          }),
+          signal:controller.signal
+        });
+      } finally {window.clearTimeout(timeout);}
+      let result={};
+      try {result=await response.json();} catch { /* Handle an unavailable endpoint */ }
+      if(!response.ok || !result.success || !result.deal_id) {
+        throw new Error(result.code||"PIPEDRIVE_NOT_CONFIRMED");
+      }
+      setSuccess(true);
+      const lines=[
+        t("Olá! Vim pelo site da INSALES e gostaria de agendar minha Consultoria Estratégica."),
+        t("Nome: ") + f.name,
+        t("Empresa: ") + (f.company||t("Não informado")),
+        "E-mail: "+f.email,
+        "WhatsApp: "+f.phone,
+        t("Faturamento: ")+t(f.revenue),
+        t("Interesse: ")+t(f.service),
+        t("Desafio: ")+(f.message||t("Quero conversar sobre oportunidades de crescimento."))
+      ];
+      window.location.assign("https://wa.me/5541996617279?text="+encodeURIComponent(lines.join("\n")));
+    } catch {
+      setError(t("Não foi possível confirmar seu cadastro no momento. Seus dados foram mantidos; tente novamente."));
+    } finally {setBusy(false);}
   };
   return (
-    <form id="formulario" onSubmit={submit} data-testid="lead-form" className="scroll-mt-28 grid gap-4 rounded-3xl border border-white/10 bg-[#111316] p-6 sm:grid-cols-2 md:p-10">
-      <div className="sm:col-span-2 rounded-2xl border border-[#FFC400]/30 bg-[#FFC400]/5 px-5 py-4">
-        <p className="font-semibold text-[#FFC400]"><T>Seu diagnóstico começa pelo WhatsApp.</T></p>
-        <p className="mt-2 text-sm leading-relaxed text-[#d5d7db]"><T>Nesta etapa, o site não grava formulários. Ao continuar, você confere a mensagem no WhatsApp e decide se deseja enviá-la.</T></p>
+    <form id="formulario" onSubmit={submit} data-testid="lead-form"
+      className="scroll-mt-28 grid gap-4 rounded-3xl border border-white/10 bg-[#111316] p-6 sm:grid-cols-2 md:p-10">
+      <div aria-hidden="true" className="absolute h-0 w-0 overflow-hidden opacity-0">
+        <label>Website <input tabIndex={-1} autoComplete="off" value={website} onChange={e=>setWebsite(e.target.value)}/></label>
       </div>
-      <Field label="Nome *"><input required minLength={2} value={f.name} onChange={set("name")} name="lead-name" data-testid="lead-input-name" className={inputCls} placeholder={t("Seu nome")} /></Field>
-      <Field label="Empresa"><input value={f.company} onChange={set("company")} data-testid="lead-input-company" className={inputCls} placeholder={t("Nome da empresa")} /></Field>
-      <Field label="E-mail *"><input required type="email" value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder={t("voce@empresa.com.br")} /></Field>
-      <Field label="WhatsApp *"><input required minLength={8} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder={t("(41) 90000-0000")} /></Field>
-      <Field label="Faturamento *"><select required value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls}><option value="">{t("Selecione")}</option>{REVENUES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
-      <Field label="Interesse *"><select required value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls}><option value=""><T>Selecione</T></option>{SERVICES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
-      <div className="sm:col-span-2"><Field label="Conte sobre seu desafio"><textarea rows={4} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder={t("Ex.: queremos reduzir o CAC e escalar as vendas online")} /></Field></div>
-      <button type="submit" data-testid="lead-form-submit-button" className="group sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 font-bold text-[#070809] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_40px_-10px_rgba(255,196,0,0.7)]">
-        <T>Continuar pelo WhatsApp</T> <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1"/>
+      <Field label="Nome *"><input required minLength={2} maxLength={120} value={f.name} onChange={set("name")} name="lead-name" data-testid="lead-input-name" className={inputCls} placeholder={t("Seu nome")} disabled={busy}/></Field>
+      <Field label="Empresa"><input maxLength={150} value={f.company} onChange={set("company")} data-testid="lead-input-company" className={inputCls} placeholder={t("Nome da empresa")} disabled={busy}/></Field>
+      <Field label="E-mail *"><input required type="email" maxLength={160} value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder={t("voce@empresa.com.br")} disabled={busy}/></Field>
+      <Field label="WhatsApp *"><input required type="tel" minLength={8} maxLength={30} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder={t("(41) 90000-0000")} disabled={busy}/></Field>
+      <Field label="Faturamento *"><select required value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls} disabled={busy}><option value="">{t("Selecione")}</option>{REVENUES.map(v=><option key={v} value={v}>{t(v)}</option>)}</select></Field>
+      <Field label="Interesse *"><select required value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls} disabled={busy}><option value="">{t("Selecione")}</option>{SERVICES.map(v=><option key={v} value={v}>{t(v)}</option>)}</select></Field>
+      <div className="sm:col-span-2"><Field label="Conte sobre seu desafio"><textarea rows={4} maxLength={2000} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder={t("Ex.: queremos reduzir o CAC e escalar as vendas online")} disabled={busy}/></Field></div>
+      <p className="sm:col-span-2 text-xs leading-relaxed text-[#AEB0B6]"><T>Ao enviar, seus dados serão utilizados para contato comercial e registrados em nosso CRM, conforme a Política de Privacidade.</T></p>
+      {error && <p role="alert" data-testid="lead-form-error" className="sm:col-span-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200">{error}</p>}
+      {success && <p role="status" className="sm:col-span-2 text-sm text-[#25D366]"><T>Cadastro confirmado. Abrindo WhatsApp...</T></p>}
+      <button type="submit" disabled={busy} aria-busy={busy} data-testid="lead-form-submit-button"
+        className="group sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 font-bold text-[#070809] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-60">
+        {busy?t("Registrando sua solicitação..."):t("Solicitar Consultoria Estratégica")}
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1"/>
       </button>
-      <p className="sm:col-span-2 text-center text-xs leading-relaxed text-[#AEB0B6]"><T>O envio da mensagem depende da sua confirmação no WhatsApp. O site não confirma recebimento antecipadamente.</T></p>
     </form>
   );
 };
