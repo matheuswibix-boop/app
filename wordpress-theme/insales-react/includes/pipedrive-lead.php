@@ -58,7 +58,7 @@ function insales_pd_search_id($kind, $term, $fields) {
 }
 function insales_pd_normalize($value) {
     $value = remove_accents((string)$value);
-    $value = mb_strtolower(trim($value), 'UTF-8');
+    $value = function_exists('mb_strtolower') ? mb_strtolower(trim($value), 'UTF-8') : strtolower(trim($value));
     $value = preg_replace('/\\s+/u', ' ', $value);
     return $value;
 }
@@ -93,8 +93,8 @@ function insales_pd_encode_field($code, $raw) {
         }
         return insales_pd_error('custom_field_option_not_mapped', 422);
     }
-    if (in_array($kind, array('varchar', 'varchar_auto', 'phone'), true)) return mb_substr($raw, 0, 255, 'UTF-8');
-    if ($kind === 'text') return mb_substr($raw, 0, 4000, 'UTF-8');
+    if (in_array($kind, array('varchar', 'varchar_auto', 'phone'), true)) return function_exists('mb_substr') ? mb_substr($raw, 0, 255, 'UTF-8') : substr($raw, 0, 255);
+    if ($kind === 'text') return function_exists('mb_substr') ? mb_substr($raw, 0, 4000, 'UTF-8') : substr($raw, 0, 4000);
     if ($kind === 'double') {
         if (!is_numeric($raw)) return insales_pd_error('custom_field_wrong_type', 422);
         return (float)$raw;
