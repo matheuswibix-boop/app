@@ -21,6 +21,12 @@ jobs:
       - name: Instalar dependencias do frontend
         working-directory: frontend
         run: yarn install --non-interactive
+      - name: Executar teste de renderizacao do menu e seletor de idiomas
+        working-directory: frontend
+        env:
+          CI: 'true'
+          DISABLE_EMERGENT_OVERLAY: 'true'
+        run: yarn test --watchAll=false --runInBand Nav.test.jsx
       - name: Compilar site React e gerar 26 HTMLs para SEO
         working-directory: frontend
         env:
