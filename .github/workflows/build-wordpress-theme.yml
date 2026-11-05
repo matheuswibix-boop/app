@@ -33,6 +33,7 @@ jobs:
         run: |
           php -l wordpress-theme/insales-react/functions.php
           php -l wordpress-theme/insales-react/index.php
+          php -l wordpress-theme/insales-react/includes/pipedrive-lead.php
       - name: Testar integridade do ZIP
         run: unzip -t wordpress-theme/output/INSALES_TEMA_WORDPRESS_INSTALAVEL.zip | tail -1
       - name: Arquivo pronto para o desenvolvedor
