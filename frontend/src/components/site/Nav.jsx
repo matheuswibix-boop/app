@@ -40,13 +40,13 @@ const LanguageSelector = () => {
   return (
     <div className="relative shrink-0" ref={root} data-testid="language-switcher">
       <button type="button" onClick={() => setExpanded(v => !v)} aria-expanded={expanded} aria-haspopup="true"
-        aria-label="Selecionar idioma / Select language / Elegir idioma"
+        aria-label={t("Selecionar idioma")}
         data-testid="language-switcher-trigger"
         className="flex h-10 items-center gap-1.5 rounded-full border border-white/20 bg-[#111316]/80 px-2.5 text-xs font-bold text-white transition-colors hover:border-[#FFC400]/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFC400]">
         <FlagIcon code={active.code}/><span>{lang.toUpperCase()}</span>
         <ChevronDown className={`h-3 w-3 text-[#FFC400] transition-transform ${expanded ? "rotate-180" : ""}`}/>
       </button>
-      {expanded && <div role="group" aria-label="Site language" className="absolute right-0 top-full z-[80] mt-2 min-w-[176px] overflow-hidden rounded-2xl border border-[#FFC400]/25 bg-[#101114] p-1.5 shadow-2xl">
+      {expanded && <div role="group" aria-label={t("Idiomas disponíveis")} className="absolute right-0 top-full z-[80] mt-2 min-w-[176px] overflow-hidden rounded-2xl border border-[#FFC400]/25 bg-[#101114] p-1.5 shadow-2xl">
         {LANGUAGE_OPTIONS.map(option => <button key={option.code} type="button" lang={option.code==="pt"?"pt-BR":option.code==="en"?"en-US":option.code}
           aria-pressed={lang===option.code} onClick={()=>{setLang(option.code);setExpanded(false);}}
           data-testid={`language-option-${option.code}`}
@@ -85,7 +85,7 @@ export const Nav = () => {
       }`}
     >
       <div className="mx-auto flex h-[72px] max-w-[1400px] items-center justify-between px-5 md:px-10">
-        <Link to="/" data-testid="nav-logo" aria-label="INSALES — início"><Logo /></Link>
+        <Link to="/" data-testid="nav-logo" aria-label={t("INSALES — início")}><Logo /></Link>
         <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
           {NAV.map((n) => n.id==="servicos" ? (
             <div key={n.id} className="relative" onMouseEnter={()=>setSolutionsOpen(true)} onMouseLeave={()=>setSolutionsOpen(false)}

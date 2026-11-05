@@ -12,6 +12,16 @@ export const CONTACT = {
     encodeURIComponent("Olá! Vim pelo site da INSALES e quero falar com um especialista."),
 };
 
+// Generic WhatsApp prompts are localized independently from service-specific messages.
+export const getWhatsAppLink = lang => {
+  const message = lang === "en"
+    ? "Hello! I found INSALES through your website and would like to speak with an expert."
+    : lang === "es"
+      ? "¡Hola! Encontré INSALES en su sitio web y me gustaría hablar con un especialista."
+      : "Olá! Vim pelo site da INSALES e quero falar com um especialista.";
+  return "https://wa.me/5541996617279?text=" + encodeURIComponent(message);
+};
+
 export const NAV = [
   { id: "servicos", to: "/servicos", label: "Soluções" },
   { id: "metodologia", to: "/metodologia", label: "Metodologia" },

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, Mail, MapPin, Phone, Instagram } from "lucide-react";
-import { CONTACT } from "@/lib/content";
+import { CONTACT, getWhatsAppLink } from "@/lib/content";
 import { T, useLanguage } from "@/lib/i18n";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 
@@ -53,8 +53,8 @@ const Form = () => {
       </div>
       <Field label="Nome *"><input required minLength={2} value={f.name} onChange={set("name")} name="lead-name" data-testid="lead-input-name" className={inputCls} placeholder={t("Seu nome")} /></Field>
       <Field label="Empresa"><input value={f.company} onChange={set("company")} data-testid="lead-input-company" className={inputCls} placeholder={t("Nome da empresa")} /></Field>
-      <Field label="E-mail *"><input required type="email" value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder="voce@empresa.com.br" /></Field>
-      <Field label="WhatsApp *"><input required minLength={8} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder="(41) 90000-0000" /></Field>
+      <Field label="E-mail *"><input required type="email" value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder={t("voce@empresa.com.br")} /></Field>
+      <Field label="WhatsApp *"><input required minLength={8} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder={t("(41) 90000-0000")} /></Field>
       <Field label="Faturamento *"><select required value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls}><option value="">{t("Selecione")}</option>{REVENUES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
       <Field label="Interesse *"><select required value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls}><option value=""><T>Selecione</T></option>{SERVICES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
       <div className="sm:col-span-2"><Field label="Conte sobre seu desafio"><textarea rows={4} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder={t("Ex.: queremos reduzir o CAC e escalar as vendas online")} /></Field></div>
@@ -85,7 +85,9 @@ const Info = () => (
   </ul>
 );
 
-export const Contact = () => (
+export const Contact = () => {
+  const {lang} = useLanguage();
+  return (
   <section id="contato" data-testid="contact-section" className="relative overflow-hidden px-5 py-24 md:px-10 md:py-32">
     <div className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-[#FFC400]/10 blur-[140px]" />
     <div className="relative mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[0.9fr_1.2fr]">
@@ -96,7 +98,7 @@ export const Contact = () => (
         </h2>
         <Reveal>
           <p className="mt-6 max-w-md text-[#c2c4c9] leading-relaxed"><T>Receba um diagnóstico do seu cenário atual e descubra as oportunidades reais para crescer, com orientações e um plano personalizado.</T></p>
-          <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" data-testid="contact-whatsapp-button"
+          <a href={getWhatsAppLink(lang)} target="_blank" rel="noreferrer" data-testid="contact-whatsapp-button"
             className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-[#070809] transition-transform duration-300 hover:-translate-y-0.5">
             <WhatsIcon className="h-5 w-5" /> <T>Prefere WhatsApp? Chame agora</T>
           </a>
@@ -106,4 +108,5 @@ export const Contact = () => (
       <Reveal delay={0.1}><Form /></Reveal>
     </div>
   </section>
-);
+  );
+};

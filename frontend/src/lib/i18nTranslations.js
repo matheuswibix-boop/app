@@ -1950,3 +1950,111 @@ Object.assign(translations, {
     "en": "Schedule a strategic consultation"
   }
 });
+
+// Audited terms and accessible labels (November 2026)
+Object.assign(translations, {
+  "ETAPA": {
+    "es": "Etapa",
+    "en": "Step"
+  },
+  "Processos de vendas": {
+    "es": "Procesos de ventas",
+    "en": "Sales processes"
+  },
+  "Conheça o serviço": {
+    "es": "Conoce el servicio",
+    "en": "Explore service"
+  },
+  "Todos os direitos reservados.": {
+    "es": "Todos los derechos reservados.",
+    "en": "All rights reserved."
+  },
+  "Falar no WhatsApp": {
+    "es": "Hablar por WhatsApp",
+    "en": "Chat on WhatsApp"
+  },
+  "Sede do Grupo GGV em Curitiba ao pôr do sol": {
+    "es": "Sede del Grupo GGV en Curitiba al atardecer",
+    "en": "GGV Group headquarters in Curitiba at sunset"
+  },
+  "Localização INSALES no Google Maps": {
+    "es": "Ubicación de INSALES en Google Maps",
+    "en": "INSALES location on Google Maps"
+  },
+  "Mapa INSALES": {
+    "es": "Mapa de INSALES",
+    "en": "INSALES location map"
+  },
+  "BI": {
+    "es": " mil millones",
+    "en": " billion"
+  },
+  "Hub de Data Marketing": {
+    "es": "Hub de marketing basado en datos",
+    "en": "Data-driven marketing"
+  },
+  "e Vendas.": {
+    "es": "y ventas.",
+    "en": "and sales hub."
+  },
+  "Endereço de e-mail": {
+    "es": "Correo electrónico",
+    "en": "Email address"
+  },
+  "Preferências de privacidade": {
+    "es": "Preferencias de privacidad",
+    "en": "Privacy preferences"
+  },
+  "Marketing que vira receita | INSALES Marketing": {
+    "es": "Marketing que genera ingresos | INSALES Marketing",
+    "en": "Marketing that drives revenue | INSALES Marketing"
+  },
+  "Quer falar com um especialista?": {
+    "es": "¿Quieres hablar con un especialista?",
+    "en": "Want to speak with an expert?"
+  }
+});
+
+// Final wording and accessible control labels
+Object.assign(translations, {
+  "BI": {
+    "en": "billion",
+    "es": "mil millones"
+  },
+  "Selecionar idioma": {
+    "en": "Select language",
+    "es": "Seleccionar idioma"
+  },
+  "Idiomas disponíveis": {
+    "en": "Available languages",
+    "es": "Idiomas disponibles"
+  },
+  "INSALES — início": {
+    "en": "INSALES — Home",
+    "es": "INSALES — Inicio"
+  },
+  "voce@empresa.com.br": {
+    "en": "you@company.com",
+    "es": "tu@empresa.com"
+  },
+  "(41) 90000-0000": {
+    "en": "+55 (41) 90000-0000",
+    "es": "+55 (41) 90000-0000"
+  },
+  "Data-driven marketing": {
+    "en": "Data-driven marketing",
+    "es": "Marketing basado en datos"
+  },
+  "Fale Conosco": {
+    "en": "Contact Us",
+    "es": "Contáctanos"
+  },
+  "Trabalhamos com plano documentado, integração de canais e leitura contínua dos resultados.": {
+    "en": "We work with a documented plan, integrated channels, and ongoing performance monitoring.",
+    "es": "Trabajamos con un plan documentado, canales integrados y seguimiento continuo de resultados."
+  },
+  "Consultoria Estratégica": {
+    "en": "Strategic Consultation",
+    "es": "Consultoría Estratégica"
+  }
+});

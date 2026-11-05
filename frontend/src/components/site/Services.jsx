@@ -33,7 +33,7 @@ const Card = ({ s, dup, grid }) => {
         <div className="my-4 h-px w-full bg-white/10" />
         <p className="min-h-[4.5em] text-sm leading-relaxed text-[#c2c4c9]">{t(s.text)}</p>
       </div>
-      <Link to={SERVICE_PATHS[s.key]} aria-label={"Conheça o serviço "+s.title} tabIndex={dup ? -1 : 0} className="absolute inset-0 z-10 rounded-3xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFC400]" />
+      <Link to={SERVICE_PATHS[s.key]} aria-label={t("Conheça o serviço")+" "+t(s.title)} tabIndex={dup ? -1 : 0} className="absolute inset-0 z-10 rounded-3xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFC400]" />
       <ArrowUpRight className="absolute right-7 top-[88px] h-5 w-5 text-[#FFC400] opacity-0 -translate-x-2 translate-y-2 transition-[opacity,transform] duration-500 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0" />
     </article>
   );
