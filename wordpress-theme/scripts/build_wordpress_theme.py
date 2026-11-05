@@ -26,6 +26,8 @@ if not list((build/'img').rglob('*.webp')):
     errors.append('Original image assets')
 if not template.joinpath('index.php').is_file() or not template.joinpath('style.css').is_file():
     errors.append('WordPress theme PHP/CSS')
+if not template.joinpath('includes/pipedrive-lead.php').is_file():
+    errors.append('Pipedrive integration PHP')
 if errors:
     print('INVALID BUILD: '+', '.join(errors),file=sys.stderr);sys.exit(1)
 html=(build/'index.html').read_text(encoding='utf-8')
