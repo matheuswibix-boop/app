@@ -2086,3 +2086,18 @@ Object.assign(translations, {
     "en": "Request a strategic consultation"
   }
 });
+
+Object.assign(translations, {
+  "Telefone/WhatsApp *": {
+    "en": "Phone / WhatsApp *",
+    "es": "Teléfono / WhatsApp *"
+  },
+  "(41) 9 9999-9999": {
+    "en": "(41) 9 9999-9999",
+    "es": "(41) 9 9999-9999"
+  },
+  "Informe um telefone brasileiro válido com DDD.": {
+    "en": "Enter a valid Brazilian phone number with area code.",
+    "es": "Introduce un número de teléfono brasileño válido con código de área."
+  }
+});

@@ -26,7 +26,7 @@ jobs:
         env:
           CI: 'true'
           DISABLE_EMERGENT_OVERLAY: 'true'
-        run: yarn test --watchAll=false --runInBand Nav.test.jsx
+        run: yarn test --watchAll=false --runInBand --testPathPattern='Nav.test.jsx|phoneFormat.test.js'
       - name: Compilar site React e gerar 26 HTMLs para SEO
         working-directory: frontend
         env:

@@ -8,11 +8,17 @@
 if (!defined('ABSPATH')) { exit; }
 
 function insales_pd_token() {
+    // Accept both server-only wp-config constant names used by the developer.
+    // The token must never be embedded in the theme, GitHub or frontend bundle.
     if (defined('INSALES_PIPEDRIVE_API_TOKEN') && is_string(INSALES_PIPEDRIVE_API_TOKEN)) {
-        return INSALES_PIPEDRIVE_API_TOKEN;
+        return trim(INSALES_PIPEDRIVE_API_TOKEN);
+    }
+    if (defined('INSALES_PIPEDRIVE_TOKEN') && is_string(INSALES_PIPEDRIVE_TOKEN)) {
+        return trim(INSALES_PIPEDRIVE_TOKEN);
     }
     $token = getenv('PIPEDRIVE_API_TOKEN');
-    return is_string($token) ? $token : '';
+    if (!is_string($token) || trim($token) === '') $token = getenv('INSALES_PIPEDRIVE_TOKEN');
+    return is_string($token) ? trim($token) : '';
 }
 function insales_pd_error($code, $status = 502) {
     return new WP_Error($code, 'Não foi possível concluir a solicitação. Tente novamente ou fale conosco.', array('status' => $status));
