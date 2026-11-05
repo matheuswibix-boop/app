@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram } from "lucide-react";
-import { CONTACT, NAV } from "@/lib/content";
+import { CONTACT, NAV, getWhatsAppLink } from "@/lib/content";
 import { T, useLanguage } from "@/lib/i18n";
 import { Logo } from "./Logo";
 import { WhatsIcon } from "./Contact";
@@ -40,8 +40,7 @@ export const Footer = () => {
 
 export const WhatsFloat = () => {
   const {t,lang} = useLanguage();
-  const greeting=lang==="en"?"Hello! I found INSALES through your website and would like to speak with an expert.":lang==="es"?"¡Hola! Encontré INSALES en su sitio web y me gustaría hablar con un especialista.":"Olá! Vim pelo site da INSALES e quero falar com um especialista.";
-  const link="https://wa.me/5541996617279?text="+encodeURIComponent(greeting);
+  const link=getWhatsAppLink(lang);
   return (
   <a href={link} target="_blank" rel="noreferrer" data-testid="whatsapp-floating-button" aria-label={t("Falar no WhatsApp")}
     className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-[#070809] shadow-[0_10px_30px_-5px_rgba(37,211,102,0.6)] transition-transform duration-300 hover:scale-110">
