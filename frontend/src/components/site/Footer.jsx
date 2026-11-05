@@ -31,17 +31,22 @@ export const Footer = () => {
         </div>
       </div>
       <div className="mx-auto mt-16 flex max-w-[1400px] flex-col gap-2 border-t border-white/10 py-6 text-xs text-[#AEB0B6] md:flex-row md:justify-between">
-        <span>© {new Date().getFullYear()} INSALES Marketing. Todos os direitos reservados.</span>
+        <span>© {new Date().getFullYear()} INSALES Marketing. <T>Todos os direitos reservados.</T></span>
         <span><T>Parte do Grupo GGV · Curitiba - PR</T></span>
       </div>
     </footer>
   );
 };
 
-export const WhatsFloat = () => (
-  <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" data-testid="whatsapp-floating-button" aria-label="Falar no WhatsApp"
+export const WhatsFloat = () => {
+  const {t,lang} = useLanguage();
+  const greeting=lang==="en"?"Hello! I found INSALES through your website and would like to speak with an expert.":lang==="es"?"¡Hola! Encontré INSALES en su sitio web y me gustaría hablar con un especialista.":"Olá! Vim pelo site da INSALES e quero falar com um especialista.";
+  const link="https://wa.me/5541996617279?text="+encodeURIComponent(greeting);
+  return (
+  <a href={link} target="_blank" rel="noreferrer" data-testid="whatsapp-floating-button" aria-label={t("Falar no WhatsApp")}
     className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-[#070809] shadow-[0_10px_30px_-5px_rgba(37,211,102,0.6)] transition-transform duration-300 hover:scale-110">
     <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping" />
     <WhatsIcon className="relative h-7 w-7" />
   </a>
-);
+  );
+};
