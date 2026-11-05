@@ -1,0 +1,45 @@
+name: Gerar tema WordPress instalavel INSALES
+on:
+  push:
+    branches:
+      - build/wordpress-installable-theme-20261105
+  workflow_dispatch:
+jobs:
+  tema_wordpress:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Obter codigo completo da INSALES
+        uses: actions/checkout@v4
+      - name: Preparar Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: yarn
+          cache-dependency-path: frontend/yarn.lock
+      - name: Instalar Yarn Classic
+        run: npm install -g yarn@1.22.22
+      - name: Instalar dependencias do frontend
+        working-directory: frontend
+        run: yarn install --frozen-lockfile --non-interactive
+      - name: Compilar site React e gerar 26 HTMLs para SEO
+        working-directory: frontend
+        env:
+          CI: 'false'
+          PUBLIC_URL: ''
+        run: yarn build
+      - name: Empacotar tema WordPress instalavel
+        run: python3 wordpress-theme/scripts/build_wordpress_theme.py
+      - name: Validar PHP do tema
+        run: |
+          php -l wordpress-theme/insales-react/functions.php
+          php -l wordpress-theme/insales-react/index.php
+      - name: Testar integridade do ZIP
+        run: unzip -t wordpress-theme/output/INSALES_TEMA_WORDPRESS_INSTALAVEL.zip | tail -1
+      - name: Arquivo pronto para o desenvolvedor
+        uses: actions/upload-artifact@v4
+        with:
+          name: INSALES-TEMA-WORDPRESS-PRONTO
+          path: wordpress-theme/output/INSALES_TEMA_WORDPRESS_INSTALAVEL.zip
+          retention-days: 30
