@@ -2058,3 +2058,31 @@ Object.assign(translations, {
     "es": "Consultoría Estratégica"
   }
 });
+
+// Pipedrive form UI copy
+Object.assign(translations, {
+  "Autorizo o uso dos meus dados para contato comercial e registro no CRM, conforme a Política de Privacidade.": {
+    "es": "Autorizo el uso de mis datos para contacto comercial y su registro en el CRM, de acuerdo con la Política de Privacidad.",
+    "en": "I authorize the use of my information for business contact and CRM registration in accordance with the Privacy Policy."
+  },
+  "Não foi possível iniciar o envio. Atualize seu navegador e tente novamente.": {
+    "es": "No se pudo iniciar el envío. Actualiza tu navegador e inténtalo de nuevo.",
+    "en": "Unable to start the submission. Please update your browser and try again."
+  },
+  "Não foi possível confirmar seu cadastro no momento. Seus dados foram mantidos; tente novamente.": {
+    "es": "No se pudo confirmar tu registro. Tus datos siguen en el formulario; inténtalo de nuevo.",
+    "en": "We couldn't confirm your registration. Your information is still in the form; please try again."
+  },
+  "Cadastro confirmado. Abrindo WhatsApp...": {
+    "es": "Registro confirmado. Abriendo WhatsApp...",
+    "en": "Registration confirmed. Opening WhatsApp..."
+  },
+  "Registrando sua solicitação...": {
+    "es": "Registrando tu solicitud...",
+    "en": "Submitting your request..."
+  },
+  "Solicitar Consultoria Estratégica": {
+    "es": "Solicitar consultoría estratégica",
+    "en": "Request a strategic consultation"
+  }
+});
