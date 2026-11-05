@@ -55,6 +55,7 @@ export function AboutPage() {
 }
 
 export function ContactPage() {
+  const {t}=useLanguage();
   const {hash} = useLocation();
   useEffect(() => {
     if (hash !== "#formulario") return undefined;
@@ -67,7 +68,7 @@ export function ContactPage() {
       <section className="px-5 pb-24 md:px-10">
         <div className="mx-auto max-w-[1400px] overflow-hidden rounded-3xl border border-white/10">
           <iframe
-            title="Mapa INSALES"
+            title={t("Mapa INSALES")}
             data-testid="contact-map"
             src={`https://maps.google.com/maps?q=${encodeURIComponent(CONTACT.address)}&z=16&output=embed`}
             className="h-[360px] w-full grayscale invert-[0.9] hue-rotate-180 md:h-[440px]"
