@@ -14,6 +14,7 @@ const lines = [
 ];
 
 const HeroImage = ({ y }) => {
+  const {t} = useLanguage();
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
   const rx = useSpring(useTransform(my, [-0.5, 0.5], [5, -5]), { stiffness: 80, damping: 20 });
@@ -28,7 +29,7 @@ const HeroImage = ({ y }) => {
       className="absolute inset-0 lg:left-[30%] [perspective:1400px] lg:[mask-image:linear-gradient(to_right,transparent,black_35%)]">
       <motion.div style={{ y, rotateX: rx, rotateY: ry }} className="absolute -inset-[4%] origin-center will-change-transform">
         <motion.img
-          src="/img/predio.webp" alt="Sede do Grupo GGV em Curitiba ao pôr do sol"
+          src="/img/predio.webp" alt={t("Sede do Grupo GGV em Curitiba ao pôr do sol")}
           data-testid="hero-image"
           initial={{ clipPath: "inset(0 0 0 100%)", scale: 1.25 }}
           animate={{ clipPath: "inset(0 0 0 0%)", scale: 1.08 }}
@@ -85,12 +86,15 @@ export const Hero = () => {
         </motion.div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.4, duration: 1 }}
           className="mt-14 grid grid-cols-3 gap-4 border-t border-white/10 pt-6 md:max-w-3xl">
-          {STATS.map((s, i) => (
+          {STATS.map((s, i) => {
+            const suffix = s.n===1 && s.suf===" BI" ? (t(" BI")) : s.suf;
+            return (
             <div key={s.label} data-testid={`hero-stat-${i}`} className={i ? "border-l border-white/10 pl-4" : ""}>
-              <Counter to={s.n} pre={s.pre} suf={s.suf} className="font-display block text-2xl sm:text-3xl md:text-4xl text-[#FFC400]" />
+              <Counter to={s.n} pre={s.pre} suf={suffix} className="font-display block text-2xl sm:text-3xl md:text-4xl text-[#FFC400]" />
               <span className="mt-1 block text-xs sm:text-sm text-[#c9cbd0]">{t(s.label)}</span>
             </div>
-          ))}
+            );
+          })}
         </motion.div>
       </motion.div>
     </section>
