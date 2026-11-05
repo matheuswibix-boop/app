@@ -16,13 +16,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: yarn
-          cache-dependency-path: frontend/yarn.lock
       - name: Instalar Yarn Classic
         run: npm install -g yarn@1.22.22
       - name: Instalar dependencias do frontend
         working-directory: frontend
-        run: yarn install --frozen-lockfile --non-interactive
+        run: yarn install --non-interactive
       - name: Compilar site React e gerar 26 HTMLs para SEO
         working-directory: frontend
         env:
