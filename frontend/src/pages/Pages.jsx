@@ -11,13 +11,7 @@ import { PageHeader, CtaBand } from "@/components/site/PageHeader";
 import { CONTACT } from "@/lib/content";
 import { T, useLanguage } from "@/lib/i18n";
 
-const useTitle = (title) => {
-  const {t,lang} = useLanguage();
-  useEffect(() => { document.title = `${t(title)} | INSALES`; }, [title,lang,t]);
-};
-
 export function ServicesPage() {
-  useTitle("Soluções");
   return (
     <main data-testid="services-page">
       <PageHeader crumb="Soluções" eyebrow="Nossas soluções" title="Soluções completas para o seu" accent="crescimento."
@@ -29,7 +23,6 @@ export function ServicesPage() {
 }
 
 export function MethodPage() {
-  useTitle("Metodologia");
   return (
     <main data-testid="method-page" className="pt-16">
       <Method interactive />
@@ -42,7 +35,6 @@ export function MethodPage() {
 
 export function AboutPage() {
   const {t} = useLanguage();
-  useTitle(t("Quem Somos"));
   return (
     <main data-testid="about-page">
       <PageHeader crumb={t("Quem Somos")} eyebrow={t("Quem Somos")} title={t("Hub de Data Marketing")} accent={t("e Vendas.")}
@@ -63,7 +55,6 @@ export function AboutPage() {
 }
 
 export function ContactPage() {
-  useTitle("Fale Conosco");
   const {hash} = useLocation();
   useEffect(() => {
     if (hash !== "#formulario") return undefined;
