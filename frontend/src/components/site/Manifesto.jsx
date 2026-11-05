@@ -11,7 +11,7 @@ const Word = ({ w, range, progress }) => {
 };
 
 export const Manifesto = () => {
-  const {t} = useLanguage();
+  const {t,lang} = useLanguage();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.85", "end 0.45"] });
   const words = t(TEXT).split(" ");
@@ -20,11 +20,21 @@ export const Manifesto = () => {
       <div className="pointer-events-none absolute inset-0 grid-lines [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFC400]/10 blur-[120px]" />
       <div className="relative mx-auto max-w-[1400px]">
-        <Eyebrow><T>Somos o primeiro</T></Eyebrow>
+        <Eyebrow>{lang==="pt" ? <T>Somos o primeiro</T> : "INSALES"}</Eyebrow>
         <h2 className="font-display mt-6 uppercase leading-[0.92] text-4xl sm:text-6xl lg:text-[5.5rem]">
-          <MaskLine><T>Hub</T> <span className="text-[#FFC400]"><T>Data</T></span></MaskLine>
-          <MaskLine delay={0.1}><span className="text-[#FFC400]"><T>Marketing</T></span></MaskLine>
-          <MaskLine delay={0.2} className="text-outline"><T>do Brasil</T></MaskLine>
+          {lang==="pt" ? <>
+            <MaskLine><T>Hub</T> <span className="text-[#FFC400]"><T>Data</T></span></MaskLine>
+            <MaskLine delay={0.1}><span className="text-[#FFC400]"><T>Marketing</T></span></MaskLine>
+            <MaskLine delay={0.2} className="text-outline"><T>do Brasil</T></MaskLine>
+          </> : lang==="en" ? <>
+            <MaskLine>Brazil's first</MaskLine>
+            <MaskLine delay={0.1}><span className="text-[#FFC400]">data-driven</span></MaskLine>
+            <MaskLine delay={0.2} className="text-outline">marketing hub</MaskLine>
+          </> : <>
+            <MaskLine>El primer hub de</MaskLine>
+            <MaskLine delay={0.1}><span className="text-[#FFC400]">marketing basado</span></MaskLine>
+            <MaskLine delay={0.2} className="text-outline">en datos de Brasil</MaskLine>
+          </>}
         </h2>
         <p data-testid="manifesto-text" className="mt-14 max-w-4xl text-2xl font-semibold leading-snug md:ml-auto md:text-4xl md:leading-[1.2]">
           {words.map((w, i) => (
