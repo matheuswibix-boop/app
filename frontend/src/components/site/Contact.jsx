@@ -4,6 +4,7 @@ import { CONTACT, getWhatsAppLink } from "@/lib/content";
 import { T, useLanguage } from "@/lib/i18n";
 import { Eyebrow, MaskLine, Reveal } from "./Reveal";
 import { getLeadAttribution, newSubmissionId } from "@/lib/leadAttribution";
+import {formatPhoneBR, isValidPhoneBR} from "@/lib/phoneBR";
 
 const EMPTY = { name: "", email: "", phone: "", company: "", revenue: "", service: "", message: "" };
 const REVENUES = ["Até R$ 50 mil/mês", "R$ 50 a 200 mil/mês", "R$ 200 mil a 1 mi/mês", "Acima de R$ 1 mi/mês"];
@@ -43,6 +44,10 @@ const Form = () => {
   const submit = async (e) => {
     e.preventDefault();
     if(busy) return;
+    if(!isValidPhoneBR(f.phone)) {
+      setError(t("Informe um telefone com DDD válido, fixo ou celular."));
+      return;
+    }
     if(!submissionId.current) submissionId.current=newSubmissionId();
     if(!submissionId.current) {setError(t("Não foi possível iniciar o envio. Atualize seu navegador e tente novamente."));return;}
     setBusy(true);setError("");
@@ -67,7 +72,7 @@ const Form = () => {
       let result={};
       try {result=await response.json();} catch { /* Handle an unavailable endpoint */ }
       if(!response.ok || !result.success || !result.deal_id) {
-        throw new Error(result.code||"PIPEDRIVE_NOT_CONFIRMED");
+        throw new Error(typeof result.code==="string" ? result.code : "crm_not_confirmed");
       }
       setSuccess(true);
       const lines=[
@@ -81,8 +86,14 @@ const Form = () => {
         t("Desafio: ")+(f.message||t("Quero conversar sobre oportunidades de crescimento."))
       ];
       window.location.assign("https://wa.me/5541996617279?text="+encodeURIComponent(lines.join("\n")));
-    } catch {
-      setError(t("Não foi possível confirmar seu cadastro no momento. Seus dados foram mantidos; tente novamente."));
+    } catch (err) {
+      const code = err instanceof Error && /^[a-z_]{3,60}$/.test(err.message) ? err.message : "network_error";
+      const message = code === "custom_field_option_not_mapped"
+        ? t("Não foi possível registrar o interesse ou faturamento. Nossa equipe precisa revisar as opções do CRM.")
+        : code === "integration_not_configured" || code === "crm_authorization_failed"
+          ? t("O cadastro está temporariamente indisponível. Entre em contato com a nossa equipe.")
+          : t("Não foi possível confirmar seu cadastro no momento. Seus dados foram mantidos; tente novamente.");
+      setError(message + " (ref.: " + code + ")");
     } finally {setBusy(false);}
   };
   return (
@@ -94,7 +105,10 @@ const Form = () => {
       <Field label="Nome *"><input required minLength={2} maxLength={120} value={f.name} onChange={set("name")} name="lead-name" data-testid="lead-input-name" className={inputCls} placeholder={t("Seu nome")} disabled={busy}/></Field>
       <Field label="Empresa"><input maxLength={150} value={f.company} onChange={set("company")} data-testid="lead-input-company" className={inputCls} placeholder={t("Nome da empresa")} disabled={busy}/></Field>
       <Field label="E-mail *"><input required type="email" maxLength={160} value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder={t("voce@empresa.com.br")} disabled={busy}/></Field>
-      <Field label="WhatsApp *"><input required type="tel" minLength={8} maxLength={30} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder={t("(41) 90000-0000")} disabled={busy}/></Field>
+      <Field label="Telefone / WhatsApp *"><input required type="tel" inputMode="numeric" autoComplete="tel-national" minLength={14} maxLength={17} value={f.phone}
+        onChange={e=>{setError("");setF(current=>({...current,phone:formatPhoneBR(e.target.value)}));}}
+        onBlur={()=>{if(f.phone&&!isValidPhoneBR(f.phone))setError(t("Informe um telefone com DDD válido, fixo ou celular."));}}
+        data-testid="lead-input-phone" className={inputCls} placeholder={t("(41) 9 9999-9999")} disabled={busy}/></Field>
       <Field label="Faturamento *"><select required value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls} disabled={busy}><option value="">{t("Selecione")}</option>{REVENUES.map(v=><option key={v} value={v}>{t(v)}</option>)}</select></Field>
       <Field label="Interesse *"><select required value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls} disabled={busy}><option value="">{t("Selecione")}</option>{SERVICES.map(v=><option key={v} value={v}>{t(v)}</option>)}</select></Field>
       <div className="sm:col-span-2"><Field label="Conte sobre seu desafio"><textarea rows={4} maxLength={2000} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder={t("Ex.: queremos reduzir o CAC e escalar as vendas online")} disabled={busy}/></Field></div>
