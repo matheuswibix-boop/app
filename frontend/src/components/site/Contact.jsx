@@ -34,6 +34,7 @@ const Form = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
   const [website, setWebsite] = useState(""); // Honeypot; should remain blank.
+  const [privacyConsent, setPrivacyConsent] = useState(false);
   const submissionId = useRef(null);
   const set = (k) => (e) => {
     setError("");
@@ -47,7 +48,7 @@ const Form = () => {
     setBusy(true);setError("");
     try {
       const controller=new AbortController();
-      const timeout=window.setTimeout(()=>controller.abort(),20000);
+      const timeout=window.setTimeout(()=>controller.abort(),45000);
       let response;
       try {
         response=await fetch("/wp-json/insales/v1/lead",{
@@ -55,7 +56,7 @@ const Form = () => {
           headers:{"Content-Type":"application/json","Accept":"application/json"},
           credentials:"same-origin",
           body:JSON.stringify({
-            ...f,locale:lang,utm:getLeadAttribution(),
+            ...f,locale:lang,utm:getLeadAttribution(), privacy_consent:privacyConsent,
             submission_id:submissionId.current,
             source_path:window.location.pathname,
             website
@@ -97,7 +98,12 @@ const Form = () => {
       <Field label="Faturamento *"><select required value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls} disabled={busy}><option value="">{t("Selecione")}</option>{REVENUES.map(v=><option key={v} value={v}>{t(v)}</option>)}</select></Field>
       <Field label="Interesse *"><select required value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls} disabled={busy}><option value="">{t("Selecione")}</option>{SERVICES.map(v=><option key={v} value={v}>{t(v)}</option>)}</select></Field>
       <div className="sm:col-span-2"><Field label="Conte sobre seu desafio"><textarea rows={4} maxLength={2000} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder={t("Ex.: queremos reduzir o CAC e escalar as vendas online")} disabled={busy}/></Field></div>
-      <p className="sm:col-span-2 text-xs leading-relaxed text-[#AEB0B6]"><T>Ao enviar, seus dados serão utilizados para contato comercial e registrados em nosso CRM, conforme a Política de Privacidade.</T></p>
+      <label className="sm:col-span-2 flex items-start gap-3 text-xs leading-relaxed text-[#AEB0B6]">
+        <input type="checkbox" className="mt-0.5 h-4 w-4 shrink-0 accent-[#25D366]" required
+          data-testid="lead-privacy-consent" checked={privacyConsent}
+          onChange={e=>setPrivacyConsent(e.target.checked)} disabled={busy}/>
+        <T>Autorizo o uso dos meus dados para contato comercial e registro no CRM, conforme a Política de Privacidade.</T>
+      </label>
       {error && <p role="alert" data-testid="lead-form-error" className="sm:col-span-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200">{error}</p>}
       {success && <p role="status" className="sm:col-span-2 text-sm text-[#25D366]"><T>Cadastro confirmado. Abrindo WhatsApp...</T></p>}
       <button type="submit" disabled={busy} aria-busy={busy} data-testid="lead-form-submit-button"
