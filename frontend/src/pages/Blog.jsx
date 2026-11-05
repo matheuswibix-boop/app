@@ -9,8 +9,7 @@ import { Eyebrow, MaskLine, Reveal } from "@/components/site/Reveal";
 import { scrollTop } from "@/lib/scroll";
 
 export function BlogList() {
-  const {lang} = useLanguage();
-  useEffect(() => { scrollTop(); document.title = "Blog | INSALES"; }, [lang]);
+  useEffect(() => { scrollTop(); }, []);
   return (
     <main data-testid="blog-list-page" className="px-5 pb-24 pt-36 md:px-10">
       <div className="mx-auto max-w-[1400px]">
@@ -29,9 +28,9 @@ export function BlogList() {
 
 export function BlogPost() {
   const { slug } = useParams();
-  const {t,lang} = useLanguage();
+  const {lang} = useLanguage();
   const post = POSTS.find((p) => p.slug === slug);
-  useEffect(() => { scrollTop(); if (post) document.title = `${t(post.title)} | INSALES`; }, [slug, post, lang, t]);
+  useEffect(() => { scrollTop(); }, [slug]);
 
   if (!post) {
     return (
