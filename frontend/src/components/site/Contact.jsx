@@ -53,8 +53,8 @@ const Form = () => {
       </div>
       <Field label="Nome *"><input required minLength={2} value={f.name} onChange={set("name")} name="lead-name" data-testid="lead-input-name" className={inputCls} placeholder={t("Seu nome")} /></Field>
       <Field label="Empresa"><input value={f.company} onChange={set("company")} data-testid="lead-input-company" className={inputCls} placeholder={t("Nome da empresa")} /></Field>
-      <Field label="E-mail *"><input required type="email" value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder="voce@empresa.com.br" /></Field>
-      <Field label="WhatsApp *"><input required minLength={8} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder="(41) 90000-0000" /></Field>
+      <Field label="E-mail *"><input required type="email" value={f.email} onChange={set("email")} data-testid="lead-input-email" className={inputCls} placeholder={t("voce@empresa.com.br")} /></Field>
+      <Field label="WhatsApp *"><input required minLength={8} value={f.phone} onChange={set("phone")} data-testid="lead-input-phone" className={inputCls} placeholder={t("(41) 90000-0000")} /></Field>
       <Field label="Faturamento *"><select required value={f.revenue} onChange={set("revenue")} data-testid="lead-select-revenue" className={inputCls}><option value="">{t("Selecione")}</option>{REVENUES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
       <Field label="Interesse *"><select required value={f.service} onChange={set("service")} data-testid="lead-select-service" className={inputCls}><option value=""><T>Selecione</T></option>{SERVICES.map(r=><option key={r} value={r}>{t(r)}</option>)}</select></Field>
       <div className="sm:col-span-2"><Field label="Conte sobre seu desafio"><textarea rows={4} value={f.message} onChange={set("message")} data-testid="lead-input-message" className={inputCls} placeholder={t("Ex.: queremos reduzir o CAC e escalar as vendas online")} /></Field></div>
