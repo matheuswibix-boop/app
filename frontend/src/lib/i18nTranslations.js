@@ -2014,3 +2014,47 @@ Object.assign(translations, {
     "en": "Want to speak with an expert?"
   }
 });
+
+// Final wording and accessible control labels
+Object.assign(translations, {
+  "BI": {
+    "en": "billion",
+    "es": "mil millones"
+  },
+  "Selecionar idioma": {
+    "en": "Select language",
+    "es": "Seleccionar idioma"
+  },
+  "Idiomas disponíveis": {
+    "en": "Available languages",
+    "es": "Idiomas disponibles"
+  },
+  "INSALES — início": {
+    "en": "INSALES — Home",
+    "es": "INSALES — Inicio"
+  },
+  "voce@empresa.com.br": {
+    "en": "you@company.com",
+    "es": "tu@empresa.com"
+  },
+  "(41) 90000-0000": {
+    "en": "+55 (41) 90000-0000",
+    "es": "+55 (41) 90000-0000"
+  },
+  "Data-driven marketing": {
+    "en": "Data-driven marketing",
+    "es": "Marketing basado en datos"
+  },
+  "Fale Conosco": {
+    "en": "Contact Us",
+    "es": "Contáctanos"
+  },
+  "Trabalhamos com plano documentado, integração de canais e leitura contínua dos resultados.": {
+    "en": "We work with a documented plan, integrated channels, and ongoing performance monitoring.",
+    "es": "Trabajamos con un plan documentado, canales integrados y seguimiento continuo de resultados."
+  },
+  "Consultoria Estratégica": {
+    "en": "Strategic Consultation",
+    "es": "Consultoría Estratégica"
+  }
+});
