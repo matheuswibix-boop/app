@@ -7,6 +7,24 @@ $file=insales_theme_dist($relative);
 if (!is_readable($file)) {status_header(503);echo 'INSALES: site build ausente. Instale o ZIP gerado pelo GitHub Actions.';return;}
 $html=file_get_contents($file);
 if (!is_string($html)||strpos($html,'id="root"')===false) {status_header(503);echo 'INSALES: build HTML invalido.';return;}
+// Use Ronaldo's existing Contact Form 7 form and its existing CRM integration.
+// Render on every React entry route so client-side navigation can reuse it.
+$native_form = '';
+if (shortcode_exists('contact-form-7')) {
+  $native_form = do_shortcode('[contact-form-7 id="aac8881" title="Formulário NOVO PAGINA FALE CONOSCO"]');
+  // CF7 registers its assets on wp_enqueue_scripts. Enqueue after registration
+  // even when its global loading is disabled, before WordPress prints assets.
+  add_action('wp_enqueue_scripts', function () {
+    if (function_exists('wpcf7_enqueue_scripts') && !wp_script_is('contact-form-7', 'enqueued')) {
+      wpcf7_enqueue_scripts();
+    }
+    if (function_exists('wpcf7_enqueue_styles') && !wp_style_is('contact-form-7', 'enqueued')) {
+      wpcf7_enqueue_styles();
+    }
+  }, 99);
+}
+$html = str_replace('<div id="root"></div>',
+  '<div id="root"></div><div id="insales-cf7-source" hidden>' . $native_form . '</div>', $html);
 // Absolute /static/ and /img/ references are also handled by WordPress rewrite rules.
 $base=untrailingslashit(get_stylesheet_directory_uri()).'/dist';
 $html=preg_replace_callback('~(\\b(?:src|href)=["\\\'])/(static/[^"\\\']+|img/[^"\\\']+|favicon\\.svg|manifest\\.json|asset-manifest\\.json)(["\\\'])~i',
