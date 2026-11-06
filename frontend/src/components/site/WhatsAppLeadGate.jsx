@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { captureLeadAttribution } from "@/lib/leadAttribution";
 
 // All outbound WhatsApp links require the contact form first.
-// WordPress handles Pipedrive persistence first; the WhatsApp form bypasses this click interceptor.
+// The existing Contact Form 7 integration owns lead submission and follow-up.
 export function WhatsAppLeadGate() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -21,7 +21,7 @@ export function WhatsAppLeadGate() {
       if (pathname === "/fale-conosco") {
         window.history.replaceState(window.history.state, "", "/fale-conosco#formulario");
         document.getElementById("formulario")?.scrollIntoView({ behavior: "smooth", block: "start" });
-        document.querySelector("#formulario input[name=lead-name]")?.focus({ preventScroll: true });
+        document.querySelector("#formulario input:not([type=hidden]):not([tabindex='-1'])")?.focus({ preventScroll: true });
       } else {
         navigate("/fale-conosco#formulario");
       }

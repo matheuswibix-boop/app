@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - build/wordpress-installable-theme-20261105
+      - fix/contact-form-7-existing-form-20261105
   workflow_dispatch:
 jobs:
   tema_wordpress:
@@ -26,7 +27,7 @@ jobs:
         env:
           CI: 'true'
           DISABLE_EMERGENT_OVERLAY: 'true'
-        run: yarn test --watchAll=false --runInBand --testPathPattern='Nav.test.jsx|phoneFormat.test.js'
+        run: yarn test --watchAll=false --runInBand --testPathPattern='Nav.test.jsx|phoneFormat.test.js|ContactForm7.test.jsx'
       - name: Compilar site React e gerar 26 HTMLs para SEO
         working-directory: frontend
         env:
@@ -40,6 +41,10 @@ jobs:
           php -l wordpress-theme/insales-react/functions.php
           php -l wordpress-theme/insales-react/index.php
           php -l wordpress-theme/insales-react/includes/pipedrive-lead.php
+      - name: Validar shortcode nativo sem alterar integracao CRM
+        run: |
+          php wordpress-theme/tests/contact-form-7.php active
+          php wordpress-theme/tests/contact-form-7.php missing
       - name: Testar integridade do ZIP
         run: unzip -t wordpress-theme/output/INSALES_TEMA_WORDPRESS_INSTALAVEL.zip | tail -1
       - name: Arquivo pronto para o desenvolvedor
